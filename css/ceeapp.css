@@ -369,7 +369,7 @@ header {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    min-height: 100vh;
+    min-height: 50vh;
 }
 
 header .intro-text {
@@ -410,8 +410,8 @@ header .opacity {
 @media(min-width:768px) {
 
     header .intro-text {
-        padding-top: 300px;
-        padding-bottom: 200px;
+        padding-top: 130px;
+        padding-bottom: 20px;
     }
 
     header .intro-text .intro-lead-in {

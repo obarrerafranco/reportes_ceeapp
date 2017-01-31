@@ -103,7 +103,7 @@
     </nav>
 
     <!-- Header -->
-    <header style="background-image: url(http://www.ceeapp.com.co/reportes/img/nike-min.jpg);" >
+    <header style="background-image: url(img/nike-min.jpg);" >
         <div class="container">
             <div class="intro-text">
                 <div class="shadow intro-lead-in">Reporte scans - semana 40</div>
@@ -229,7 +229,58 @@
         </div>
     </section>
 
-    <!-- SECCION HISTORICO -->
+
+         <!-- BLOG -->
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+        <h2 class="section-heading">NEWS</h2><br>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#noticia01" target="_blank" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="http://www.ceeapp.com.co/reportes/img/news01-sem35-thumb-min.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Mida sus resultados en redes sociales con estas herramientas</h4>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#noticia02" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="http://www.ceeapp.com.co/reportes/img/news02-sem35-thumb-min.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Cómo tener éxito con tu estrategia de marketing online</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#noticia03" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="http://www.ceeapp.com.co/reportes/img/news03-sem35-thumb-min.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>‪‎Cómo tener éxito con tu estrategia de marketing online</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- SECCION HISTORICO -->
     <section id="historial">
         <div class="container">
             <div class="row">
@@ -269,11 +320,11 @@
                 </div>
                 </a>
 
-<a href="#sem35" class="portfolio-link" data-toggle="modal">  
-                	<div class="item yellowLight transition">
-                		<h1>SEMANA</h1>
-                		<h2>35</h2>
-                	</div>
+                <a href="#sem35" class="portfolio-link" data-toggle="modal">  
+                    <div class="item yellowLight transition">
+                        <h1>SEMANA</h1>
+                        <h2>35</h2>
+                    </div>
                 </a>
 
                 <a href="#sem34" class="portfolio-link" data-toggle="modal">  
@@ -342,59 +393,6 @@
 
             </div>
             </div>
-
-
-     
-         <!-- BLOG -->
-    <section id="portfolio" class="bg-light-gray">
-        <div class="container">
-        <h2 class="section-heading">NEWS</h2><br>
-
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#noticia01" target="_blank" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="http://www.ceeapp.com.co/reportes/img/news01-sem35-thumb-min.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Mida sus resultados en redes sociales con estas herramientas</h4>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#noticia02" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="http://www.ceeapp.com.co/reportes/img/news02-sem35-thumb-min.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Cómo tener éxito con tu estrategia de marketing online</h4>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#noticia03" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="http://www.ceeapp.com.co/reportes/img/news03-sem35-thumb-min.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>‪‎Cómo tener éxito con tu estrategia de marketing online</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- IMG FINAL -->
     <section class="mupi"><div class="mupi-img"><img src="http://www.ceeapp.com.co/reportes/img/mupi-min.jpg"></div></section>
     <!-- FIN IMG FINAL -->
@@ -637,7 +635,7 @@
       var generoLoaded = false;
             $(document).on('scroll', function(){      
                 var scrollTop = $(window).scrollTop();
-                if(scrollTop > 750 && !generoLoaded){
+                if(scrollTop > 250 && !generoLoaded){
                     var ctxgenero = document.getElementById("genero");
 
                     var dataGenero = {
@@ -680,7 +678,7 @@
       var semanaLoaded = false;
             $(document).on('scroll', function(){      
                 var scrollTop = $(window).scrollTop();
-                if(scrollTop > 750 && !semanaLoaded){
+                if(scrollTop > 250 && !semanaLoaded){
                     var ctxsemana = document.getElementById("semana");
 
                     var dataSemana = {
@@ -732,7 +730,7 @@
       var edadLoaded = false;
             $(document).on('scroll', function(){      
                 var scrollTop = $(window).scrollTop();
-                if(scrollTop > 750 && !edadLoaded){
+                if(scrollTop > 580 && !edadLoaded){
                     var ctxedad = document.getElementById("edad");
 
                     var dataEdad = {
@@ -762,7 +760,7 @@
                         };
 
                     var edad = new Chart(ctxedad, {
-                        type: 'doughnut',
+                        type: 'pie',
                         data: dataEdad,
                         options: optionsEdad
                     });  
@@ -778,7 +776,7 @@
       var generalLoaded = false;
             $(document).on('scroll', function(){      
                 var scrollTop = $(window).scrollTop();
-                if(scrollTop > 750 && !generalLoaded){
+                if(scrollTop > 580 && !generalLoaded){
                     var ctxgral = document.getElementById("infogral");
 
                     var dataGeneral = {
