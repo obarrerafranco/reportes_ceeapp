@@ -48,7 +48,7 @@
 
 #header{
 	background: #f1f1f1;
-	padding: 100px 0 100px;
+	padding: 50px 0 50px;
 }
 #header h1{
 	color: #7fc242;
@@ -117,7 +117,7 @@ padding: 8px 12px;
 /* Demo Slides */
 
 #owl-example .item{
-	padding: 30px 0px;
+	padding: 10px 0px;
 	margin: 10px;
 	color: #FFF;
 	-webkit-border-radius: 3px;
@@ -133,7 +133,7 @@ padding: 8px 12px;
 #owl-example .item h3{
 	font-size: 28px;
 	font-weight: 300 !important;
-	margin: 25px 0 0;
+	margin: 15px 0 0;
 	text-transform: none;
 
 }

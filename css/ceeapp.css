@@ -7,6 +7,7 @@ body {
 
 .text-muted {
     color: #777;
+    line-height: 20px;
 }
 
 .text-primary {
@@ -410,23 +411,23 @@ header .opacity {
 @media(min-width:768px) {
 
     header .intro-text {
-        padding-top: 130px;
+        padding-top: 120px;
         padding-bottom: 20px;
     }
 
     header .intro-text .intro-lead-in {
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 40px;
+        font-size: 35px;
         font-style: italic;
-        line-height: 40px;
+        line-height: 35px;
     }
 
     header .intro-text .intro-heading {
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         text-transform: uppercase;
         font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 75px;
+        font-size: 70px;
         font-weight: 700;
         line-height: 75px;
     }
@@ -444,7 +445,7 @@ section h2.section-heading {
 }
 
 section h3.section-subheading {
-    margin-bottom: 75px;
+    margin-bottom: 15px;
     text-transform: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 19px;
@@ -455,7 +456,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     section {
-        padding: 50px 0 20px;
+        padding: 25px 0 20px;
     }
 }
 
@@ -473,7 +474,7 @@ section h3.section-subheading {
     display: block;
     position: relative;
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 250px;
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
@@ -514,7 +515,7 @@ section h3.section-subheading {
 #portfolio .portfolio-item .portfolio-caption {
     margin: 0 auto;
     padding: 25px;
-    max-width: 400px;
+    max-width: 250px;
     text-align: center;
     background-color: #fff;
 }
@@ -995,4 +996,13 @@ body {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     
 }
+.caja h1, h4 {
+    color: rgba(0, 0, 0, 0.4) !important;
+} 
+.caja a, p{
+    color: #ffffff !important;
+} 
+.caja a:hover{
+    color: rgba(0, 0, 0, 0.4) !important;
+} 
 /* Fin Nuevos estilos*/
