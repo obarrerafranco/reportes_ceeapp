@@ -999,7 +999,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .caja h1, h4 {
     color: rgba(0, 0, 0, 0.4) !important;
 } 
-.caja a, p{
+.caja a, .caja p{
     color: #ffffff !important;
 } 
 .caja a:hover{
