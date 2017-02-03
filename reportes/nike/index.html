@@ -14,19 +14,19 @@
     <title>Nike (Bogotá) / Reporte Semana 40</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/ceeapp.css" rel="stylesheet">
+    <link href="../../css/ceeapp.css" rel="stylesheet">
 
       <!-- Default Theme -->
-    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="../../css/owl.theme.css">
 
     <!--Owl stylesheet -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.custom.css">
-    <link rel="stylesheet" href="css/AdminLTE.min.css">
-    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="../../css/owl.carousel.css">
+    <link rel="stylesheet" href="../../css/owl.custom.css">
+    <link rel="stylesheet" href="../../css/AdminLTE.min.css">
+    <link rel="stylesheet" href="../../css/ionicons.min.css">
 
 
     <!-- Custom Fonts -->
@@ -45,8 +45,8 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="js/device.min.js"></script>
-    <script src="js/modernizr.custom.js"></script>
+    <script src="../../js/device.min.js"></script>
+    <script src="../../js/modernizr.custom.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -73,7 +73,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top"><img class="monitor" src="img/plataforma/ceelogo.png"><h4 class="logo-txt">CEE APP</h4></a>
+                <a class="navbar-brand page-scroll" href="#page-top"><img class="monitor" src="../../img/plataforma/ceelogo.png"><h4 class="logo-txt">CEE APP</h4></a>
             </div>
             <!-- /.navbar-collapse -->
              <!-- Collect the nav links, forms, and other content for toggling -->
@@ -103,7 +103,7 @@
     </nav>
 
     <!-- Header -->
-    <header style="background-image: url(img/headers/nike-min.jpg);">
+    <header style="background-image: url(../../img/headers/nike-min.jpg);">
         <div class="container">
             <div class="intro-text">
                 <div class="shadow intro-lead-in">Reporte scans - semana 40</div>
@@ -183,21 +183,23 @@
         <div class="container">
             <div class="row">
                <div class="scans col-md-6 col-lg-6">
-                    <div class="text-center">
-                        <h4 class="section-heading">Género</h4>
-                    </div>
-                    <div>
-                        <canvas id="genero"></canvas>
-                    </div>
-
-                </div>
-                <div class="views col-md-6 col-lg-6">
-                     <div class="text-center">
+         
+                                         <div class="text-center">
                         <h4 class="section-heading">SEMANA 40 <span class="ciudad">(Bogotá)</span></h4>
                         <h5 class="section-subheading text-muted">Estos son los datos recogidos de scans realizados en la semana 40, que abarca del 28 de Septiembre al 04 de Octubre:</h5>
                     </div>
                     <div>
                         <canvas id="semana"></canvas>
+                    </div>
+
+                </div>
+                <div class="views col-md-6 col-lg-6">
+                    <div class="text-center">
+                        <h4 class="section-heading">INFORMACIÓN GENERAL <span class="ciudad">(Bogotá)</span></h4>
+                        <h5 class="section-subheading text-muted">En la gráfica se muestran todos los scans realizados en la última semana:</h5>
+                    </div>
+                    <div>
+                        <canvas id="infogral"></canvas>
                     </div>
                 </div>
             </div>
@@ -208,23 +210,31 @@
     <section id="reportes2">
         <div class="container">
             <div class="row">
-               <div class="scans col-md-6 col-lg-6">
+               <div class="scans col-md-4">
                     <div class="text-center">
+                        <h4 class="section-heading">Género</h4>
+                    </div>
+                    <div>
+                        <canvas id="genero"></canvas>
+                    </div>
+
+                </div>
+                <div class="views col-md-4 col-lg-4">
+               <div class="text-center">
                         <h4 class="section-heading">Edad</h4>
                     </div>
                     <div>
                         <canvas id="edad"></canvas>
                     </div>
-
                 </div>
-                <div class="views col-md-6 col-lg-6">
-                     <div class="text-center">
-                        <h4 class="section-heading">INFORMACIÓN GENERAL <span class="ciudad">(Bogotá)</span></h4>
-                        <h5 class="section-subheading text-muted">En la gráfica se muestran todos los scans realizados en la última semana:</h5>
+                 <div class="scans col-md-4">
+                    <div class="text-center">
+                        <h4 class="section-heading">Edad</h4>
                     </div>
                     <div>
-                        <canvas id="infogral"></canvas>
+                        <canvas id="Pie3"></canvas>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -244,7 +254,7 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/news/news01-sem35-thumb-min.jpg" class="img-responsive" alt="">
+                        <img src="../../img/news/news01-sem35-thumb-min.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Mida sus resultados en redes sociales con estas herramientas</h4>
@@ -258,7 +268,7 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/news/news01-sem35-thumb-min.jpg" class="img-responsive" alt="">
+                        <img src="../../img/news/news01-sem35-thumb-min.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Mida sus resultados en redes sociales con estas herramientas</h4>
@@ -272,7 +282,7 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/news/news02-sem35-thumb-min.jpg" class="img-responsive" alt="">
+                        <img src="../../img/news/news02-sem35-thumb-min.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Cómo tener éxito con tu estrategia de marketing online</h4>
@@ -285,7 +295,7 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/news/news03-sem35-thumb-min.jpg" class="img-responsive" alt="">
+                        <img src="../../img/news/news03-sem35-thumb-min.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>‪‎Cómo tener éxito con tu estrategia de marketing online</h4>
@@ -406,10 +416,38 @@
         </div>
     </section>
 
+     <!--  CIUDADES -->
+    <section id="ciudades">
+      <div class="row">
+              <div class="col-md-6 ciudades-txt">
+                  <div>
+                      <hr style="width:50%;height: 10px;"/>
+                      <h1 class="mapa">CONOCE<br />LOS REPORTES <br />DE CADA CIUDAD</h1>
+                      <hr />
+                  </div>
+              </div>
+              <div class="col-md-6 ciudades-map" usemap="#image-maps-colombia">
+                  <img id="Image-Maps-Com-image-maps-2017-02-02-174113" src="../../img/plataforma/colombia.png" border="0" width="712" height="576" orgWidth="712" orgHeight="576" usemap="#image-maps-2017-02-02-174113" alt="" />
+                  <map name="image-maps-2017-02-02-174113" id="ImageMapsCom-image-maps-2017-02-02-174113">
+                      <area id="1" alt="Bogotá" title="Bogotá" href="http://ceeapp.com.co/reportes/pegastic/pegastic-bogota.html" shape="rect" coords="280,246,336,298" style="outline:none;" target="_self"     />
+                      <area id="2" alt="Cali" title="Cali" href="http://ceeapp.com.co/reportes/pegastic/pegastic-cali.html" shape="rect" coords="197,275,253,327" style="outline:none;" target="_self"     />
+                      <area shape="rect" coords="710,574,712,576" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
+                  </map>
+              </div>
+          </div>
+    </section>
+    <!-- FIN CIUDADES -->
+
             </div>
             </div>
     <!-- IMG FINAL -->
-    <section class="mupi"><div class="mupi-img"><img src="img/plataforma/mupi-min.jpg"></div></section>
+    <footer class="footter">
+        <div class="row">
+            <div class="col-sm-3"><img alt="JCdecaux" title="JCdecaux" src="../../img/plataforma/jcdecaux.png"></div>
+            <div class="col-sm-6"></div>
+            <div class="col-sm-3"><img alt="CEE APP" title="CEE APP"  src="../../img/plataforma/ceelogo_footer.png"></div>
+        </div>
+    </footer>
     <!-- FIN IMG FINAL -->
 
 
@@ -429,7 +467,7 @@
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
                             <h2>Mida sus resultados en redes sociales con estas herramientas</h2>
-                            <img class="img-responsive" src="img/news/news01-sem35-min.jpg" alt="">
+                            <img class="img-responsive" src="../../img/news/news01-sem35-min.jpg" alt="">
                             <p>Los “me gusta” o likes que reciben las publicaciones de su empresa en Facebook pueden darle una satisfacción inicial e inmediata, de la misma forma que un selfie le encanta a los usuarios. Empero si lo que busca es vender, deberá recurrir a otras herramientas que le permitirán ver los resultados reales de sus esfuerzos de mercadeo digital. Algunas de estas herramientas –como Topic Data de Facebook– también serán muy útiles para la planificación de las campañas.</p>
 
                             <a target="_blank" class="btn link-noticia" href="http://bit.ly/01sem35">
@@ -459,7 +497,7 @@
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
                             <h2>Cómo tener éxito con tu estrategia de marketing online</h2>
-                            <img class="img-responsive" src="img/news/news02-sem35-min.jpg" alt="">
+                            <img class="img-responsive" src="../../img/news/news02-sem35-min.jpg" alt="">
                             <p>Actualmente, es necesario disponer de una buena estrategia de marketing online para que sea posible conseguir un gran número de clientes potenciales. Por ese motivo, es necesario que sepas cómo tener éxito con tu estrategia de marketing online. Para esto no pierdas de vista los siguientes elementos...</p>
 
                             <a target="_blank" class="btn link-noticia" href="http://bit.ly/02sem35">
@@ -491,7 +529,7 @@
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
                             <h2>Marketing Digital: Facebook mejora su marketing digital y aumenta sus ingresos. ¿cómo lo está consiguiendo?</h2>
-                            <img class="img-responsive" src="img/news/news03-sem35-min.jpg" alt="">
+                            <img class="img-responsive" src="../../img/news/news03-sem35-min.jpg" alt="">
                             <p>Facebook no permitirá el bloqueo de anuncios de ‘ad blockers’ en su página. La decisión del grande en las redes sociales, repercutirá sobre los expertos en marketing digital, que usan con frecuencia este medio. Mark Zuckerberg el creador de la red social, indicó que uno de los principales motivos de esta decisión, es que miles de usuarios hacen trampa en sus negocios, porque emplean extensiones para sus navegadores que bloquean los anuncios. El acontecimiento también se dio, porque la red social más famosa vive de la publicidad.  
                             </p>
 
@@ -521,7 +559,7 @@
                     <div class="col-lg-12">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <img class="img-responsive" src="img/historico/nike-bogota-sem32-min.jpg">
+                            <img class="img-responsive" src="../../img/historico/nike-bogota-sem32-min.jpg">
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
                         </div>
                     </div>
@@ -543,7 +581,7 @@
                     <div class="col-lg-12">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <img class="img-responsive" src="img/historico/nike-bogota-sem33-min.jpg">
+                            <img class="img-responsive" src="../../img/historico/nike-bogota-sem33-min.jpg">
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
                         </div>
                     </div>
@@ -565,7 +603,7 @@
                     <div class="col-lg-12">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <img class="img-responsive" src="img/historico/nike-bogota-sem34-min.jpg">
+                            <img class="img-responsive" src="../../img/historico/nike-bogota-sem34-min.jpg">
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
                         </div>
                     </div>
@@ -587,7 +625,7 @@
                     <div class="col-lg-12">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <img class="img-responsive" src="img/historico/nike-bogota-sem35-min.jpg">
+                            <img class="img-responsive" src="../../img/historico/nike-bogota-sem35-min.jpg">
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
                         </div>
                     </div>
@@ -599,41 +637,41 @@
     
 
     <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
+    <script src="../../js/jquery-1.11.0.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
+    <script src="../../js/classie.js"></script>
+    <script src="../../js/cbpAnimatedHeader.js"></script>
 
 
     <!-- Custom Theme JavaScript -->
-    <script src="js/agency.js"></script>
+    <script src="../../js/agency.js"></script>
 
 
-    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="../../js/jquery.easing.1.3.js"></script>
     <!-- IE -->
-    <script src="js/modernizr.custom.js"></script>
+    <script src="../../js/modernizr.custom.js"></script>
 
     <!-- JS responsible for hover in touch devices -->
-    <script src="js/jquery.hoverIntent.js"></script>
+    <script src="../../js/jquery.hoverIntent.js"></script>
 
     <!-- Detects when a element is on wiewport -->
-    <script src="js/jquery.appear.js"></script>
+    <script src="../../js/jquery.appear.js"></script>
 
     <!-- Count to plugin -->
-    <script src="js/jquery.countTo.js"></script>
+    <script src="../../js/jquery.countTo.js"></script>
 
     <!-- Charts -->
-    <script src="js/Chart.min.js"></script>
+    <script src="../../js/Chart.min.js"></script>
 
     <!-- our main JS file -->
-    <script src="js/main.js"></script>
+    <!--script src="js/main.js"></script-->
 
     <!-- Owl Carousel -->
-    <script src="js/owl.carousel.js"></script>
+    <script src="../../js/owl.carousel.js"></script>
 
 <script>
     $(document).ready(function() {
@@ -646,49 +684,6 @@
 
 <script>
 "use strict";
-
-      /* Dona de Genero Inicio */
-      var generoLoaded = false;
-            $(document).on('scroll', function(){      
-                var scrollTop = $(window).scrollTop();
-                if(scrollTop > 250 && !generoLoaded){
-                    var ctxgenero = document.getElementById("genero");
-
-                    var dataGenero = {
-                            labels: ["Masculino", "Femenino"],
-                            datasets: [{
-                                label: 'Genero',
-                                data: [20, 10],
-                                backgroundColor: [
-                                    '#5589ec',
-                                    '#FF6384',
-                                ],
-                                borderColor: [
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                ],
-                                borderWidth: 5
-                            },
-                            ]
-                        };
-
-                    var optionsGenero = {
-                            responsive: true,
-                        };
-
-                    var genero = new Chart(ctxgenero, {
-                        type: 'doughnut',
-                        data: dataGenero,
-                        options: optionsGenero
-                    });  
-
-                     generoLoaded = true;
-                    }
-                    else{
-                    return;
-                    }
-                 });
-        /* Dona de Genero Fin */
 
         /* Semana linea Inicio */
       var semanaLoaded = false;
@@ -706,13 +701,13 @@
                                         label: "Numero de views",
                                         fill: true,
                                         lineTension: 0.1,
-                                        backgroundColor: "rgba(75,192,192,1)",
-                                        borderColor: "#6DC1F3",
+                                        backgroundColor: "#0c2756",
+                                        borderColor: "#0c2756",
                                         borderCapStyle: 'butt',
                                         borderDash: [],
                                         borderDashOffset: 0.0,
                                         borderJoinStyle: 'miter',
-                                        pointBorderColor: "#6DC1F3",
+                                        pointBorderColor: "#0c2756",
                                         pointBackgroundColor: "#fff",
                                         pointBorderWidth: 1,
                                         pointHoverRadius: 5,
@@ -769,57 +764,11 @@
                  });
         /* Semana Linea Fin */
 
-         /* Dona de Edad Inicio */
-      var edadLoaded = false;
-            $(document).on('scroll', function(){      
-                var scrollTop = $(window).scrollTop();
-                if(scrollTop > 580 && !edadLoaded){
-                    var ctxedad = document.getElementById("edad");
-
-                    var dataEdad = {
-                            labels: ["25 años", "18 años", "31 años", "14 años"],
-                            datasets: [{
-                                label: 'Edad',
-                                data: [12, 22, 11, 22],
-                                backgroundColor: [
-                                    '#5589ec',
-                                    '#FF6384',
-                                    '#94C11F',
-                                    '#6dc1f3',
-                                ],
-                                borderColor: [
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                ],
-                                borderWidth: 5
-                            },
-                            ]
-                        };
-
-                    var optionsEdad = {
-                            responsive: true,
-                        };
-
-                    var edad = new Chart(ctxedad, {
-                        type: 'pie',
-                        data: dataEdad,
-                        options: optionsEdad
-                    });  
-
-                     edadLoaded = true;
-                    }
-                    else{
-                    return;
-                    }
-                 });
-        /* Dona de Edad Fin */
-         /* Dona de Edad Inicio */
+          /* General bar Inicio */
       var generalLoaded = false;
             $(document).on('scroll', function(){      
                 var scrollTop = $(window).scrollTop();
-                if(scrollTop > 580 && !generalLoaded){
+                if(scrollTop > 250 && !generalLoaded){
                     var ctxgral = document.getElementById("infogral");
 
                     var dataGeneral = {
@@ -835,13 +784,13 @@
                             pointHighlightStroke: "rgba(220,220,220,1)",
                             data: [5837, 4060, 6632, 4513, 2914, 5964, 6803],
                             backgroundColor: [
-                                    '#5589ec',
-                                    '#5589ec',
-                                    '#5589ec',
-                                    '#5589ec',
-                                    '#5589ec',
-                                    '#5589ec',
-                                    '#5589ec'
+                                    '#0c2756',
+                                    '#0c2756',
+                                    '#0c2756',
+                                    '#0c2756',
+                                    '#0c2756',
+                                    '#0c2756',
+                                    '#0c2756'
                                 ],
                         },
                         
@@ -864,7 +813,143 @@
                     return;
                     }
                  });
+        /* General Bar Fin */
+
+        /* Dona de Genero Inicio */
+      var generoLoaded = false;
+            $(document).on('scroll', function(){      
+                var scrollTop = $(window).scrollTop();
+                if(scrollTop > 580 && !generoLoaded){
+                    var ctxgenero = document.getElementById("genero");
+
+                    var dataGenero = {
+                            labels: ["Masculino", "Femenino"],
+                            datasets: [{
+                                label: 'Genero',
+                                data: [20, 10],
+                                backgroundColor: [
+                                    '#0074A7',
+                                    '#FFACA3',
+                                ],
+                                borderColor: [
+                                    'rgba(200,200,200,1)',
+                                    'rgba(200,200,200,1)',
+                                    'rgba(200,200,200,1)',
+                                    'rgba(200,200,200,1)',
+                                ],
+                                borderWidth: 1
+                            },
+                            ]
+                        };
+
+                    var optionsGenero = {
+                            responsive: true,
+                        };
+
+                    var genero = new Chart(ctxgenero, {
+                        type: 'doughnut',
+                        data: dataGenero,
+                        options: optionsGenero
+                    });  
+
+                     generoLoaded = true;
+                    }
+                    else{
+                    return;
+                    }
+                 });
+        /* Dona de Genero Fin */
+
+         /* Dona de Edad Inicio */
+      var edadLoaded = false;
+            $(document).on('scroll', function(){      
+                var scrollTop = $(window).scrollTop();
+                if(scrollTop > 580 && !edadLoaded){
+                    var ctxedad = document.getElementById("edad");
+
+                    var dataEdad = {
+                            labels: ["25 años", "18 años", "31 años", "14 años"],
+                            datasets: [{
+                                label: 'Edad',
+                                data: [12, 22, 11, 22],
+                                backgroundColor: [
+                                    '#5589ec',
+                                    '#FF6384',
+                                    '#94C11F',
+                                    '#0c2756',
+                                ],
+                                borderColor: [
+                                    'rgba(200,200,200,1)',
+                                    'rgba(200,200,200,1)',
+                                    'rgba(200,200,200,1)',
+                                    'rgba(200,200,200,1)',
+                                ],
+                                borderWidth: 1
+                            },
+                            ]
+                        };
+
+                    var optionsEdad = {
+                            responsive: true,
+                        };
+
+                    var edad = new Chart(ctxedad, {
+                        type: 'pie',
+                        data: dataEdad,
+                        options: optionsEdad
+                    });  
+
+                     edadLoaded = true;
+                    }
+                    else{
+                    return;
+                    }
+                 });
         /* Dona de Edad Fin */
+
+       /* Dona de Pie3 Inicio */
+      var pieLoaded = false;
+            $(document).on('scroll', function(){      
+                var scrollTop = $(window).scrollTop();
+                if(scrollTop > 580 && !pieLoaded){
+                    var ctxpie = document.getElementById("Pie3");
+
+                    var dataPie = {
+                            labels: ["25 años", "18 años"],
+                            datasets: [{
+                                label: 'Edad',
+                                data: [12, 22],
+                                backgroundColor: [
+                                    '#5589ec',
+                                    '#FF6384',
+                                ],
+                                borderColor: [
+                                    'rgba(200,200,200,1)',
+                                    'rgba(200,200,200,1)',
+                                ],
+                                borderWidth: 1
+                            },
+                            ]
+                        };
+
+                    var optionsPie = {
+                            responsive: true,
+                        };
+
+                    var edad = new Chart(ctxpie, {
+                        type: 'pie',
+                        data: dataPie,
+                        options: optionsPie
+                    });  
+
+                     pieLoaded = true;
+                    }
+                    else{
+                    return;
+                    }
+                 });
+        /* Dona de Edad Fin */
+       
 </script>
 <!-- end scripts -->
 </body>
