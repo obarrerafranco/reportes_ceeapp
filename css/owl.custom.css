@@ -117,7 +117,7 @@ padding: 8px 12px;
 /* Demo Slides */
 
 #owl-example .item{
-	padding: 10px 0px;
+	padding: 5px 0px;
 	margin: 10px;
 	color: #FFF;
 	-webkit-border-radius: 3px;
@@ -131,7 +131,7 @@ padding: 8px 12px;
 	display: block;
 }
 #owl-example .item h3{
-	font-size: 28px;
+	font-size: 20px;
 	font-weight: 300 !important;
 	margin: 15px 0 0;
 	text-transform: none;
@@ -149,7 +149,7 @@ padding: 8px 12px;
 
 .owl-item a:hover {text-decoration: none;}
 .owl-item h1 {color: #fff;}
-.owl-item h2 {font-size: 55px; color: rgba(0, 0, 0, 0.4);}
+.owl-item h2 {font-size: 40px; color: rgba(0, 0, 0, 0.4);}
 
 
 
