@@ -109,7 +109,7 @@
     <header style="background-image: url(../../img/headers/imagen-min.png);">
         <div class="container">
             <div class="intro-text">
-                <div class="shadow intro-lead-in text-right">Reporte scans<br /> semana 04</div>
+                <div class="shadow intro-lead-in text-right">Reporte<br /> semana 04</div>
                 <div class="shadow intro-heading text-right">Pega Stic<br>
                     <span class="ciudad">(Cali)</span> </div>
             </div>
@@ -231,10 +231,10 @@
                 </div>
                  <div class="scans col-md-4">
                     <div class="text-center">
-                        <h4 class="section-heading">Edad</h4>
+                        <h4 class="section-heading">Dispositivo</h4>
                     </div>
                     <div>
-                        <canvas id="Pie3"></canvas>
+                        <canvas id="dispositiv"></canvas>
                     </div>
 
                 </div>
@@ -840,23 +840,23 @@
                  });
         /* Dona de Edad Fin */
 
-       /* Dona de Pie3 Inicio */
-      var pieLoaded = false;
+      /* Dona de dispositiv Inicio */
+      var disposiLoaded = false;
             $(document).on('scroll', function(){      
                 var scrollTop = $(window).scrollTop();
-                if(scrollTop > 580 && !pieLoaded){
-                    var ctxpie = document.getElementById("Pie3");
+                if(scrollTop > 580 && !disposiLoaded){
+                    var ctxdisp = document.getElementById("dispositiv");
 
-                    var dataPie = {
-                            labels: ["12 años", "22 años", "35 años", "60 años"],
+                    var dataDispo = {
+                            labels: ["Android", "IOS", "Windows", "Otro"],
                             datasets: [{
                                 label: 'Edad',
                                 data: [12, 22, 35, 60],
                                 backgroundColor: [
-                                   '#ff6b61',
-                                    '#fad441',
-                                    '#b5d36f',
-                                    '#143b80',
+                                   '#8dbe00',
+                                    '#909090',
+                                    '#0191f2',
+                                    '#f8c341',
                                 ],
                                 borderColor: [
                                     'rgba(200,200,200,1)',
@@ -869,23 +869,23 @@
                             ]
                         };
 
-                    var optionsPie = {
+                    var optionsDispo= {
                             responsive: true,
                         };
 
-                    var edad = new Chart(ctxpie, {
+                    var disposi = new Chart(ctxdisp, {
                         type: 'pie',
-                        data: dataPie,
-                        options: optionsPie
+                        data: dataDispo,
+                        options: optionsDispo
                     });  
 
-                     pieLoaded = true;
+                     disposiLoaded = true;
                     }
                     else{
                     return;
                     }
                  });
-        /* Dona de Edad Fin */
+        /* Dona de dispositiv Fin */
        
 </script>
 <!-- end scripts -->

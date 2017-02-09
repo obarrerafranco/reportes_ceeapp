@@ -208,7 +208,7 @@ fieldset[disabled] .btn-xl.active {
     color: #ffffff;
 }
 
-.navbar-default .navbar-brand .monitor {display: none !important;}
+.navbar-default .navbar-brand .monitor {height: 70%;margin: 10px auto;}
 .navbar-default .navbar-brand .logo-txt {margin-left: 15px; margin-top: 2px;}
 
 .navbar-default .navbar-brand:hover,
@@ -847,7 +847,7 @@ section#contact .text-danger {
 footer {
     padding: 5px 0;
     text-align: center;
-    background-color: #f7f7f7;
+    background-color: #dcdcdc;
     color:#333;
     font-weight: 500px;
     font-family: 'Oswald', sans-serif !important;
@@ -1034,5 +1034,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 .page-scroll2 .nav>li>a {
     padding: 10px 10px;
+}
+.navbar {
+    margin-bottom: 0px !important;
 }
 /* Fin Nuevos estilos*/
