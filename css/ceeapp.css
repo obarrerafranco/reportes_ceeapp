@@ -30,6 +30,9 @@ p.large {
 
 .ciudad{font-size: 0.6em;}
 
+#barra {
+   border-right: 3px solid #dcdcdc;
+}
 
 a,
 a:hover,
