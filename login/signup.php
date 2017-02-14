@@ -12,18 +12,22 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Signup</title>
+    <title>Registro de Usuario | CeeAPP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="../css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="../css/main.css" rel="stylesheet" media="screen">
+    <link rel="shortcut icon" href="../img/plataforma/favicon.jpeg">
   </head>
 
   <body>
     <div class="container">
 
       <form class="form-signup" id="usersignup" name="usersignup" method="post" action="createuser.php">
-        <h2 class="form-signup-heading">Registro</h2>
+        <div class="form-group text-center">
+          <img src="../img/plataforma/logo.png" alt="Cee APP">
+          <h2 class="form-signup-heading">Registro de Usuarios</h2>
+        </div>
         <div class="form-group text-center">
           <input name="newuser" id="newuser" type="text" class="form-control" placeholder="Usuario" autofocus>
         </div>

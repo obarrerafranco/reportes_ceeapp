@@ -13,6 +13,7 @@ if (isset($_SESSION['username'])) {
     <!-- Bootstrap -->
     <link href="../css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="../css/main.css" rel="stylesheet" media="screen">
+    <link rel="shortcut icon" href="../img/plataforma/favicon.jpeg">
   </head>
 
   <body>
