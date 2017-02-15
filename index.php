@@ -164,7 +164,7 @@
     </nav>
 
     <!-- Header -->
-    <header style="background-image: url(img/headers/imagen-min.png);">
+    <header style="background-image: url(img/headers/header_mopi.jpg);">
         <div class="container">
             <div class="intro-text">
                 <div class="shadow intro-lead-in text-right">Bienvenidos a<br /> Los reportes<br />Semanales</div>
@@ -182,320 +182,399 @@
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/acueducto.png"></a>
+                <h3 class="text-center"><a href="#">Acueducto</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/adidas.png"></a>
+                <h3 class="text-center"><a href="#">Adidas</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/alkosto.png"></a>
+                <h3 class="text-center"><a href="#">Alkost</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/artefacto.png"></a>
+                <h3 class="text-center"><a href="#">Artefacto</a></h3>
+              </div>
+            </div>
+          </div>
+             <hr class="gruesa"/>
+          <div class="row">
+            <div class="col-6 col-sm-3">
+              <div class="text-center">
+                <a href="#"><img src="img/logos/avianca.png"></a>
+                <h3 class="text-center"><a href="#">Avianca</a></h3>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3">
+             <div class="text-center">
+                <a href="#"><img src="img/logos/aguila_light.png"></a>
+                <h3 class="text-center"><a href="#">Aguila Light</a></h3>
+              </div>
+            </div>
+             <div class="col-6 col-sm-3">
+              <div class="text-center">
+
+              </div>
+              </div>
+               <div class="col-6 col-sm-3">
+                <div class="text-center">
+
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
-   <section id="b">      
+   <section id="b" class="bg-light-gray">      
        <div class="container">
           <div><h2 class="section-heading">B</h2></div><br /> 
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/banco_alimentos.png"></a>
+                <h3 class="text-center"><a href="#">Banco alimentos</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/bancolombia.png"></a>
+                <h3 class="text-center"><a href="#">Bancolombia</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/birdfair.png"></a>
+                <h3 class="text-center"><a href="#">Birdfair</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/bodytech.png"></a>
+                <h3 class="text-center"><a href="#">Bodytech</a></h3>
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
    <section id="c">      
        <div class="container">
           <div><h2 class="section-heading">C</h2></div><br /> 
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/Caracol_television.png"></a>
+                <h3 class="text-center"><a href="#">Caracol Televisión</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/casa_grajales.png"></a>
+                <h3 class="text-center"><a href="#">Casa Grajales</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/chivas.png"></a>
+                <h3 class="text-center"><a href="#">Chivas</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/cine_colombia.png"></a>
+                <h3 class="text-center"><a href="#">Cine Colombia</a></h3>
+              </div>
+            </div>
+          </div>
+             <hr />
+          <div class="row">
+            <div class="col-6 col-sm-3">
+              <div class="text-center">
+                <a href="#"><img src="img/logos/citi.png"></a>
+                <h3 class="text-center"><a href="#">Citi</a></h3>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3">
+             <div class="text-center">
+                <a href="#"><img src="img/logos/claro.png"></a>
+                <h3 class="text-center"><a href="#">Claro</a></h3>
+              </div>
+            </div>
+             <div class="col-6 col-sm-3">
+              <div class="text-center">
+                <a href="#"><img src="img/logos/Club_Colombia.png"></a>
+                <h3 class="text-center"><a href="#">Club Colombia</a></h3>
+              </div>
+              </div>
+               <div class="col-6 col-sm-3">
+                <div class="text-center">
+                <a href="#"><img src="img/logos/coca_cola.png"></a>
+                <h3 class="text-center"><a href="#">Coca Cola</a></h3>
+              </div>
+            </div>
+          </div>
+             <hr />
+          <div class="row">
+            <div class="col-6 col-sm-3">
+              <div class="text-center">
+                <a href="#"><img src="img/logos/colcafe.png"></a>
+                <h3 class="text-center"><a href="#">Colcafe</a></h3>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3">
+             <div class="text-center">
+                <a href="#"><img src="img/logos/colsubsidio.png"></a>
+                <h3 class="text-center"><a href="#">Colsubsidio</a></h3>
+              </div>
+            </div>
+             <div class="col-6 col-sm-3">
+              <div class="text-center">
+                <a href="#"><img src="img/logos/convergys.png"></a>
+                <h3 class="text-center"><a href="#">Convergys</a></h3>
+              </div>
+              </div>
+               <div class="col-6 col-sm-3">
+                <div class="text-center">
+                <a href="#"><img src="img/logos/coca_cola.png"></a>
+                <h3 class="text-center"><a href="#">Coca Cola</a></h3>
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
-   <section id="d">      
+   <section id="d" class="bg-light-gray">      
        <div class="container">
           <div><h2 class="section-heading">D</h2></div><br /> 
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/discovery.png"></a>
+                <h3 class="text-center"><a href="#">discovery</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
    <section id="e">      
        <div class="container">
           <div><h2 class="section-heading">E</h2></div><br /> 
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/ebba.png"></a>
+                <h3 class="text-center"><a href="#">Ebba</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/el_pais.png"></a>
+                <h3 class="text-center"><a href="#">El Pais</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/ela.png"></a>
+                <h3 class="text-center"><a href="#">Ela</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/ENSALSATE.png"></a>
+                <h3 class="text-center"><a href="#">ENSALSATE</a></h3>
+              </div>
+            </div>
+          </div>
+             <hr />
+          <div class="row">
+            <div class="col-6 col-sm-3">
+              <div class="text-center">
+                <a href="#"><img src="img/logos/etb.png"></a>
+                <h3 class="text-center"><a href="#">etb</a></h3>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3">
+             <div class="text-center">
+                <a href="#"><img src="img/logos/Exito.png"></a>
+                <h3 class="text-center"><a href="#">Exito</a></h3>
+              </div>
+            </div>
+             <div class="col-6 col-sm-3">
+              <div class="text-center">
+
+              </div>
+              </div>
+               <div class="col-6 col-sm-3">
+                <div class="text-center">
+
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
-   <section id="f">      
+   <section id="f" class="bg-light-gray">      
        <div class="container">
           <div><h2 class="section-heading">F</h2></div><br /> 
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/falabella.png"></a>
+                <h3 class="text-center"><a href="#">Falabella</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/fontur.png"></a>
+                <h3 class="text-center"><a href="#">Fontur</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
    <section id="g">      
        <div class="container">
           <div><h2 class="section-heading">G</h2></div><br /> 
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
-   <section id="h">      
+   <section id="h" class="bg-light-gray">      
        <div class="container">
           <div><h2 class="section-heading">H</h2></div><br /> 
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/havaianas.png"></a>
+                <h3 class="text-center"><a href="#">Havaianas</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/Huawei.png"></a>
+                <h3 class="text-center"><a href="#">Huawei</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
    <section id="i">      
        <div class="container">
           <div><h2 class="section-heading">I</h2></div><br /> 
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
-   <section id="j">      
+   <section id="j" class="bg-light-gray">      
        <div class="container">
           <div><h2 class="section-heading">J</h2></div><br /> 
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="reportes/jcdecaux/"><img src="img/logos/jcdecaux.jpg"></a>
-                <h2 class="text-center"><a href="reportes/jcdecaux/">JcDecaux</a></h2>
+                <a href="#"><img src="img/logos/JAC.png"></a>
+                <h3 class="text-center"><a href="#">JAC</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/jaramillo_mora.png"></a>
+                <h3 class="text-center"><a href="#">Jaramillo Mora</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="reportes/jcdecaux/"><img src="img/logos/jcdecaux.jpg"></a>
+                <h3 class="text-center"><a href="reportes/jcdecaux/">Jcdecaux</a></h3>
             </div>
             </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/Jeep.png"></a>
+                <h3 class="text-center"><a href="#">Jeep</a></h3>
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
    <section id="k">      
        <div class="container">
           <div><h2 class="section-heading">K</h2></div><br /> 
@@ -503,63 +582,61 @@
             <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
             </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
-   <section id="l">      
+   <section id="l" class="bg-light-gray">      
        <div class="container">
           <div><h2 class="section-heading">L</h2></div><br /> 
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/Lacoste.png"></a>
+                <h3 class="text-center"><a href="#">Lacoste</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/Le_coq.png"></a>
+                <h3 class="text-center"><a href="#">Le coq sportif </a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/lili_pink.png"></a>
+                <h3 class="text-center"><a href="#">Lili Pink</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/locatel.png"></a>
+                <h3 class="text-center"><a href="#">Locatel</a></h3>
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
    <section id="m">      
        <div class="container">
           <div><h2 class="section-heading">M</h2></div><br /> 
@@ -567,63 +644,61 @@
             <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
-   <section id="n">      
+   <section id="n" class="bg-light-gray">      
        <div class="container">
           <div><h2 class="section-heading">N</h2></div><br /> 
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
             </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
    <section id="o">      
        <div class="container">
           <div><h2 class="section-heading">O</h2></div><br /> 
@@ -631,63 +706,61 @@
             <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
-   <section id="p">      
+   <section id="p" class="bg-light-gray">      
        <div class="container">
           <div><h2 class="section-heading">P</h2></div><br /> 
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="reportes/pegastic/"><img src="img/logos/pegastic.jpg"></a>
-                <h2 class="text-center"><a href="reportes/pegastic/">Pega Stic</a></h2>
+                <h3 class="text-center"><a href="reportes/pegastic/">Pega Stic</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
    <section id="q">      
        <div class="container">
           <div><h2 class="section-heading">Q</h2></div><br /> 
@@ -695,63 +768,61 @@
             <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
               </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
-   <section id="r">      
+   <section id="r" class="bg-light-gray">      
        <div class="container">
           <div><h2 class="section-heading">R</h2></div><br /> 
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
    <section id="s">      
        <div class="container">
           <div><h2 class="section-heading">S</h2></div><br /> 
@@ -759,127 +830,123 @@
             <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
-   <section id="t">      
+   <section id="t" class="bg-light-gray">      
        <div class="container">
           <div><h2 class="section-heading">T</h2></div><br /> 
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
               </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
    <section id="u">      
        <div class="container">
           <div><h2 class="section-heading">U</h2></div><br /> 
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <a href="#"><img src="img/logos/Unicentro.png"></a>
+                <h3 class="text-center"><a href="#">Unicentro</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
-   <section id="v">      
+   <section id="v" class="bg-light-gray">      
        <div class="container">
           <div><h2 class="section-heading">V</h2></div><br /> 
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
    <section id="w">      
        <div class="container">
           <div><h2 class="section-heading">W</h2></div><br /> 
@@ -887,63 +954,61 @@
             <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
-   <section id="x">      
+   <section id="x" class="bg-light-gray">      
        <div class="container">
           <div><h2 class="section-heading">X</h2></div><br /> 
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
    <section id="y">      
        <div class="container">
           <div><h2 class="section-heading">Y</h2></div><br /> 
@@ -951,57 +1016,56 @@
             <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
               </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
           </div>
       </div>
    </section>
-   <hr />
-   <section id="z">      
+   <section id="z" class="bg-light-gray">      
        <div class="container">
           <div><h2 class="section-heading">Z</h2></div><br /> 
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
                 <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h2 class="text-center"><a href="#">OLX</a></h2>
+                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
           </div>
