@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="../../img/plataforma/favicon.jpeg">
     <meta name="robots" content="noindex">
 
-    <title>Pega Stic (Cali) / Reporte Semana 04</title>
+    <title>Pega Stic (Bogotá) / Reporte Semana 04</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -115,7 +115,7 @@
             <div class="intro-text">
                 <div class="shadow intro-lead-in text-right">Reporte<br /> semana 04</div>
                 <div class="shadow intro-heading text-right">Pega Stic<br>
-                    <span class="ciudad">(Cali)</span> </div>
+                    <span class="ciudad">(Bogotá)</span> </div>
             </div>
         </div>
         <div class="opacity"></div>
@@ -131,7 +131,7 @@
           <!-- small box -->
           <div class="small-box bg-scans">
             <div class="inner caja">
-              <h1 class="text-center">151</h1>
+              <h1 class="text-center">418</h1>
 
               <p class="text-center">Número de Scans</p>
             </div>
@@ -142,7 +142,7 @@
           <!-- small box -->
           <div class="small-box bg-views">
             <div class="inner caja">
-              <h1 class="text-center">64</h1>
+              <h1 class="text-center">175</h1>
 
               <p class="text-center">Número de Views</p>
             </div>
@@ -153,7 +153,7 @@
           <!-- small box -->
           <div class="small-box bg-hora">
             <div class="inner caja">
-             <h4 class="text-center">1 PM: 56 SCANS<br /><p>&nbsp;</p></h4>
+             <h4 class="text-center">2 PM: 202 SCANS<br /><p>&nbsp;</p></h4>
 
               <p class="text-center">Mejor Hora</p>
             </div>
@@ -164,7 +164,7 @@
           <!-- small box -->
           <div class="small-box bg-scan-total">
             <div class="inner caja">
-              <h1 class="text-center">7.191</h1>
+              <h1 class="text-center">16.403</h1>
 
               <p class="text-center"><a href="#" data-toggle="tooltip" title="*2.55% del total">Scans Total</a></p>
             </div>
@@ -191,7 +191,7 @@
                <div class="scans col-md-6 col-lg-6">
          
                                          <div class="text-center">
-                        <h4 class="section-heading">SEMANA 04 <span class="ciudad">(Cali)</span></h4>
+                        <h4 class="section-heading">SEMANA 04 <span class="ciudad">(Bogotá)</span></h4>
                         <h5 class="section-subheading text-muted">Estos son los datos recogidos de scans realizados en la semana 04, que abarca del 18 de Enero al 24 de Enero:</h5>
                     </div>
                     <div>
@@ -201,7 +201,7 @@
                 </div>
                 <div class="views col-md-6 col-lg-6">
                     <div class="text-center">
-                        <h4 class="section-heading">INFORMACIÓN GENERAL <span class="ciudad">(Cali)</span></h4>
+                        <h4 class="section-heading">INFORMACIÓN GENERAL <span class="ciudad">(Bogotá)</span></h4>
                         <h5 class="section-subheading text-muted">En la gráfica se muestran todos los scans realizados en la última semana:</h5>
                     </div>
                     <div>
@@ -246,43 +246,42 @@
         </div>
     </section>
 
+
 <!-- SECCION HISTORICO -->
     <section id="historial" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">HISTÓRICO <span class="ciudad">(Cali)</span></h2>
+                    <h2 class="section-heading">HISTÓRICO <span class="ciudad">(Bogotá)</span></h2>
                     <h3 class="section-subheading text-muted">El histórico incluye los datos registrados en semanas anteriores para esta campaña:</h3>
                 </div>
             </div>
             <div class="row text-center">
                 <div id="owl-example" class="owl-carousel">
 
-<?php 
-        $sql = 'SELECT historial.id, semanas.semana as lasemana,  semanas.color as color, 
-        id_cliente, id_ciudad, id_semana, 
-        historial.estatus, imagen FROM historial 
-        INNER JOIN semanas 
-        ON historial.id_semana= semanas.id
-        WHERE historial.estatus = 1 and id_ciudad = 3 and id_cliente = 1 ORDER BY historial.id DESC';
+                <?php 
+                $sql = 'SELECT historial.id, semanas.semana as lasemana,  semanas.color as color, 
+                id_cliente, id_ciudad, id_semana, 
+                historial.estatus, imagen FROM historial 
+                INNER JOIN semanas 
+                ON historial.id_semana= semanas.id
+                WHERE historial.estatus = 1 and id_ciudad = 2 and id_cliente = 1 ORDER BY historial.id DESC';
 
-        foreach ($PDO->query($sql) as $row1) {
+                foreach ($PDO->query($sql) as $row1) {
 
-                        echo '<a href="#sem'.$row1['lasemana'].'" class="portfolio-link" data-toggle="modal"> '; 
-                         echo  '<div class="item '.$row1['color'].' transition"> ';  ?>
-                                <h3>SEMANA</h3>
-                                <h2><?php echo $row1['lasemana']; ?></h2>
-                            </div>
-                        </a>
-<?php
-        }
-?>
-              
+                                echo '<a href="#sem'.$row1['lasemana'].'" class="portfolio-link" data-toggle="modal"> '; 
+                                 echo  '<div class="item '.$row1['color'].' transition"> ';  ?>
+                                        <h3>SEMANA</h3>
+                                        <h2><?php echo $row1['lasemana']; ?></h2>
+                                    </div>
+                                </a>
+                <?php
+                        }
+                ?>
               </div>
             </div>
         </div>
     </section>
-<!-- FIN SECCION HISTORICO -->
 
  <!-- FOOTER INICIAL -->
     <footer class="footter">
@@ -296,38 +295,39 @@
         </div>
     </footer>
     <!-- FIN IMG FINAL -->
-<!-- INICIO MODAL HISTORICO -->
-<?php 
 
-foreach ($PDO->query($sql)as $row2) {
+    <!-- INICIO MODAL HISTORICO -->
+    <?php 
+
+    foreach ($PDO->query($sql)as $row2) {
 
 
-    echo '<div class="portfolio-modal modal fade" id="sem'.$row2['lasemana'].'" tabindex="-1" role="dialog" aria-hidden="true">'; ?>
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+        echo '<div class="portfolio-modal modal fade" id="sem'.$row2['lasemana'].'" tabindex="-1" role="dialog" aria-hidden="true">'; ?>
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <?php echo '<img class="img-responsive" src="../../img/historico/'.$row2['imagen'].'">';?>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <?php echo '<img class="img-responsive" src="../../img/historico/'.$row2['imagen'].'">';?>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
- <?php 
-   }
-?>
-    
-<!-- FIN MODAL HISTORICO -->
+     <?php 
+       }
+    ?>
+        
+    <!-- FIN MODAL HISTORICO -->
     
 
     <!-- jQuery Version 1.11.0 -->
@@ -617,6 +617,7 @@ foreach ($PDO->query($sql)as $row2) {
                                    '#8dbe00',
                                     '#909090',
                                     '#0191f2',
+                                    '#f8c341',
                                 ],
                                 borderColor: [
                                     'rgba(200,200,200,1)',

@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="../../img/plataforma/favicon.jpeg">
     <meta name="robots" content="noindex">
 
-    <title>Pega Stic (Cali) / Reporte Semana 04</title>
+    <title>JC Decaux Cali / Reporte Semana 04</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -87,19 +87,22 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#resumen">Resumen</a>
+                        <a class="page-scroll" href="#resumen_views">Resumen</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#resumen_descargas">Descargas</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#reportes1">Reportes</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">News</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="#historial">Historico</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="../../reportes/pegastic/index.php">Nacional</a>
+                        <a class="page-scroll" href="#mapa_ciudad">Mapa</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../../reportes/jcdecaux/index.php">Nacional</a>
                     </li>
                     
                 </ul>
@@ -114,59 +117,129 @@
         <div class="container">
             <div class="intro-text">
                 <div class="shadow intro-lead-in text-right">Reporte<br /> semana 04</div>
-                <div class="shadow intro-heading text-right">Pega Stic<br>
-                    <span class="ciudad">(Cali)</span> </div>
+                <div class="shadow intro-heading text-right">JC Decaux  <br>
+                    <span class="ciudad">(Cali)</span></div>
             </div>
         </div>
         <div class="opacity"></div>
     </header>
-
-    <!-- SECCION RESUMEN-->
-
-   <section id="resumen">
+ <!-- SECCION RESUMEN VIEWS-->
+   <section id="resumen_views">
        
        <div class="container">
-       <div><h2 class="section-heading">Resumen</h2></div><br />
-        <div class="col-sm-2 col-sm-offset-1">
-          <!-- small box -->
-          <div class="small-box bg-scans">
-            <div class="inner caja">
-              <h1 class="text-center">151</h1>
+        <div class="row">
+          <div class="col-md-6" id="barra">
+          <div><h2 class="section-heading">Resumen Scans</h2></div><br />
+              <div class="col-sm-4">
+                <!-- small box -->
+                <div class="small-box bg-scans">
+                  <div class="inner caja">
+                    <h1 class="text-center">7.191</h1>
 
-              <p class="text-center">Número de Scans</p>
+                    <p class="text-center">Total Semana</p>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col -->
+              <div class="col-sm-4">
+                <!-- small box -->
+                <div class="small-box bg-views">
+                  <div class="inner caja">
+                    <h1 class="text-center">1.027</h1>
+
+                    <p class="text-center">Promedio Diario</p>
+                  </div>
+                </div>
+              </div>
+               <!-- ./col -->
+              <div class="col-sm-4">
+                <!-- small box -->
+                <div class="small-box bg-descargas">
+                  <div class="inner caja">
+                    <h1 class="text-center">26.502</h1>
+
+                    <p class="text-center">Total 2017</p>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col -->  
+          </div>
+          <div class="col-md-6">
+            <div><h2 class="section-heading">Resumen Views</h2></div><br />
+            <div class="col-sm-4">
+              <!-- small box -->
+              <div class="small-box bg-scans">
+                <div class="inner caja">
+                  <h1 class="text-center">7.191</h1>
+
+                  <p class="text-center">Total Semana</p>
+                </div>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-sm-4">
+              <!-- small box -->
+              <div class="small-box bg-views">
+                <div class="inner caja">
+                  <h1 class="text-center">1.027</h1>
+
+                  <p class="text-center">Promedio Diario</p>
+                </div>
+              </div>
+            </div>
+             <!-- ./col -->
+            <div class="col-sm-4">
+              <!-- small box -->
+              <div class="small-box bg-descargas">
+                <div class="inner caja">
+                  <h1 class="text-center">26.502</h1>
+
+                  <p class="text-center">Total 2017</p>
+                </div>
+              </div>
+            </div>
+            <!-- ./col -->
+          </div>
+        </div>
+      </div>
+   </section>
+   <!-- FIN RESUMEN VIEWS -->
+
+    <!-- SECCION DESCARGAS-->
+
+   <section id="resumen_descargas" >
+       
+       <div class="container">
+       <div><h2 class="section-heading">DESCARGAS DE LA APLICACIÓN EN COLOMBIA</h2></div><br />
+        <div class="col-sm-2 col-sm-offset-2">
+          <!-- small box -->
+          <div class="small-box bg-android">
+            <div class="inner caja">
+              <h1 class="text-center">43.810</h1>
+
+              <p class="text-center">Android</p>
             </div>
           </div>
         </div>
         <!-- ./col -->
         <div class="col-sm-2">
           <!-- small box -->
-          <div class="small-box bg-views">
+          <div class="small-box bg-ios">
             <div class="inner caja">
-              <h1 class="text-center">64</h1>
+              <h1 class="text-center">41.553</h1>
 
-              <p class="text-center">Número de Views</p>
+              <p class="text-center">IOS</p>
             </div>
           </div>
         </div>
-        <!-- ./col -->
+
         <div class="col-sm-2">
           <!-- small box -->
-          <div class="small-box bg-hora">
+          <div class="small-box bg-windows">
             <div class="inner caja">
-             <h4 class="text-center">1 PM: 56 SCANS<br /><p>&nbsp;</p></h4>
+              <h1 class="text-center">2.533</h1>
 
-              <p class="text-center">Mejor Hora</p>
-            </div>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-sm-2">
-          <!-- small box -->
-          <div class="small-box bg-scan-total">
-            <div class="inner caja">
-              <h1 class="text-center">7.191</h1>
-
-              <p class="text-center"><a href="#" data-toggle="tooltip" title="*2.55% del total">Scans Total</a></p>
+              <p class="text-center">Windows</p>
             </div>
           </div>
         </div>
@@ -177,13 +250,15 @@
             <div class="inner caja">
               <h1 class="text-center">87.896</h1>
 
-              <p class="text-center">Descargas Totales</p>
+              <p class="text-center">Total</p>
             </div>
           </div>
         </div>
         <!-- ./col -->
       </div>
    </section>
+   <!-- FIN DESCARGAS -->
+
    <!-- SECCION REPORTES 1-->
     <section id="reportes1" class="bg-light-gray">
         <div class="container">
@@ -191,8 +266,7 @@
                <div class="scans col-md-6 col-lg-6">
          
                                          <div class="text-center">
-                        <h4 class="section-heading">SEMANA 04 <span class="ciudad">(Cali)</span></h4>
-                        <h5 class="section-subheading text-muted">Estos son los datos recogidos de scans realizados en la semana 04, que abarca del 18 de Enero al 24 de Enero:</h5>
+                        <h4 class="section-heading">EVOLUCIÓN SEMANAL DE SCANS Y VIEWS <span class="ciudad">(Cali)</span></h4>
                     </div>
                     <div>
                         <canvas id="semana"></canvas>
@@ -257,34 +331,45 @@
             </div>
             <div class="row text-center">
                 <div id="owl-example" class="owl-carousel">
+                <?php 
+                $sql = 'SELECT historial.id, semanas.semana as lasemana,  semanas.color as color, 
+                id_cliente, id_ciudad, id_semana, 
+                historial.estatus, imagen FROM historial 
+                INNER JOIN semanas 
+                ON historial.id_semana= semanas.id
+                WHERE historial.estatus = 1 and id_ciudad = 3 and id_cliente = 2 ORDER BY historial.id DESC';
 
-<?php 
-        $sql = 'SELECT historial.id, semanas.semana as lasemana,  semanas.color as color, 
-        id_cliente, id_ciudad, id_semana, 
-        historial.estatus, imagen FROM historial 
-        INNER JOIN semanas 
-        ON historial.id_semana= semanas.id
-        WHERE historial.estatus = 1 and id_ciudad = 3 and id_cliente = 1 ORDER BY historial.id DESC';
+                foreach ($PDO->query($sql) as $row1) {
 
-        foreach ($PDO->query($sql) as $row1) {
-
-                        echo '<a href="#sem'.$row1['lasemana'].'" class="portfolio-link" data-toggle="modal"> '; 
-                         echo  '<div class="item '.$row1['color'].' transition"> ';  ?>
-                                <h3>SEMANA</h3>
-                                <h2><?php echo $row1['lasemana']; ?></h2>
-                            </div>
-                        </a>
-<?php
-        }
-?>
+                                echo '<a href="#sem'.$row1['lasemana'].'" class="portfolio-link" data-toggle="modal"> '; 
+                                 echo  '<div class="item '.$row1['color'].' transition"> ';  ?>
+                                        <h3>SEMANA</h3>
+                                        <h2><?php echo $row1['lasemana']; ?></h2>
+                                    </div>
+                                </a>
+                <?php
+                        }
+                ?>
               
               </div>
             </div>
         </div>
     </section>
-<!-- FIN SECCION HISTORICO -->
 
- <!-- FOOTER INICIAL -->
+     <!--  MAPA CIUDAD -->
+    <section id="mapa_ciudad">
+      <div class="row">
+        <div class="map-img row">
+          <h2 class="section-heading">MAPA CALI</h2>
+          <img style="margin:0 auto" class="img-responsive" src="../../img/mapas/map-cali-sem04.jpg">
+        </div>
+      </div>
+    </section>
+    <!-- FIN MAPA CIUDAD -->
+
+  </div>
+  </div>
+     <!-- FOOTER INICIAL -->
     <footer class="footter">
         <div class="row">
             <div class="col-sm-3"></div>
@@ -296,39 +381,41 @@
         </div>
     </footer>
     <!-- FIN IMG FINAL -->
+
 <!-- INICIO MODAL HISTORICO -->
-<?php 
+    <?php 
 
-foreach ($PDO->query($sql)as $row2) {
+    foreach ($PDO->query($sql)as $row2) {
 
 
-    echo '<div class="portfolio-modal modal fade" id="sem'.$row2['lasemana'].'" tabindex="-1" role="dialog" aria-hidden="true">'; ?>
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+        echo '<div class="portfolio-modal modal fade" id="sem'.$row2['lasemana'].'" tabindex="-1" role="dialog" aria-hidden="true">'; ?>
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <?php echo '<img class="img-responsive" src="../../img/historico/'.$row2['imagen'].'">';?>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <?php echo '<img class="img-responsive" src="../../img/historico/'.$row2['imagen'].'">';?>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
- <?php 
-   }
-?>
-    
-<!-- FIN MODAL HISTORICO -->
-    
+     <?php 
+       }
+    ?>
+        
+    <!-- FIN MODAL HISTORICO -->
+
+<!-- MODAL HISTORIAL FIN -->
 
     <!-- jQuery Version 1.11.0 -->
     <script src="../../js/jquery-1.11.0.js"></script>
@@ -389,7 +476,7 @@ foreach ($PDO->query($sql)as $row2) {
 
 
                     var dataSemana = {
-                                labels: ["18 Enero", "19 Enero", "20 Enero", "21 Enero", "22 Enero", "23 Enero", "24 Enero"],
+                                labels: ["Semana 1", "Semana 2", "Semana 3", "Semana 4"],
                                 datasets: [
                                      {
                                         label: "Numero de views",
@@ -411,7 +498,7 @@ foreach ($PDO->query($sql)as $row2) {
                                         pointRadius: 3,
                                         pointColor: "rgba(148, 193, 31,1)",
                                         pointHitRadius: 10,
-                                        data:[37, 36, 29, 16, 9, 28, 20],
+                                        data: [2340, 2147, 2824, 3191],
                                         spanGaps: false,
                                     },
                                       {
@@ -434,7 +521,7 @@ foreach ($PDO->query($sql)as $row2) {
                                         pointRadius: 3,
                                         pointColor: "rgba(148, 193, 31,1)",
                                         pointHitRadius: 10,
-                                        data:[89, 86, 69, 39, 22, 66, 47],
+                                         data: [6340, 6147, 6824, 7191],
                                         spanGaps: false,
                                     }
                                 ]
@@ -476,7 +563,7 @@ foreach ($PDO->query($sql)as $row2) {
                             pointStrokeColor: "#fff",
                             pointHighlightFill: "#fff",
                             pointHighlightStroke: "rgba(220,220,220,1)",
-                             data: [5352, 4223, 4166, 2365, 1303, 3097, 3088],
+                             data: [1631, 1287, 1270, 721, 397, 944, 941],
                             backgroundColor: [
                                     '#0c2756',
                                     '#0c2756',
@@ -601,7 +688,7 @@ foreach ($PDO->query($sql)as $row2) {
                  });
         /* Dona de Edad Fin */
 
-      /* Dona de dispositiv Inicio */
+       /* Dona de dispositiv Inicio */
       var disposiLoaded = false;
             $(document).on('scroll', function(){      
                 var scrollTop = $(window).scrollTop();

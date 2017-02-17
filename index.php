@@ -736,8 +736,8 @@
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="reportes/pegastic/"><img src="img/logos/pegastic.jpg"></a>
-                <h3 class="text-center"><a href="reportes/pegastic/">Pega Stic</a></h3>
+                <a href="reportes/pegastic/index.php"><img src="img/logos/pegastic.jpg"></a>
+                <h3 class="text-center"><a href="reportes/pegastic/index.php">Pega Stic</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">

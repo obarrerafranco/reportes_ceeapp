@@ -25,6 +25,8 @@ require 'db.php';
     <meta charset="utf-8">
     <link   href="../css/bootstrap.min.css" rel="stylesheet">
     <script src="../js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="../img/plataforma/favicon.jpeg">
+    <title>Registro de Historiales | JCdecaux</title>
 </head>
  
 <body>
