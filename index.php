@@ -421,7 +421,8 @@
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-
+                <a href="#"><img src="img/logos/efecty.png"></a>
+                <h3 class="text-center"><a href="#">Efecty</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
@@ -562,7 +563,7 @@
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="reportes/jcdecaux/"><img src="img/logos/jcdecaux.jpg"></a>
+                <a href="reportes/jcdecaux/"><img src="img/logos/jcdecaux.png"></a>
                 <h3 class="text-center"><a href="reportes/jcdecaux/">Jcdecaux</a></h3>
             </div>
             </div>
@@ -581,26 +582,22 @@
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
             </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
             </div>
           </div>
@@ -643,26 +640,24 @@
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/Mcdonalds.png"></a>
+                <h3 class="text-center"><a href="#">Mcdonalds</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/Mercedes_Benz.png"></a>
+                <h3 class="text-center"><a href="#">Mercedes Benz</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/motorola.png"></a>
+                <h3 class="text-center"><a href="#">Motorola</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
               </div>
             </div>
           </div>
@@ -674,26 +669,24 @@
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/Nailen.png"></a>
+                <h3 class="text-center"><a href="#">Nailen</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/nike.png"></a>
+                <h3 class="text-center"><a href="#">Nike</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
             </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
             </div>
           </div>
@@ -705,14 +698,14 @@
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/oboticrio.png"></a>
+                <h3 class="text-center"><a href="#">O Boticario</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/oldparr.png"></a>
+                <h3 class="text-center"><a href="#">Old parr</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
@@ -723,8 +716,8 @@
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/oqshoes.png"></a>
+                <h3 class="text-center"><a href="#">OQ shoes</a></h3>
               </div>
             </div>
           </div>
@@ -736,26 +729,50 @@
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="reportes/pegastic/index.php"><img src="img/logos/pegastic.jpg"></a>
-                <h3 class="text-center"><a href="reportes/pegastic/index.php">Pega Stic</a></h3>
+                <a href="reportes/pegastic/index.php"><img src="img/logos/pacifimall.png"></a>
+                <h3 class="text-center"><a href="reportes/pegastic/index.php">Pacific Mall</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/palmetto.png"></a>
+                <h3 class="text-center"><a href="#">Palmetto Plaza</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="reportes/pegastic/index.php"><img src="img/logos/pegastic.jpg"></a>
+                <h3 class="text-center"><a href="reportes/pegastic/index.php">Pega Stic</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/pny_malta.png"></a>
+                <h3 class="text-center"><a href="#">Pony Malta</a></h3>
+              </div>
+            </div>
+          </div>
+          <hr />
+           <div class="row">
+            <div class="col-6 col-sm-3">
+              <div class="text-center">
+                <a href="reportes/pegastic/index.php"><img src="img/logos/politecnico.png"></a>
+                <h3 class="text-center"><a href="reportes/pegastic/index.php">Politécnico Grancolombiano</a></h3>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3">
+             <div class="text-center">
+
+              </div>
+            </div>
+             <div class="col-6 col-sm-3">
+              <div class="text-center">
+
+              </div>
+              </div>
+               <div class="col-6 col-sm-3">
+                <div class="text-center">
+
               </div>
             </div>
           </div>
@@ -767,26 +784,23 @@
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/quest.png"></a>
+                <h3 class="text-center"><a href="#">Quest</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
               </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
             </div>
           </div>
@@ -798,20 +812,20 @@
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/ranchera.png"></a>
+                <h3 class="text-center"><a href="#">Ranchera</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/rcn.png"></a>
+                <h3 class="text-center"><a href="#">RCN</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="reportes/reebok/"><img src="img/logos/reebok.png"></a>
+                <h3 class="text-center"><a href="reportes/reebok/">Reebok</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
@@ -829,26 +843,51 @@
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/Sedal.png"></a>
+                <h3 class="text-center"><a href="#">Sedal</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/sppro.png"></a>
+                <h3 class="text-center"><a href="#">SP Pro</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/studiof.png"></a>
+                <h3 class="text-center"><a href="#">Studio F</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/superricas.png"></a>
+                <h3 class="text-center"><a href="#">Super Ricas</a></h3>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-6 col-sm-3">
+              <div class="text-center">
+                <a href="#"><img src="img/logos/suramericana.png"></a>
+                <h3 class="text-center"><a href="#">Suramericana</a></h3>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3">
+             <div class="text-center">
+                <a href="#"><img src="img/logos/swatch.png"></a>
+                <h3 class="text-center"><a href="#">Swatch</a></h3>
+              </div>
+            </div>
+             <div class="col-6 col-sm-3">
+              <div class="text-center">
+
+              </div>
+              </div>
+               <div class="col-6 col-sm-3">
+                <div class="text-center">
+
               </div>
             </div>
           </div>
@@ -860,26 +899,26 @@
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/telepacifico.png"></a>
+                <h3 class="text-center"><a href="#">Telepacifico</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/tigo.png"></a>
+                <h3 class="text-center"><a href="#">Tigo</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/Tnt.png"></a>
+                <h3 class="text-center"><a href="#">Tnt</a></h3>
               </div>
               </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/tvs.png"></a>
+                <h3 class="text-center"><a href="#">TVS</a></h3>
               </div>
             </div>
           </div>
@@ -891,26 +930,26 @@
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/Unicentro.png"></a>
-                <h3 class="text-center"><a href="#">Unicentro</a></h3>
+                <a href="#"><img src="img/logos/under_armour.png"></a>
+                <h3 class="text-center"><a href="#">Under Armor</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/Unicentro.png"></a>
+                <h3 class="text-center"><a href="#">Unicentro</a></h3>
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/universidadsanbuenaventura.png"></a>
+                <h3 class="text-center"><a href="#">Universidad San Buenaventura</a></h3>
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/universidadsantiagodecali.png"></a>
+                <h3 class="text-center"><a href="#">Universidad Santiago de Cali</a></h3>
               </div>
             </div>
           </div>
@@ -922,26 +961,23 @@
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+                <a href="#"><img src="img/logos/Volkswagen.png"></a>
+                <h3 class="text-center"><a href="#">Volkswagen</a></h3>
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+      
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
             </div>
           </div>
@@ -953,26 +989,22 @@
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+  
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
             </div>
           </div>
@@ -984,26 +1016,22 @@
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
             </div>
           </div>
@@ -1015,26 +1043,22 @@
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
               </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
             </div>
           </div>
@@ -1046,26 +1070,22 @@
           <div class="row">
             <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+
               </div>
             </div>
             <div class="col-6 col-sm-3">
              <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+  
               </div>
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+ 
               </div>
               </div>
                <div class="col-6 col-sm-3">
                 <div class="text-center">
-                <a href="#"><img src="img/logos/olx.jpg"></a>
-                <h3 class="text-center"><a href="#">OLX</a></h3>
+  
               </div>
             </div>
           </div>

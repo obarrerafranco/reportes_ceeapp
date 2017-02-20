@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="../../img/plataforma/favicon.jpeg">
     <meta name="robots" content="noindex">
 
-    <title>JC Decaux Nacional / Reporte Semana 04</title>
+    <title>JC Decaux Nacional / Reporte Semana 07</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -113,7 +113,7 @@
     <header style="background-image: url(../../img/headers/header_mopi.jpg);">
         <div class="container">
             <div class="intro-text">
-                <div class="shadow intro-lead-in text-right">Reporte<br /> semana 04</div>
+                <div class="shadow intro-lead-in text-right">Reporte<br /> semana 07</div>
                 <div class="shadow intro-heading text-right">JC Decaux  <br>
                     <span class="ciudad">(Nacional)</span></div>
             </div>
@@ -132,7 +132,7 @@
                 <!-- small box -->
                 <div class="small-box bg-scans">
                   <div class="inner caja">
-                    <h1 class="text-center">23.594</h1>
+                    <h1 class="text-center">31.256</h1>
 
                     <p class="text-center">Total Semana</p>
                   </div>
@@ -143,7 +143,7 @@
                 <!-- small box -->
                 <div class="small-box bg-views">
                   <div class="inner caja">
-                    <h1 class="text-center">3.371</h1>
+                    <h1 class="text-center">4.465</h1>
 
                     <p class="text-center">Promedio Diario</p>
                   </div>
@@ -154,7 +154,7 @@
                 <!-- small box -->
                 <div class="small-box bg-descargas">
                   <div class="inner caja">
-                    <h1 class="text-center">89.192</h1>
+                    <h1 class="text-center">173.639</h1>
 
                     <p class="text-center">Total 2017</p>
                   </div>
@@ -213,7 +213,7 @@
           <!-- small box -->
           <div class="small-box bg-android">
             <div class="inner caja">
-              <h1 class="text-center">43.810</h1>
+              <h1 class="text-center">43.877</h1>
 
               <p class="text-center">Android</p>
             </div>
@@ -224,7 +224,7 @@
           <!-- small box -->
           <div class="small-box bg-ios">
             <div class="inner caja">
-              <h1 class="text-center">41.553</h1>
+              <h1 class="text-center">42.011</h1>
 
               <p class="text-center">IOS</p>
             </div>
@@ -235,7 +235,7 @@
           <!-- small box -->
           <div class="small-box bg-windows">
             <div class="inner caja">
-              <h1 class="text-center">2.533</h1>
+              <h1 class="text-center">2.540</h1>
 
               <p class="text-center">Windows</p>
             </div>
@@ -246,7 +246,7 @@
           <!-- small box -->
           <div class="small-box bg-descargas">
             <div class="inner caja">
-              <h1 class="text-center">87.896</h1>
+              <h1 class="text-center">88.428</h1>
 
               <p class="text-center">Total</p>
             </div>
@@ -487,7 +487,7 @@
 
 
                     var dataSemana = {
-                                labels: ["Semana 1", "Semana 2", "Semana 3", "Semana 4"],
+                                labels: ["Semana 1", "Semana 2", "Semana 3", "Semana 4", "Semana 5", "Semana 6", "Semana 7"],
                                 datasets: [
                                      {
                                         label: "Numero de views",
@@ -509,7 +509,7 @@
                                         pointRadius: 3,
                                         pointColor: "rgba(148, 193, 31,1)",
                                         pointHitRadius: 10,
-                                        data: [11744, 10968, 12886, 13598],
+                                        data: [11744, 10968, 12886, 13598 , 14598, 15598, 16598],
                                         spanGaps: false,
                                     },
                                       {
@@ -532,7 +532,7 @@
                                         pointRadius: 3,
                                         pointColor: "rgba(148, 193, 31,1)",
                                         pointHitRadius: 10,
-                                         data: [21744, 20968, 22886, 23598],
+                                         data: [21744, 20968, 22886, 23594, 25135, 28055, 31256],
                                         spanGaps: false,
                                     }
                                 ]
@@ -564,7 +564,7 @@
                     var ctxgral = document.getElementById("infogral");
 
                     var dataGeneral = {
-                           labels: ["18 Enero", "19 Enero", "20 Enero", "21 Enero", "22 Enero", "23 Enero", "24 Enero"],
+                           labels: ["8 Febrero", "9 Febrero", "10 Febrero", "11 Febrero", "12 Febrero", "13 Febrero", "14 Febrero"],
                     datasets: [
                         {
                             label: "Scans generales",
@@ -574,7 +574,7 @@
                             pointStrokeColor: "#fff",
                             pointHighlightFill: "#fff",
                             pointHighlightStroke: "rgba(220,220,220,1)",
-                             data: [5352, 4223, 4166, 2365, 1303, 3097, 3088],
+                             data: [4166, 4368, 2955, 1987, 1606, 4305, 3015],
                             backgroundColor: [
                                     '#0c2756',
                                     '#0c2756',
@@ -618,7 +618,7 @@
                             labels: ["Masculino", "Femenino"],
                             datasets: [{
                                 label: 'Genero',
-                                data: [20, 10],
+                                data: [15593, 6809],
                                 backgroundColor: [
                                     '#1f5bbd',
                                     '#ff777c',
@@ -660,13 +660,13 @@
                     var ctxedad = document.getElementById("edad");
 
                     var dataEdad = {
-                            labels: ["25 años", "18 años", "31 años", "14 años"],
+                            labels: ["10-19 años", "20-29 años", "30-39 años", "40-60 años"],
                             datasets: [{
                                 label: 'Edad',
-                                data: [12, 22, 11, 22],
+                                data: [0, 15587, 6816, 0],
                                 backgroundColor: [
                                     '#ff6b61',
-                                    '#fad441',
+                                    '#f0a150',
                                     '#b5d36f',
                                     '#143b80',
                                 ],
@@ -710,7 +710,7 @@
                             labels: ["Android", "IOS", "Windows"],
                             datasets: [{
                                 label: 'Edad',
-                                data: [12, 22, 35],
+                                data: [12321, 10081, 0],
                                 backgroundColor: [
                                    '#8dbe00',
                                     '#909090',

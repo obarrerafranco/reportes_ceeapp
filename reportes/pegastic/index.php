@@ -216,7 +216,7 @@
     <section id="reportes2">
         <div class="container">
             <div class="row">
-               <div class="scans col-md-4">
+               <div class="scans col-md-6 col-lg-6">
                     <div class="text-center">
                         <h4 class="section-heading">Género</h4>
                     </div>
@@ -225,22 +225,13 @@
                     </div>
 
                 </div>
-                <div class="views col-md-4 col-lg-4">
+                <div class="views col-md-6 col-lg-6">
                <div class="text-center">
                         <h4 class="section-heading">Edad</h4>
                     </div>
                     <div>
                         <canvas id="edad"></canvas>
                     </div>
-                </div>
-                 <div class="scans col-md-4">
-                    <div class="text-center">
-                        <h4 class="section-heading">Dispositivo</h4>
-                    </div>
-                    <div>
-                        <canvas id="dispositiv"></canvas>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -591,13 +582,13 @@
                     var ctxedad = document.getElementById("edad");
 
                     var dataEdad = {
-                            labels: ["25 años", "18 años", "31 años", "14 años"],
+                            labels: ["10-19 años", "20-29 años", "30-39 años", "40-60 años"],
                             datasets: [{
                                 label: 'Edad',
                                 data: [12, 22, 11, 22],
                                 backgroundColor: [
                                     '#ff6b61',
-                                    '#fad441',
+                                    '#f0a150',
                                     '#b5d36f',
                                     '#143b80',
                                 ],
@@ -630,50 +621,6 @@
                  });
         /* Dona de Edad Fin */
 
-       /* Dona de dispositiv Inicio */
-      var disposiLoaded = false;
-            $(document).on('scroll', function(){      
-                var scrollTop = $(window).scrollTop();
-                if(scrollTop > 580 && !disposiLoaded){
-                    var ctxdisp = document.getElementById("dispositiv");
-
-                    var dataDispo = {
-                            labels: ["Android", "IOS", "Windows"],
-                            datasets: [{
-                                label: 'Edad',
-                                data: [12, 22, 35],
-                                backgroundColor: [
-                                   '#8dbe00',
-                                    '#909090',
-                                    '#0191f2',
-                                ],
-                                borderColor: [
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                ],
-                                borderWidth: 1
-                            },
-                            ]
-                        };
-
-                    var optionsDispo= {
-                            responsive: true,
-                        };
-
-                    var disposi = new Chart(ctxdisp, {
-                        type: 'pie',
-                        data: dataDispo,
-                        options: optionsDispo
-                    });  
-
-                     disposiLoaded = true;
-                    }
-                    else{
-                    return;
-                    }
-                 });
-        /* Dona de dispositiv Fin */
        
 </script>
 <!-- end scripts -->

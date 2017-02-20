@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="../../img/plataforma/favicon.jpeg">
     <meta name="robots" content="noindex">
 
-    <title>JC Decaux Bogotá / Reporte Semana 04</title>
+    <title>Reebok (Bogotá) / Reporte Semana 07</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -87,22 +87,19 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#resumen_views">Resumen</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#resumen_descargas">Descargas</a>
+                        <a class="page-scroll" href="#resumen">Resumen</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#reportes1">Reportes</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#portfolio">News</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#historial">Historico</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#mapa_ciudad">Mapa</a>
-                    </li>
-                     <li>
-                        <a class="page-scroll" href="../../reportes/jcdecaux/index.php">Nacional</a>
+                        <a class="page-scroll" href="#ciudades">Ciudades</a>
                     </li>
                     
                 </ul>
@@ -116,131 +113,60 @@
     <header style="background-image: url(../../img/headers/header_mopi.jpg);">
         <div class="container">
             <div class="intro-text">
-                <div class="shadow intro-lead-in text-right">Reporte<br /> semana 04</div>
-                <div class="shadow intro-heading text-right">JC Decaux  <br>
-                    <span class="ciudad">(Bogotá)</span></div>
+                <div class="shadow intro-lead-in text-right">Reporte<br /> semana 07</div>
+                <div class="shadow intro-heading text-right">Reebok <br>
+                    <span class="ciudad">(Bogotá)</span> </div>
             </div>
         </div>
         <div class="opacity"></div>
     </header>
 
-  <!-- SECCION RESUMEN VIEWS-->
-   <section id="resumen_views">
+    <!-- SECCION RESUMEN-->
+
+   <section id="resumen">
        
        <div class="container">
-        <div class="row">
-          <div class="col-md-6" id="barra">
-          <div><h2 class="section-heading">Resumen Scans</h2></div><br />
-              <div class="col-sm-4">
-                <!-- small box -->
-                <div class="small-box bg-scans">
-                  <div class="inner caja">
-                    <h1 class="text-center">22.402</h1>
-
-                    <p class="text-center">Total Semana</p>
-                  </div>
-                </div>
-              </div>
-              <!-- ./col -->
-              <div class="col-sm-4">
-                <!-- small box -->
-                <div class="small-box bg-views">
-                  <div class="inner caja">
-                    <h1 class="text-center">3.200</h1>
-
-                    <p class="text-center">Promedio Diario</p>
-                  </div>
-                </div>
-              </div>
-               <!-- ./col -->
-              <div class="col-sm-4">
-                <!-- small box -->
-                <div class="small-box bg-descargas">
-                  <div class="inner caja">
-                    <h1 class="text-center">122.293</h1>
-
-                    <p class="text-center">Total 2017</p>
-                  </div>
-                </div>
-              </div>
-              <!-- ./col -->  
-          </div>
-          <div class="col-md-6">
-            <div><h2 class="section-heading">Resumen Views</h2></div><br />
-            <div class="col-sm-4">
-              <!-- small box -->
-              <div class="small-box bg-scans">
-                <div class="inner caja">
-                  <h1 class="text-center">16.403</h1>
-
-                  <p class="text-center">Total Semana</p>
-                </div>
-              </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-sm-4">
-              <!-- small box -->
-              <div class="small-box bg-views">
-                <div class="inner caja">
-                  <h1 class="text-center">2.343</h1>
-
-                  <p class="text-center">Promedio Diario</p>
-                </div>
-              </div>
-            </div>
-             <!-- ./col -->
-            <div class="col-sm-4">
-              <!-- small box -->
-              <div class="small-box bg-descargas">
-                <div class="inner caja">
-                  <h1 class="text-center">62.690</h1>
-
-                  <p class="text-center">Total 2017</p>
-                </div>
-              </div>
-            </div>
-            <!-- ./col -->
-          </div>
-        </div>
-      </div>
-   </section>
-   <!-- FIN RESUMEN VIEWS -->
-
-    <!-- SECCION DESCARGAS-->
-
-   <section id="resumen_descargas" >
-       
-       <div class="container">
-       <div><h2 class="section-heading">DESCARGAS DE LA APLICACIÓN EN COLOMBIA</h2></div><br />
-        <div class="col-sm-2 col-sm-offset-2">
+       <div><h2 class="section-heading">Resumen</h2></div><br />
+        <div class="col-sm-2 col-sm-offset-1">
           <!-- small box -->
-          <div class="small-box bg-android">
+          <div class="small-box bg-scans">
             <div class="inner caja">
-              <h1 class="text-center">43.877</h1>
+              <h1 class="text-center">379</h1>
 
-              <p class="text-center">Android</p>
+              <p class="text-center">Número de Scans</p>
             </div>
           </div>
         </div>
         <!-- ./col -->
         <div class="col-sm-2">
           <!-- small box -->
-          <div class="small-box bg-ios">
+          <div class="small-box bg-views">
             <div class="inner caja">
-              <h1 class="text-center">42.011</h1>
+              <h1 class="text-center">121</h1>
 
-              <p class="text-center">IOS</p>
+              <p class="text-center">Número de Views</p>
             </div>
           </div>
         </div>
-
+        <!-- ./col -->
         <div class="col-sm-2">
           <!-- small box -->
-          <div class="small-box bg-windows">
+          <div class="small-box bg-hora">
             <div class="inner caja">
-              <h1 class="text-center">2.540</h1>
+             <h4 class="text-center">11 AM: 164 SCANS<p>&nbsp;</p></h4>
 
-              <p class="text-center">Windows</p>
+              <p class="text-center">Mejor Hora</p>
+            </div>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-sm-2">
+          <!-- small box -->
+          <div class="small-box bg-scan-total">
+            <div class="inner caja">
+              <h1 class="text-center">22.402</h1>
+
+              <p class="text-center"><a href="#" data-toggle="tooltip" title="*4.54% del total">Scans Total</a></p>
             </div>
           </div>
         </div>
@@ -249,17 +175,15 @@
           <!-- small box -->
           <div class="small-box bg-descargas">
             <div class="inner caja">
-              <h1 class="text-center">88.428</h1>
+              <h1 class="text-center">87.896</h1>
 
-              <p class="text-center">Total</p>
+              <p class="text-center">Descargas Totales</p>
             </div>
           </div>
         </div>
         <!-- ./col -->
       </div>
    </section>
-   <!-- FIN DESCARGAS -->
-
    <!-- SECCION REPORTES 1-->
     <section id="reportes1" class="bg-light-gray">
         <div class="container">
@@ -267,7 +191,8 @@
                <div class="scans col-md-6 col-lg-6">
          
                                          <div class="text-center">
-                        <h4 class="section-heading">EVOLUCIÓN SEMANAL DE SCANS Y VIEWS <span class="ciudad">(Bogotá)</span></h4>
+                        <h4 class="section-heading">SEMANA 07 <span class="ciudad">(Nacional)</span></h4>
+                        <h5 class="section-subheading text-muted">Estos son los datos recogidos de scans realizados en la semana 07, que abarca del 8 de Febrero al 14 de Febrero:</h5>
                     </div>
                     <div>
                         <canvas id="semana"></canvas>
@@ -276,7 +201,7 @@
                 </div>
                 <div class="views col-md-6 col-lg-6">
                     <div class="text-center">
-                        <h4 class="section-heading">INFORMACIÓN GENERAL <span class="ciudad">(Bogotá)</span></h4>
+                        <h4 class="section-heading">INFORMACIÓN GENERAL <span class="ciudad">(Nacional)</span></h4>
                         <h5 class="section-subheading text-muted">En la gráfica se muestran todos los scans realizados en la última semana:</h5>
                     </div>
                     <div>
@@ -291,7 +216,7 @@
     <section id="reportes2">
         <div class="container">
             <div class="row">
-               <div class="scans col-md-4">
+               <div class="scans col-md-6 col-lg-6">
                     <div class="text-center">
                         <h4 class="section-heading">Género</h4>
                     </div>
@@ -300,7 +225,7 @@
                     </div>
 
                 </div>
-                <div class="views col-md-4 col-lg-4">
+                <div class="views col-md-6 col-lg-6">
                <div class="text-center">
                         <h4 class="section-heading">Edad</h4>
                     </div>
@@ -308,38 +233,31 @@
                         <canvas id="edad"></canvas>
                     </div>
                 </div>
-                 <div class="scans col-md-4">
-                    <div class="text-center">
-                        <h4 class="section-heading">Dispositivo</h4>
-                    </div>
-                    <div>
-                        <canvas id="dispositiv"></canvas>
-                    </div>
-
-                </div>
             </div>
         </div>
     </section>
+
 
 <!-- SECCION HISTORICO -->
     <section id="historial" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">HISTÓRICO <span class="ciudad">(Bogotá)</span></h2>
+                    <h2 class="section-heading">HISTÓRICO <span class="ciudad">(Nacional)</span></h2>
                     <h3 class="section-subheading text-muted">El histórico incluye los datos registrados en semanas anteriores para esta campaña:</h3>
                 </div>
             </div>
             <div class="row text-center">
                 <div id="owl-example" class="owl-carousel">
 
+                
                 <?php 
                 $sql = 'SELECT historial.id, semanas.semana as lasemana,  semanas.color as color, 
                 id_cliente, id_ciudad, id_semana, 
                 historial.estatus, imagen FROM historial 
                 INNER JOIN semanas 
                 ON historial.id_semana= semanas.id
-                WHERE historial.estatus = 1 and id_ciudad = 2 and id_cliente = 2 ORDER BY historial.id DESC';
+                WHERE historial.estatus = 1 and id_ciudad = 2 and id_cliente = 3 ORDER BY historial.id DESC';
 
                 foreach ($PDO->query($sql) as $row1) {
 
@@ -357,20 +275,35 @@
         </div>
     </section>
 
-     <!--  MAPA CIUDAD -->
-    <section id="mapa_ciudad">
+     <!--  CIUDADES -->
+    <!--section id="ciudades">
       <div class="row">
-        <div class="map-img row">
-          <h2 class="section-heading">MAPA BOGOTÁ</h2>
-          <img style="margin:0 auto" class="img-responsive" src="../../img/mapas/bogota_sem7_2017.jpg">
-        </div>
-      </div>
-    </section>
-    <!-- FIN MAPA CIUDAD -->
+              <div class="col-md-6 ciudades-txt">
+                  <div>
+                      <hr class="separador"/>
+                      <h1 class="mapa">CONOCE<br />LOS REPORTES <br />DE CADA CIUDAD</h1>
+                      <hr class="separador"/>
+                      <div >
+                        <a class="btn-ciudad" href="pegastic-bogota.php">BOGOTÁ</a> - 
+                        <a class="btn-ciudad" href="pegastic-cali.php">CALI</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 ciudades-map" usemap="#image-maps-colombia">
+                <div class="mapita">
+                  <img id="Image-Maps-Com-image-maps-2017-02-03-182337" src="../../img/plataforma/colombia.png" border="0" width="239" height="300" orgWidth="239" orgHeight="300" usemap="#image-maps-2017-02-03-182337" alt="" />
+                  <map name="image-maps-2017-02-03-182337" id="ImageMapsCom-image-maps-2017-02-03-182337">
+                    <area id="1" alt="Bogotá" title="Bogotá" href="pegastic-bogota.php" shape="rect" coords="78,128,108,161" style="outline:none;" target="_self"     />
+                    <area id="2" alt="Cali" title="Cali" href="pegastic-cali.php" shape="rect" coords="27,138,64,176" style="outline:none;" target="_self"     />
+                    <area shape="rect" coords="237,298,239,300" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
+                  </map>
+                </div>
+              </div>
+          </div>
+    </section-->
+    <!-- FIN CIUDADES -->
 
-  </div>
-  </div>
-      <!-- FOOTER INICIAL -->
+    <!-- FOOTER INICIAL -->
     <footer class="footter">
         <div class="row">
             <div class="col-sm-3"></div>
@@ -381,7 +314,7 @@
             <div class="col-sm-3"></div>
         </div>
     </footer>
-    <!-- FOOTER FINAL -->
+    <!-- FIN IMG FINAL -->
 
  <!-- INICIO MODAL HISTORICO -->
     <?php 
@@ -415,7 +348,8 @@
     ?>
         
     <!-- FIN MODAL HISTORICO -->
-  
+    
+
     <!-- jQuery Version 1.11.0 -->
     <script src="../../js/jquery-1.11.0.js"></script>
 
@@ -475,7 +409,7 @@
 
 
                     var dataSemana = {
-                                labels: ["Semana 1", "Semana 2", "Semana 3", "Semana 4", "Semana 5", "Semana 6", "Semana 7"],
+                                labels: ["8 Febrero", "9 Febrero", "10 Febrero", "11 Febrero", "12 Febrero", "13 Febrero", "14 Febrero"],
                                 datasets: [
                                      {
                                         label: "Numero de views",
@@ -497,7 +431,7 @@
                                         pointRadius: 3,
                                         pointColor: "rgba(148, 193, 31,1)",
                                         pointHitRadius: 10,
-                                        data: [8404, 7821, 8062, 8403, 8403, 8403, 8403],
+                                        data: [22, 19, 26, 6, 5, 24, 19],
                                         spanGaps: false,
                                     },
                                       {
@@ -520,7 +454,7 @@
                                         pointRadius: 3,
                                         pointColor: "rgba(148, 193, 31,1)",
                                         pointHitRadius: 10,
-                                         data: [15404, 14821, 16062, 16403, 17626, 19575, 22402],
+                                        data: [69, 59, 80, 20, 16, 76, 59],
                                         spanGaps: false,
                                     }
                                 ]
@@ -562,7 +496,7 @@
                             pointStrokeColor: "#fff",
                             pointHighlightFill: "#fff",
                             pointHighlightStroke: "rgba(220,220,220,1)",
-                             data: [1647, 1726, 1168, 785, 634, 1702, 1192],
+                             data: [69, 59, 80, 20, 16, 76, 59],
                             backgroundColor: [
                                     '#0c2756',
                                     '#0c2756',
@@ -606,7 +540,7 @@
                             labels: ["Masculino", "Femenino"],
                             datasets: [{
                                 label: 'Genero',
-                                data: [15593, 6809],
+                                data: [227, 152],
                                 backgroundColor: [
                                     '#1f5bbd',
                                     '#ff777c',
@@ -651,7 +585,7 @@
                             labels: ["10-19 años", "20-29 años", "30-39 años", "40-60 años"],
                             datasets: [{
                                 label: 'Edad',
-                                data: [0, 15587, 6816, 0],
+                                data: [84, 63, 105, 126],
                                 backgroundColor: [
                                     '#ff6b61',
                                     '#f0a150',
@@ -687,50 +621,6 @@
                  });
         /* Dona de Edad Fin */
 
-      /* Dona de dispositiv Inicio */
-      var disposiLoaded = false;
-            $(document).on('scroll', function(){      
-                var scrollTop = $(window).scrollTop();
-                if(scrollTop > 580 && !disposiLoaded){
-                    var ctxdisp = document.getElementById("dispositiv");
-
-                    var dataDispo = {
-                            labels: ["Android", "IOS", "Windows"],
-                            datasets: [{
-                                label: 'Edad',
-                                data: [12321, 10081, 0],
-                                backgroundColor: [
-                                   '#8dbe00',
-                                    '#909090',
-                                    '#0191f2',
-                                ],
-                                borderColor: [
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                ],
-                                borderWidth: 1
-                            },
-                            ]
-                        };
-
-                    var optionsDispo= {
-                            responsive: true,
-                        };
-
-                    var disposi = new Chart(ctxdisp, {
-                        type: 'pie',
-                        data: dataDispo,
-                        options: optionsDispo
-                    });  
-
-                     disposiLoaded = true;
-                    }
-                    else{
-                    return;
-                    }
-                 });
-        /* Dona de dispositiv Fin */
        
 </script>
 <!-- end scripts -->
