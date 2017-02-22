@@ -1,7 +1,7 @@
 <?php
-require "../login/loginheader.php";
-require 'db.php';
-require 'PDO_Pagination.php';
+require "../../login/loginheader.php";
+require '../db.php';
+require '../PDO_Pagination.php';
 
 $pagination = new PDO_Pagination($PDO);
 
@@ -11,25 +11,24 @@ $pagination = new PDO_Pagination($PDO);
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link   href="../css/bootstrap.min.css" rel="stylesheet">
-    <script src="../js/bootstrap.min.js"></script>
+    <link   href="../../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../js/bootstrap.min.js"></script>
     <link rel="shortcut icon" href="../img/plataforma/favicon.jpeg">
-    <title>Historiales | JCdecaux</title>
+    <title>Clientes | JCdecaux</title>
 </head>
  
 <body>
 <div class="container">
     <div class="row">
-    <h3>Historial de Reportes CEE APP</h3>
+    <h3>Clientes CEE APP</h3>
     </div>
     <div class="row">
-    <p><a class="btn btn-xs btn-success" href="create.php">Crear</a></p>
+    <p><a class="btn btn-md btn-success" href="create.php">Nuevo Cliente</a></p>
     <table class="table table-striped table-bordered table-hover">
     <tr>
         <th>ID</th>
-        <th>Semana</th>
         <th>Cliente</th>
-        <th>Ciudad</th>
+        <th>Logo</th>
         <th>Estatus</th>
         <th>Accion</th>
     </tr>
@@ -53,16 +52,8 @@ while($rows = $query->fetch())
 }
 else
 {*/
-        $sqlpagina = 'SELECT historial.id as idh, semanas.semana as lasemana,semanas.year as anno,
-        clientes.nombre_cliente as nombre_cliente, ciudades.nombre_ciudad as nombre_ciudad,
-        historial.estatus as estatush FROM historial 
-        INNER JOIN semanas 
-        ON historial.id_semana= semanas.id
-        INNER JOIN clientes 
-        ON historial.id_cliente = clientes.id
-        INNER JOIN ciudades 
-        ON historial.id_ciudad = ciudades.id
-        WHERE historial.estatus = 1 ORDER BY historial.id DESC';
+        $sqlpagina = 'SELECT id, nombre_cliente, logo, estatus FROM clientes 
+        WHERE clientes.estatus = 1 ORDER BY nombre_cliente ASC';
 $pagination->rowCount($sqlpagina);
 $pagination->config(10, 10);
 $sql =  $sqlpagina." LIMIT $pagination->start_row, $pagination->max_rows";
@@ -79,13 +70,12 @@ while($rows = $query->fetch())
 
     foreach ($model as $row) {
         echo '<tr>';
-        echo '<td>'. $row['idh'] . '</td>';
-        echo '<td>'. $row['lasemana'] .'-'.$row['anno'] .'</td>';
-        echo '<td>'. utf8_encode($row['nombre_cliente']) . '</td>';
-        echo '<td>'. utf8_encode($row['nombre_ciudad']) . '</td>';
-        echo '<td>'. $row['estatush'] . '</td>';
+        echo '<td>'. $row['id'] . '</td>';
+        echo '<td>'. $row['nombre_cliente'] .'</td>';
+        echo '<td>'. $row['logo'] . '</td>';
+        echo '<td>'. $row['estatus'] . '</td>';
         echo '<td>
-                  <a class="btn btn-xs btn-primary" href="update.php?id='. $row['idh'] . '">Actualizar</a>
+                  <a class="btn btn-xs btn-primary" href="update.php?id='. $row['id'] . '">Actualizar</a>
               </td>';
         echo '</tr>';
     }

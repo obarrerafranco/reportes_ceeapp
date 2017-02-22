@@ -1,6 +1,6 @@
 <?php 
-require "../login/loginheader.php";
-require 'db.php';
+require "../../login/loginheader.php";
+require '../db.php';
 
     if ( !empty($_POST)) {
         
@@ -23,9 +23,9 @@ require 'db.php';
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link   href="../css/bootstrap.min.css" rel="stylesheet">
-    <script src="../js/bootstrap.min.js"></script>
-    <link rel="shortcut icon" href="../img/plataforma/favicon.jpeg">
+    <link   href="../../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="../../img/plataforma/favicon.jpeg">
     <title>Registro de Historiales | JCdecaux</title>
 </head>
  
@@ -87,7 +87,7 @@ require 'db.php';
         </select>  
     </div>
     <div class="form-group">
-        <label for="inputGender">Imagen</label>
+        <label for="inputImagen">Imagen</label>
         <input type="text" class="form-control" required="required" id="inputImagen" name="imagen" placeholder="Nombre de la Imagen">
     </div>
     
