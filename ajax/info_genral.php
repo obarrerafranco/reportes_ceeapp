@@ -1,17 +1,17 @@
 <?php 
     require '../registros/db.php';
     	$idrepor = '2';
-    	$sqlinfo = "select id, id_reporte, fechas_general, datos_general from graficas_general where id_reporte =?";
+    	/*$sqlinfo = "select fechas_general, datos_general from graficas_general where id_reporte =?";
  		$stmt = $PDO->prepare($sqlinfo);
-        $stmt->execute(array($idrepor));
-        $data = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        $info = array();
-			foreach ($data as $row) {
-				$info[] = $row;
+        $data->execute(array($idrepor));
+        */
+        //$info2 = array();
+        $sqlinfo = $PDO->query('select fechas_general, datos_general from graficas_general where id_reporte =2');
+        foreach($sqlinfo as $row) {
+				 $info2 = array( 'fechas_general' => $row['fechas_general'], 'datos_general' => $row['datos_general']);
 			}
 
 	//now print the data
-print json_encode($info);
+print json_encode($info2);
 
 ?>

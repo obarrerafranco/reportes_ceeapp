@@ -1,9 +1,9 @@
 <?php 
     require '../../registros/db.php';
 
-          $week = 5;
-          $client = 43;
-          $city = 2;
+          $week = $_POST['wekks'];//5;
+          $client = $_POST['client']; //43;
+          $city = $_POST['citias']; //2;
           $sql = "SELECT rc.id, 
           rc.id_campana, 
           rc.id_ciudad, 
@@ -147,10 +147,10 @@
     </nav>
 
     <!-- Header -->
-    <?php echo '<header style="background-image: url(../../img/headers/'.$data['mupi'].");>"; ?>
+    <?php echo '<header style="background-image: url(../../img/headers/'.$data['mupi'].');">'; ?>
         <div class="container">
             <div class="intro-text">
-                <div class="shadow intro-lead-in text-right">Reporte <br /> semana <?php echo $data['semana']; ?>&nbsp;</div>
+                <div class="shadow intro-lead-in text-right">Reporte <br /> semana <?php echo $data['semana']; ?></div>
                 <div class="shadow intro-heading text-right"><?php echo $data['cliente']; ?> <br>
                     <span class="ciudad">(<?php echo $data['city']; ?>)</span> </div>
             </div>
@@ -332,8 +332,18 @@
                 <div class="mapita">
                   <img id="Image-Maps-Com-image-maps-2017-02-03-182337" src="../../img/plataforma/colombia.png" border="0" width="239" height="300" orgWidth="239" orgHeight="300" usemap="#image-maps-2017-02-03-182337" alt="" />
                   <map name="image-maps-2017-02-03-182337" id="ImageMapsCom-image-maps-2017-02-03-182337">
-                    <area id="1" alt="Bogotá" title="Bogotá" href="pegastic-bogota.php" shape="rect" coords="78,128,108,161" style="outline:none;" target="_self"     />
-                    <area id="2" alt="Cali" title="Cali" href="pegastic-cali.php" shape="rect" coords="27,138,64,176" style="outline:none;" target="_self"     />
+                    <form method="post" id="bogot" action="index.php">
+                      <area id="1" alt="Bogotá" title="Bogotá" href="#" onclick="document.forms['bogot'].submit(); return false;" shape="rect" coords="78,128,108,161" style="outline:none;" target="_self"     />
+                     <?php echo '<input type="hidden" name="wekks" value="'.$week.'">
+                      <input type="hidden" name="client" value="'.$client.'">
+                      <input type="hidden" name="citias" value="2">'; ?>
+                  </form>
+                  <form method="post" id="cal" action="index.php">
+                      <area id="1" alt="Cali" title="Cali" href="#" onclick="document.forms['cal'].submit(); return false;" shape="rect" coords="27,138,64,176" style="outline:none;" target="_self"     />
+                     <?php echo '<input type="hidden" name="wekks" value="'.$week.'">
+                      <input type="hidden" name="client" value="'.$client.'">
+                      <input type="hidden" name="citias" value="3">'; ?>
+                  </form>
                     <area shape="rect" coords="237,298,239,300" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
                   </map>
                 </div>

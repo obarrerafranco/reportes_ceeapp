@@ -221,7 +221,13 @@
             </div>
              <div class="col-6 col-sm-3">
               <div class="text-center">
-
+                <form method="post" id="akt" action="reportes/clientes/index.php">
+                  <a href="#" onclick="document.forms['akt'].submit(); return false;"><img src="img/logos/aguila_light.png"></a>
+                  <h3 class="text-center"><a href="#" onclick="document.forms['akt'].submit(); return false;">AKT Motos</a></h3>
+                  <input type="hidden" name="wekks" value="5">
+                  <input type="hidden" name="client" value="43">
+                  <input type="hidden" name="citias" value="1">
+                </form>
               </div>
               </div>
                <div class="col-6 col-sm-3">
