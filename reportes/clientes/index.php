@@ -1,10 +1,17 @@
 <?php 
+   if(!isset($_POST['client'])){
+
+    echo "<div>No tienes acceso para ver esta página</div>";
+
+   }else{
+
+
     require '../../registros/db.php';
 
           $week = $_POST['wekks'];//5;
           $client = $_POST['client']; //43;
           $city = $_POST['citias']; //2;
-          $sql = "SELECT rc.id, 
+          $sql = "SELECT rc.id as id_rep, 
           rc.id_campana, 
           rc.id_ciudad, 
           rc.id_semana, 
@@ -116,6 +123,9 @@
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top"><img class="monitor" src="../../img/plataforma/logo.png"><h4 class="logo-txt">CEE APP</h4></a>
             </div>
+
+            <?php if($city == 1){
+  ?>
             <!-- /.navbar-collapse -->
              <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -142,10 +152,44 @@
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
+            <?php }else { ?>
+              <!-- /.navbar-collapse -->
+               <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                      <li class="hidden">
+                          <a href="#page-top"></a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#resumen">Resumen</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#reportes1">Reportes</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#portfolio">News</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#historial">Historico</a>
+                      </li>
+                      <li style="padding: 15px 10px 10px 10px">
+                        <form method="post" id="nacional" action="index.php">
+                        <a class="page-scroll" href="#" onclick="document.forms['nacional'].submit(); return false;">Nacional</a>
+                         <?php echo '<input type="hidden" name="wekks" value="'.$week.'">
+                        <input type="hidden" name="client" value="'.$client.'">
+                        <input type="hidden" name="citias" value="1">'; ?>
+                        </form> 
+                      </li>
+
+                  </ul>
+              </div>
+              <!-- /.navbar-collapse -->
+
+            <?php } ?>
         </div>
         <!-- /.container-fluid -->
     </nav>
-
+    <!--input type="text" name="id_reporte" id="id_reporte" value="<?php echo $data['id_rep']; ?>"-->
     <!-- Header -->
     <?php echo '<header style="background-image: url(../../img/headers/'.$data['mupi'].');">'; ?>
         <div class="container">
@@ -313,6 +357,8 @@
             </div>
         </div>
     </section>
+<?php if($city == 1){
+  ?>
 
      <!--  CIUDADES -->
     <section id="ciudades">
@@ -351,7 +397,7 @@
           </div>
     </section>
     <!-- FIN CIUDADES -->
-
+<?php } ?>
     <!-- FOOTER INICIAL -->
     <footer class="footter">
         <div class="row">
@@ -394,6 +440,8 @@
         </div>
      <?php 
        }
+
+}
     ?>
         
     <!-- FIN MODAL HISTORICO -->
@@ -436,6 +484,9 @@
     <!-- Owl Carousel -->
     <script src="../../js/owl.carousel.js"></script>
     <script type="text/javascript" src="../../ajax/info_genral.js"></script>
+    <script type="text/javascript" src="../../ajax/genero.js"></script>
+    <script type="text/javascript" src="../../ajax/edad.js"></script>
+    <script type="text/javascript" src="../../ajax/semana.js"></script>
 
 <script>
     $(document).ready(function() {
@@ -446,233 +497,6 @@
 });
 </script>
 
-<script>
-"use strict";
-
-        /* Semana linea Inicio */
-      var semanaLoaded = false;
-            $(document).on('scroll', function(){      
-                var scrollTop = $(window).scrollTop();
-                if(scrollTop > 250 && !semanaLoaded){
-                    var ctxsemana = document.getElementById("semana");
-
-
-
-                    var dataSemana = {
-                                labels: ["18 Enero", "19 Enero", "20 Enero", "21 Enero", "22 Enero", "23 Enero", "24 Enero"],
-                                datasets: [
-                                     {
-                                        label: "Numero de views",
-                                        fill: true,
-                                        lineTension: 0.1,
-                                        backgroundColor: "#0c2756",
-                                        borderColor: "#0c2756",
-                                        borderCapStyle: 'butt',
-                                        borderDash: [],
-                                        borderDashOffset: 0.0,
-                                        borderJoinStyle: 'miter',
-                                        pointBorderColor: "#0c2756",
-                                        pointBackgroundColor: "#fff",
-                                        pointBorderWidth: 1,
-                                        pointHoverRadius: 5,
-                                        pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                                        pointHoverBorderColor: "rgba(220,220,220,1)",
-                                        pointHoverBorderWidth: 2,
-                                        pointRadius: 3,
-                                        pointColor: "rgba(148, 193, 31,1)",
-                                        pointHitRadius: 10,
-                                        data: [51, 48, 38, 21, 12, 37, 32],
-                                        spanGaps: false,
-                                    },
-                                      {
-                                        label: "Numero de scans",
-                                        fill: true,
-                                        lineTension: 0.1,
-                                        backgroundColor: "#94C11F",
-                                        borderColor: "#94C11F",
-                                        borderCapStyle: 'butt',
-                                        borderDash: [],
-                                        borderDashOffset: 0.0,
-                                        borderJoinStyle: 'miter',
-                                        pointBorderColor: "#94C11F",
-                                        pointBackgroundColor: "#fff",
-                                        pointBorderWidth: 1,
-                                        pointHoverRadius: 5,
-                                        pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                                        pointHoverBorderColor: "rgba(220,220,220,1)",
-                                        pointHoverBorderWidth: 2,
-                                        pointRadius: 3,
-                                        pointColor: "rgba(148, 193, 31,1)",
-                                        pointHitRadius: 10,
-                                        data: [122, 114, 91, 51, 29, 86, 76],
-                                        spanGaps: false,
-                                    }
-                                ]
-                        };
-
-                    var optionsSemana = {
-                            responsive: true,
-                        };
-
-                    var genero = new Chart(ctxsemana, {
-                        type: 'line',
-                        data: dataSemana,
-                        options: optionsSemana
-                    });  
-
-                     semanaLoaded = true;
-                    }
-                    else{
-                    return;
-                    }
-                 });
-        /* Semana Linea Fin */
-
-          /* General bar Inicio */
-     /*var generalLoaded = false;
-            $(document).on('scroll', function(){      
-                var scrollTop = $(window).scrollTop();
-                if(scrollTop > 250 && !generalLoaded){
-                    var ctxgral = document.getElementById("infogral");
-
-                    var dataGeneral = {
-                           labels: ["18 Enero", "19 Enero", "20 Enero", "21 Enero", "22 Enero", "23 Enero", "24 Enero"],
-                    datasets: [
-                        {
-                            label: "Scans generales",
-                            fillColor: "rgba(148, 193, 31,1)",
-                            strokeColor: "rgba(148, 193, 31,1)",
-                            pointColor: "rgba(148, 193, 31,1)",
-                            pointStrokeColor: "#fff",
-                            pointHighlightFill: "#fff",
-                            pointHighlightStroke: "rgba(220,220,220,1)",
-                             data: [5352, 4223, 4166, 2365, 1303, 3097, 3088],
-                            backgroundColor: [
-                                    '#0c2756',
-                                    '#0c2756',
-                                    '#0c2756',
-                                    '#0c2756',
-                                    '#0c2756',
-                                    '#0c2756',
-                                    '#0c2756'
-                                ],
-                        },
-                        
-                    ]
-                        };
-
-                    var optionsGeneral = {
-                            responsive: true,
-                        };
-
-                    var edad = new Chart(ctxgral, {
-                        type: 'bar',
-                        data: dataGeneral,
-                        options: optionsGeneral
-                    });  
-
-                     generalLoaded = true;
-                    }
-                    else{
-                    return;
-                    }
-                 });*/
-        /* General Bar Fin */
-
-        /* Dona de Genero Inicio */
-      var generoLoaded = false;
-            $(document).on('scroll', function(){      
-                var scrollTop = $(window).scrollTop();
-                if(scrollTop > 580 && !generoLoaded){
-                    var ctxgenero = document.getElementById("genero");
-
-                    var dataGenero = {
-                            labels: ["Masculino", "Femenino"],
-                            datasets: [{
-                                label: 'Genero',
-                                data: [20, 10],
-                                backgroundColor: [
-                                    '#1f5bbd',
-                                    '#ff777c',
-                                ],
-                                borderColor: [
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                ],
-                                borderWidth: 1
-                            },
-                            ]
-                        };
-
-                    var optionsGenero = {
-                            responsive: true,
-                        };
-
-                    var genero = new Chart(ctxgenero, {
-                        type: 'doughnut',
-                        data: dataGenero,
-                        options: optionsGenero
-                    });  
-
-                     generoLoaded = true;
-                    }
-                    else{
-                    return;
-                    }
-                 });
-        /* Dona de Genero Fin */
-
-         /* Dona de Edad Inicio */
-      var edadLoaded = false;
-            $(document).on('scroll', function(){      
-                var scrollTop = $(window).scrollTop();
-                if(scrollTop > 580 && !edadLoaded){
-                    var ctxedad = document.getElementById("edad");
-
-                    var dataEdad = {
-                            labels: ["10-19 años", "20-29 años", "30-39 años", "40-60 años"],
-                            datasets: [{
-                                label: 'Edad',
-                                data: [12, 22, 11, 22],
-                                backgroundColor: [
-                                    '#ff6b61',
-                                    '#f0a150',
-                                    '#b5d36f',
-                                    '#143b80',
-                                ],
-                                borderColor: [
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                ],
-                                borderWidth: 1
-                            },
-                            ]
-                        };
-
-                    var optionsEdad = {
-                            responsive: true,
-                        };
-
-                    var edad = new Chart(ctxedad, {
-                        type: 'pie',
-                        data: dataEdad,
-                        options: optionsEdad
-                    });  
-
-                     edadLoaded = true;
-                    }
-                    else{
-                    return;
-                    }
-                 });
-        /* Dona de Edad Fin */
-
-       
-</script>
 <!-- end scripts -->
 </body>
 
