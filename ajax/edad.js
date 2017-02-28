@@ -1,8 +1,9 @@
 $(document).ready(function(){
-
+    var id_report = $("#id_ob").val();
 	$.ajax({
 		url: "http://localhost:8081/cee_report/ajax/edad.php",
 		method: "GET",
+        data: { id_reporte: id_report },
 		success: function(edad) {
 			console.log(edad);
             var edad2 = $.parseJSON(edad);

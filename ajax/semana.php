@@ -1,6 +1,6 @@
 <?php 
     require '../registros/db.php';
-    	$idrepor = '2';
+    	$idrepor = $_GET['id_reporte'];
         $sqlinfo = $PDO->query('select  fechas_semana, scans_semana, views_semana from graficas_semana where id_reporte ='.$idrepor);
         foreach($sqlinfo as $row) {
                 $fechas = array($row['fechas_semana']);

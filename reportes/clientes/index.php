@@ -10,7 +10,7 @@
 
           $week = $_POST['wekks'];//5;
           $client = $_POST['client']; //43;
-          $city = $_POST['citias']; //2;
+          $city = $_POST['citias']; 
           $sql = "SELECT rc.id as id_rep, 
           rc.id_campana, 
           rc.id_ciudad, 
@@ -44,6 +44,8 @@
           $stmt = $PDO->prepare($sql);
           $stmt->execute(array($week,$client,$city));
           $data = $stmt->fetch(PDO::FETCH_ASSOC);
+
+          //$id_reporte =  $data['id_rep'];
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +61,7 @@
     <link rel="shortcut icon" href="../../img/plataforma/favicon.jpeg">
     <meta name="robots" content="noindex">
 
-    <title>Pega Stic (<?php echo $data['city'] ." ) / Reporte Semana ".$data['semana'] ?></title>
+    <title><?php echo $data['cliente']." ( ".$data['city'] ." ) / Reporte Semana ".$data['semana'] ?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -189,7 +191,6 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <!--input type="text" name="id_reporte" id="id_reporte" value="<?php echo $data['id_rep']; ?>"-->
     <!-- Header -->
     <?php echo '<header style="background-image: url(../../img/headers/'.$data['mupi'].');">'; ?>
         <div class="container">
@@ -201,6 +202,8 @@
         </div>
         <div class="opacity"></div>
     </header>
+
+    <?php echo '<input type="hidden" name="id_ob" id="id_ob" value="'.$data['id_rep'].'">'; ?>
 
     <!-- SECCION RESUMEN-->
 

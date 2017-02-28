@@ -1,24 +1,11 @@
-/*$(document).ready(function(){
-    var repor = "id_reporte=" + $("#id_reporte").val();
-    $.ajax({
-      url: 'info_genral.php',
-      type: 'GET',
-      async: true,
-      data: repor,
-      success: function(repor){
-        },
-      error: function(data) {
-            console.log(data);
-        }
-    });
-});*/
 $(document).ready(function(){
-
+     var id_report = $("#id_ob").val();
 	$.ajax({
 		url: "http://localhost:8081/cee_report/ajax/info_genral.php",
 		method: "GET",
+        data: { id_reporte: id_report },
 		success: function(info2) {
-			//console.log(info2);
+			console.log(info2);
             var info = $.parseJSON(info2);
             var fechas = info.fechas;
             var datos = info.datos;

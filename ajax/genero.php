@@ -1,6 +1,6 @@
 <?php 
     require '../registros/db.php';
-    	$idrepor = '2';
+    	$idrepor = $_GET['id_reporte'];
         $sqlinfo = $PDO->query('select  datos_generos from graficas_genero where id_reporte ='.$idrepor);
         foreach($sqlinfo as $row) {
                 $datos = array($row['datos_generos']);
