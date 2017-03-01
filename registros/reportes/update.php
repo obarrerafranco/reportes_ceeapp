@@ -48,6 +48,7 @@ require '../db.php';
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link   href="../../css/bootstrap.min.css" rel="stylesheet">
     <script src="../../js/bootstrap.min.js"></script>
+        <title>Actualizar Reporte | JCdecaux</title>
 </head>
  
 <body>
@@ -56,7 +57,7 @@ require '../db.php';
     
                     <div class="row">
                     <div class="row">
-                        <h3>Actualizar Historial</h3>
+                        <h3>Actualizar Reporte</h3>
                     </div>
             
                     <form method="POST" action="update.php?id=<?php echo $id?>">

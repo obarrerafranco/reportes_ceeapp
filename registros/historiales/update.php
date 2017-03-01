@@ -49,11 +49,13 @@ require '../db.php';
 <html lang="en">
 <head>
     <meta charset="utf-8">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link   href="../../css/bootstrap.min.css" rel="stylesheet">
     <script src="../../js/bootstrap.min.js"></script>
 </head>
  
 <body>
+<?php include('../menu.php'); ?>
 <div class="container">
     
                     <div class="row">

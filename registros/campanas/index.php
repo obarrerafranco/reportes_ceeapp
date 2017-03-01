@@ -14,16 +14,19 @@ $pagination = new PDO_Pagination($PDO);
     <link   href="../../css/bootstrap.min.css" rel="stylesheet">
     <script src="../../js/bootstrap.min.js"></script>
     <link rel="shortcut icon" href="../img/plataforma/favicon.jpeg">
+        <!-- jQuery Version 1.11.0 -->
+    <script src="../../js/jquery-1.11.0.js"></script>
     <title>Campañas | JCdecaux</title>
 </head>
  
 <body>
+<?php include('../menu.php'); ?>
 <div class="container">
     <div class="row">
     <h3>Campañas CEE APP</h3>
     </div>
     <div class="row">
-    <p><a class="btn btn-md btn-success" href="create.php">Nuevo Cliente</a></p>
+    <p><a class="btn btn-md btn-success" href="create.php">Nueva Campaña</a></p>
     <table class="table table-striped table-bordered table-hover">
     <tr>
         <th>ID</th>
@@ -34,14 +37,16 @@ $pagination = new PDO_Pagination($PDO);
     </tr>
     <tbody>
     <?php
-   /* $search = null;
-if(isset($_REQUEST["search"]) && $_REQUEST["search"] != "")
+    $search = null;
+/*if(isset($_REQUEST["search"]) && $_REQUEST["search"] != "")
 {
 $search = htmlspecialchars($_REQUEST["search"]);
 $pagination->param = "&search=$search";
-$pagination->rowCount("SELECT * FROM products WHERE category LIKE '%$search%' OR description LIKE '%$search%' OR name LIKE '%$search%'");
+$pagination->rowCount("SELECT cp.id, nombre_campana, cp.id_cliente, cl.nombre_cliente as cliente, cp.status, img_header FROM campanas cp INNER JOIN clientes cl ON cl.id = cp.id_cliente
+        WHERE status = 1 AND  nombre_campana LIKE '%$search%' ORDER BY id DESC");
 $pagination->config(3, 5);
-$sql = "SELECT * FROM products WHERE category LIKE '%$search%' OR description LIKE '%$search%' OR name LIKE '%$search%' ORDER BY id_product ASC LIMIT $pagination->start_row, $pagination->max_rows";
+$sql = "SELECT cp.id, nombre_campana, cp.id_cliente, cl.nombre_cliente as cliente, cp.status, img_header FROM campanas cp INNER JOIN clientes cl ON cl.id = cp.id_cliente
+        WHERE status = 1 AND  nombre_campana LIKE '%$search%' ORDER BY id DESC LIMIT $pagination->start_row, $pagination->max_rows";
 $query = $connection->prepare($sql);
 $query->execute();
 $model = array();

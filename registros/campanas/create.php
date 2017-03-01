@@ -4,14 +4,15 @@ require '../db.php';
 
     if ( !empty($_POST)) {
         
+        $campana  = $_POST['campana'];
+        $header  = $_POST['header'];
         $cliente  = $_POST['cliente'];
-        $logo  = $_POST['logo'];
         
         // inserta data
             $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO clientes (nombre_cliente,logo) values(?, ?)";
+            $sql = "INSERT INTO campanas (nombre_campana,id_cliente,img_header) values(?, ?, ?)";
             $stmt = $PDO->prepare($sql);
-            $stmt->execute(array($cliente,$logo));
+            $stmt->execute(array($campana,$cliente,$header));
             header("Location: index.php");
     }
 ?>
@@ -27,21 +28,39 @@ require '../db.php';
 </head>
  
 <body>
+<?php include('../menu.php'); ?>
 <div class="container">
     
                     <div class="row">
                     <div class="row">
-                        <h3>Crear Nuevo Cliente</h3>
+                        <h3>Crear Nueva Campaña</h3>
                     </div>
             
                     <form method="POST" action="">
     <div class="form-group">
-        <label for="inputGender">Nombre Cliente</label>
-        <input type="text" class="form-control" required="required" id="inputName" name="cliente" placeholder="Nombre del Cliente">
+        <label for="inputCampana">Nombre de la Campaña</label>
+        <input type="text" class="form-control" required="required" id="inputCampana" name="campana" placeholder="Nombre de la campaña">
     </div>
     <div class="form-group">
-        <label for="inputGender">Imagen</label>
-        <input type="text" class="form-control"  id="inputImagen" name="logo" placeholder="Nombre de logo">
+        <label for="inputCliente">Cliente</label>
+        <select class="form-control" required="required" id="inputCliente" name="cliente" placeholder="Cliente">
+        <option></option>
+        <?php 
+           $client = 'SELECT id, nombre_cliente, estatus FROM clientes WHERE estatus = 1 ORDER BY nombre_cliente ASC';
+
+            foreach ($PDO->query($client) as $cli1) {
+
+                echo '<option value="'.$cli1['id'].'">'.utf8_encode($cli1['nombre_cliente']).'</option>';
+
+            }
+            ?>
+
+        </select>
+        
+    </div>
+    <div class="form-group">
+        <label for="inputGender">Header</label>
+        <input type="text" class="form-control"  id="inputHeader" name="header" placeholder="Nombre del header">
     </div>
     
     <div class="form-actions">

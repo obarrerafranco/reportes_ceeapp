@@ -11,6 +11,7 @@ $pagination = new PDO_Pagination($PDO);
 <html lang="en">
 <head>
     <meta charset="utf-8">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link   href="../../css/bootstrap.min.css" rel="stylesheet">
     <script src="../../js/bootstrap.min.js"></script>
     <link rel="shortcut icon" href="../../img/plataforma/favicon.jpeg">
@@ -18,6 +19,7 @@ $pagination = new PDO_Pagination($PDO);
 </head>
  
 <body>
+<?php include('../menu.php'); ?>
 <div class="container">
     <div class="row">
     <h3>Historial de Reportes CEE APP</h3>

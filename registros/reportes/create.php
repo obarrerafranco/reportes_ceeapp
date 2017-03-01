@@ -4,17 +4,20 @@ require '../db.php';
 
     if ( !empty($_POST)) {
         
-        $cliente  = $_POST['cliente'];
+        $campana  = $_POST['campana'];
         $ciudad  = $_POST['ciudad'];
-        $semana    = $_POST['semana'];
-        $imagen = $_POST['imagen'];
+        $semana  = $_POST['semana'];
+        $tsemana  = $_POST['textow'];
+        $scans  = $_POST['no_scans'];
+        $views  = $_POST['no_views'];
+        $hora  = $_POST['hora'];
+        $porcent  = $_POST['porcent'];
         
         // inserta data
             $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO historial (id_cliente,id_ciudad,id_semana,imagen) values(?, ?, ?, ?)";
+            $sql = "INSERT INTO reportes_clientes (id_campana,id_ciudad,id_semana,text_semana,no_scans,no_views,best_hour,porcen_total) values(?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $PDO->prepare($sql);
-            $stmt->execute(array($cliente,$ciudad,$semana,$imagen));
-            //$PDO = null;
+            $stmt->execute(array($campana,$ciudad,$semana,$tsemana,$scans,$views,$hora,$porcent));
             header("Location: index.php");
     }
 ?>
@@ -27,7 +30,7 @@ require '../db.php';
     <link   href="../../css/bootstrap.min.css" rel="stylesheet">
     <script src="../../js/bootstrap.min.js"></script>
     <link rel="shortcut icon" href="../../img/plataforma/favicon.jpeg">
-    <title>Registro de Historiales | JCdecaux</title>
+    <title>Nuevo Reporte | JCdecaux</title>
 </head>
  
 <body>
@@ -36,20 +39,20 @@ require '../db.php';
     
                     <div class="row">
                     <div class="row">
-                        <h3>Crear Nuevo Historial</h3>
+                        <h3>Crear Nuevo Reporte</h3>
                     </div>
             
-                    <form method="POST" action="">
-    <div class="form-group">
-        <label for="inputGender">Cliente</label>
-        <select class="form-control" required="required" id="inputCliente" name="cliente" placeholder="Cliente">
+   <form method="POST" action="">
+      <div class="form-group">
+        <label for="inputCampana">Campaña</label>
+        <select class="form-control" required="required" id="inputCampana" name="campana" placeholder="Campaña">
         <option></option>
         <?php 
-           $client = 'SELECT id, nombre_cliente, estatus FROM clientes WHERE estatus = 1 ORDER BY nombre_cliente ASC';
+           $client = 'SELECT id, nombre_campana, status FROM campanas WHERE status = 1 ORDER BY nombre_campana ASC';
 
             foreach ($PDO->query($client) as $cli1) {
 
-                echo '<option value="'.$cli1['id'].'">'.utf8_encode($cli1['nombre_cliente']).'</option>';
+                echo '<option value="'.$cli1['id'].'">'.utf8_encode($cli1['nombre_campana']).'</option>';
 
             }
             ?>
@@ -89,10 +92,25 @@ require '../db.php';
         </select>  
     </div>
     <div class="form-group">
-        <label for="inputImagen">Imagen</label>
-        <input type="text" class="form-control" required="required" id="inputImagen" name="imagen" placeholder="Nombre de la Imagen">
+        <label for="inputTextw">Texto de la Semana</label>
+        <input type="text" class="form-control"  id="inputTextw" name="textow" placeholder="Dia DE Mes AL Dia DE Mes">
     </div>
-    
+    <div class="form-group">
+        <label for="inputScans"># Scans</label>
+        <input type="text" class="form-control"  id="inputScans" name="no_scans" placeholder="# scans">
+    </div>
+    <div class="form-group">
+        <label for="inputViews"># Views</label>
+        <input type="text" class="form-control"  id="inputViews" name="no_views" placeholder="# views">
+    </div>
+    <div class="form-group">
+        <label for="inputHour">Mejor Hora</label>
+        <input type="text" class="form-control"  id="inputHour" name="hora" placeholder="Hora PM Cantidad SCANS">
+    </div>
+   <div class="form-group">
+        <label for="inputPorcen">Porcentaje</label>
+        <input type="text" class="form-control"  id="inputPorcen" name="porcent" placeholder="Porcentaje de Scans">
+    </div>
     <div class="form-actions">
         <button type="submit" class="btn btn-success">Crear</button>
         <a class="btn btn btn-default" href="index.php">Regresar</a>
@@ -101,6 +119,8 @@ require '../db.php';
                 
     </div> <!-- /row -->
     </div> <!-- /container -->
+
+    <script type="text/javascript" src="../../js/functions.js"></script>
 
 </body>
 </html>

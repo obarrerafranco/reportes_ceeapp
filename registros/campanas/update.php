@@ -15,20 +15,21 @@ require '../db.php';
     {
         
         // post values
-       $cliente  = $_POST['cliente'];
-        $logo  = $_POST['logo'];
+        $campana  = $_POST['campana'];
+        $header  = $_POST['header'];
+        $cliente  = $_POST['cliente'];
         
         // update data
             $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "Update clientes set nombre_cliente=?,logo=? where id=?";
+            $sql = "Update campanas set nombre_campana=?,id_cliente=?,img_header=? where id=?";
             $stmt = $PDO->prepare($sql);
-            $stmt->execute(array($cliente,$logo,$id));
+            $stmt->execute(array($campana,$cliente,$header,$id));
             $PDO = null;
             header("Location: index.php");
     }
     else{
         $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "SELECT * FROM clientes where id = ?";
+        $sql = "SELECT * FROM campanas where id = ?";
         $stmt = $PDO->prepare($sql);
         $stmt->execute(array($id));
         $data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -36,8 +37,9 @@ require '../db.php';
         if (empty($data)){
             header("Location: index.php");
         }
-        $cliente  = $data['nombre_cliente'];
-        $logo  = $data['logo'];
+        $campana  = $data['nombre_campana'];
+        $header  = $data['img_header'];
+        $clientes  = $data['id_cliente'];
     }
 ?>
 
@@ -50,6 +52,7 @@ require '../db.php';
 </head>
  
 <body>
+<?php include('../menu.php'); ?>
 <div class="container">
     
                     <div class="row">
@@ -59,12 +62,34 @@ require '../db.php';
             
                     <form method="POST" action="update.php?id=<?php echo $id?>">
                         <div class="form-group">
-                            <label for="inputCliente">Nombre del Cliente</label>
-                            <input type="text" class="form-control" required="required" id="inputCliente" name="cliente" value="<?php echo $cliente; ?>">
+                            <label for="inputCampana">Nombre del Cliente</label>
+                            <input type="text" class="form-control" required="required" id="inputCampana" name="campana" value="<?php echo $campana; ?>">
                         </div>
+                         <div class="form-group">
+                        <label for="inputCliente">Cliente</label>
+                        <select class="form-control" required="required" id="inputCliente" name="cliente" placeholder="Cliente">
+                        <?php 
+                            $client = 'SELECT id, nombre_cliente, estatus FROM clientes WHERE estatus = 1 ORDER BY nombre_cliente ASC';
+                            foreach ($PDO->query($client) as $cli1) {
+
+                                $optin1 = '<option value="'.$cli1['id'].'" ';
+
+                                if($cli1['id'] == trim($clientes)) {
+
+                                $optin1 .= 'selected="selected"'; }
+
+                                $optin1 .= '>'.utf8_encode($cli1['nombre_cliente']).'</option>';
+
+                                echo $optin1;
+
+                            }
+                            ?> 
+                        </select>
+                        
+                    </div>
                         <div class="form-group">
-                            <label for="inputLogo">Logo</label>
-                            <input type="text" class="form-control" id="inputLogo" name="logo" value="<?php echo $logo; ?>">
+                            <label for="inputHeader">Logo</label>
+                            <input type="text" class="form-control" id="inputHeader" name="header" value="<?php echo $header; ?>">
                         </div>
         
                         <div class="form-actions">
