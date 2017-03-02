@@ -2,7 +2,6 @@
 require "../../login/loginheader.php";
 require '../db.php';
 require '../PDO_Pagination.php';
-
 $pagination = new PDO_Pagination($PDO);
 
 
@@ -105,7 +104,8 @@ while($rows = $query->fetch())
         echo '<td>'. $row['no_views'] . '</td>';
         echo '<td>
                   <a class="btn btn-xs btn-primary" href="update.php?id='. $row['id_repor'] . '">Editar</a>
-                   <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalGral">General</button>
+                    <button data-toggle="modal" data-target="#view-modal" data-id="'.$row['id_repor'].'" id="getUser" class="btn btn-primary btn-xs">General</button>
+                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalGral">Semana</button>
                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalSem">Semana</button>
                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalGenero">Genero</button>
                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalEdad">Edad</button>
@@ -125,7 +125,7 @@ $pagination->pages("btn");
 </div><!-- /container -->
 <!-- Inicio Modal General-->
   <div class="modal fade" id="myModalGral" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog"-->
     
       <!-- Modal content-->
       <div class="modal-content">
@@ -134,15 +134,86 @@ $pagination->pages("btn");
           <h4 class="modal-title">Gráfica General</h4>
         </div>
         <div class="modal-body">
-          <p>Some text in the modal.</p>
+          <input type="text" name="repir" id="repormdl">
+          <input type="text" name="fechs" id="fechasmld">
+          <input type="text" name="datoss" id="datosmdl">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-default" onclick="savedata()">Cerrar</button>
         </div>
       </div>
       
     </div>
   </div>
+  <!--div id="view-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+             <div class="modal-dialog"> 
+                  <div class="modal-content"> 
+                  
+                       <div class="modal-header"> 
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                            <h4 class="modal-title">
+                             User Profile
+                            </h4> 
+                       </div> 
+                       <div class="modal-body"> 
+                       
+                           <div id="modal-loader" style="display: none; text-align: center;">
+                            <img src="ajax-loader.gif">
+                           </div>
+                       
+                           <div id="dynamic-content">
+                                        
+                           <div class="row"> 
+                                <div class="col-md-12"> 
+                              
+                              <div class="table-responsive">
+                              
+                                <table class="table table-striped table-bordered">
+                              <tr>
+                              <th>First Name</th>
+                              <td id="txt_fname"></td>
+                                </tr>
+                                     
+                                <tr>
+                              <th>Last Name</th>
+                              <td id="txt_lname"></td>
+                                </tr>
+                                          
+                                <tr>
+                                <th>Email ID</th>
+                                <td id="txt_email"></td>
+                                </tr>
+                                          
+                                <tr>
+                                <th>Position</th>
+                                <td id="txt_position"></td>
+                                </tr>
+                                          
+                                <tr>
+                                <th>Office</th>
+                                <td id="txt_office"></td>
+                                </tr>
+                                          
+                                </table>
+                                
+                                </div>
+                                       
+                                </div> 
+                          </div>
+                          
+                          </div> 
+                             
+                        </div> 
+                        <div class="modal-footer"> 
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>  
+                        </div> 
+                        
+                 </div> 
+              </div>
+       </div--><!-- /.modal -->    
+    
+    <!--/div-->
 <!-- Fin Modal General-->
 <!-- Inicio Modal Semana-->
   <div class="modal fade" id="myModalSem" role="dialog">
@@ -207,5 +278,55 @@ $pagination->pages("btn");
     </div>
   </div>
 <!-- Fin Modal Edad-->
+<script type="text/javascript">
+function savedata(){
+  var irepor = $('repormdl').val();
+  var idfecha = $('fechasmld').val();
+  var idatos = $('datosmdl').val();
+  $.ajax({
+    type: "POST",
+    url: "general.php?p=add",
+    data: "repormdl="+1+"fechasmld="+2+"datosmdl="+3,
+    success: function(msg){alert("exito");}
+  });
+}
+
+
+/*$(document).ready(function(){
+  
+  $(document).on('click', '#getUser', function(e){
+    
+    e.preventDefault();
+    
+    var uid = $(this).data('id'); // get id of clicked row
+    
+    $('#dynamic-content').hide(); // hide dive for loader
+    //$('#modal-loader').show();  // load ajax loader
+    
+    $.ajax({
+      url: 'getuser.php',
+      type: 'POST',
+      data: 'id='+uid,
+      dataType: 'json'
+    })
+    .done(function(data){
+      console.log(data);
+      $('#dynamic-content').hide(); // hide dynamic div
+      $('#dynamic-content').show(); // show dynamic div
+      $('#txt_fname').html(data.id_campana);
+      $('#txt_lname').html(data.id_ciudad);
+      $('#txt_email').html(data.id_semana);
+      $('#txt_position').html(data.text_semana);
+      $('#txt_office').html(data.no_scans);
+      $('#modal-loader').hide();    // hide ajax loader
+    })
+    .fail(function(){
+      $('.modal-body').html('<i class="glyphicon glyphicon-info-sign"></i> Something went wrong, Please try again...');
+    });
+    
+  });
+  
+});*/
+</script>
 </body>
 </html>
