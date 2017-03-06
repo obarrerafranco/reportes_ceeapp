@@ -104,11 +104,10 @@ while($rows = $query->fetch())
         echo '<td>'. $row['no_views'] . '</td>';
         echo '<td>
                   <a class="btn btn-xs btn-primary" href="update.php?id='. $row['id_repor'] . '">Editar</a>
-                    <button data-toggle="modal" data-target="#view-modal" data-id="'.$row['id_repor'].'" id="getUser" class="btn btn-primary btn-xs">General</button>
-                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalGral">Semana</button>
-                   <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalSem">Semana</button>
-                   <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalGenero">Genero</button>
-                   <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalEdad">Edad</button>
+                    <button type="button" class="btn btn-primary btn-xs" data-id="'. $row['id_repor'] . '" data-toggle="modal" onclick="mostrarGral('.$row['id_repor'].')">General</button>
+                   <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-id="'. $row['id_repor'] . '" onclick="mostrarWkk('.$row['id_repor'].')">Semana</button>
+                   <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-id="'. $row['id_repor'] . '" onclick="mostrarGnr('.$row['id_repor'].')">Genero</button>
+                   <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-id="'. $row['id_repor'] . '" onclick="mostrarAge('.$row['id_repor'].')">Edad</button>
               </td>';
         echo '</tr>';
     }
@@ -131,89 +130,27 @@ $pagination->pages("btn");
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Gráfica General</h4>
+          <h4 class="modal-title">Datos Gráfica General</h4>
         </div>
         <div class="modal-body">
-          <input type="text" name="repir" id="repormdl">
-          <input type="text" name="fechs" id="fechasmld">
-          <input type="text" name="datoss" id="datosmdl">
+          <div class="form-group">
+            <label for="fechasmld">Fechas separadas por coma</label>
+            <input type="text" class="form-control"  id="fechasmld" name="fechasmld" placeholder="Fechas">
+          </div>
+          <div class="form-group">
+            <label for="datosmdl">Datos separados por coma</label>
+            <input type="text" class="form-control"  id="datosmdl" name="datosmdl" placeholder="Datos">
+          </div>
+          <input type="hidden" name="repir" id="repormdl">
         </div>
         <div class="modal-footer">
+          <button type="submit" class="btn btn-default" id="salva_general">Guardar</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-          <button type="submit" class="btn btn-default" onclick="savedata()">Cerrar</button>
         </div>
       </div>
       
     </div>
   </div>
-  <!--div id="view-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-             <div class="modal-dialog"> 
-                  <div class="modal-content"> 
-                  
-                       <div class="modal-header"> 
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
-                            <h4 class="modal-title">
-                             User Profile
-                            </h4> 
-                       </div> 
-                       <div class="modal-body"> 
-                       
-                           <div id="modal-loader" style="display: none; text-align: center;">
-                            <img src="ajax-loader.gif">
-                           </div>
-                       
-                           <div id="dynamic-content">
-                                        
-                           <div class="row"> 
-                                <div class="col-md-12"> 
-                              
-                              <div class="table-responsive">
-                              
-                                <table class="table table-striped table-bordered">
-                              <tr>
-                              <th>First Name</th>
-                              <td id="txt_fname"></td>
-                                </tr>
-                                     
-                                <tr>
-                              <th>Last Name</th>
-                              <td id="txt_lname"></td>
-                                </tr>
-                                          
-                                <tr>
-                                <th>Email ID</th>
-                                <td id="txt_email"></td>
-                                </tr>
-                                          
-                                <tr>
-                                <th>Position</th>
-                                <td id="txt_position"></td>
-                                </tr>
-                                          
-                                <tr>
-                                <th>Office</th>
-                                <td id="txt_office"></td>
-                                </tr>
-                                          
-                                </table>
-                                
-                                </div>
-                                       
-                                </div> 
-                          </div>
-                          
-                          </div> 
-                             
-                        </div> 
-                        <div class="modal-footer"> 
-                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>  
-                        </div> 
-                        
-                 </div> 
-              </div>
-       </div--><!-- /.modal -->    
-    
-    <!--/div-->
 <!-- Fin Modal General-->
 <!-- Inicio Modal Semana-->
   <div class="modal fade" id="myModalSem" role="dialog">
@@ -223,12 +160,25 @@ $pagination->pages("btn");
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Gráfica Semana</h4>
+          <h4 class="modal-title">Datos Gráfica Semana</h4>
         </div>
         <div class="modal-body">
-          <p>Some text in the modal.</p>
+          <div class="form-group">
+            <label for="fechasmld2">Fechas separadas por coma</label>
+            <input type="text" class="form-control"  id="fechasmld2" name="fechasmld2" placeholder="Fechas">
+          </div>
+          <div class="form-group">
+            <label for="scansmdl">Scans separados por coma</label>
+            <input type="text" class="form-control"  id="scansmdl" name="scansmdl" placeholder="Scans">
+          </div>
+          <div class="form-group">
+            <label for="viewsmdl">Views separados por coma</label>
+            <input type="text" class="form-control"  id="viewsmdl" name="viewsmdl" placeholder="Views">
+          </div>
+          <input type="hidden" name="repir2" id="repormd2">
         </div>
         <div class="modal-footer">
+          <button type="submit" class="btn btn-default" id="salva_semana">Guardar</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         </div>
       </div>
@@ -244,12 +194,17 @@ $pagination->pages("btn");
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Gráfica Genero</h4>
+          <h4 class="modal-title">Datos Gráfica Genero</h4>
         </div>
         <div class="modal-body">
-          <p>Some text in the modal.</p>
+          <div class="form-group">
+            <label for="datosmdl3">Datos separados por coma</label>
+            <input type="text" class="form-control"  id="datosmdl3" name="datosmdl3" placeholder="Femenino,Masculino">
+          </div>
+          <input type="hidden" name="repir3" id="repormdl3">
         </div>
         <div class="modal-footer">
+          <button type="submit" class="btn btn-default" id="salva_genero">Guardar</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         </div>
       </div>
@@ -265,12 +220,17 @@ $pagination->pages("btn");
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Gráfica Edad</h4>
+          <h4 class="modal-title">Datos Gráfica Edad</h4>
         </div>
         <div class="modal-body">
-          <p>Some text in the modal.</p>
+          <div class="form-group">
+            <label for="datosmdl4">Datos separados por coma</label>
+            <input type="text" class="form-control"  id="datosmdl4" name="datosmdl4" placeholder="10-19,20-29,30-39,40-60">
+          </div>
+          <input type="hidden" name="repir4" id="repormdl4">
         </div>
         <div class="modal-footer">
+          <button type="submit" class="btn btn-default" id="salva_edad">Guardar</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         </div>
       </div>
@@ -279,54 +239,89 @@ $pagination->pages("btn");
   </div>
 <!-- Fin Modal Edad-->
 <script type="text/javascript">
-function savedata(){
-  var irepor = $('repormdl').val();
-  var idfecha = $('fechasmld').val();
-  var idatos = $('datosmdl').val();
-  $.ajax({
-    type: "POST",
-    url: "general.php?p=add",
-    data: "repormdl="+1+"fechasmld="+2+"datosmdl="+3,
-    success: function(msg){alert("exito");}
-  });
+$(document).ready(incia);
+
+function incia(){
+  $("#salva_general").click(savedataGral);
+  $("#salva_semana").click(savedataWkk);
+  $("#salva_genero").click(savedataGnr);
+  $("#salva_edad").click(savedataAge);
 }
 
+function mostrarGral (idr){
+    $('#myModalGral').modal('show'); 
+    $('#repormdl').val(idr);
+    $('#fechasmld').val("");
+    $('#datosmdl').val("");
 
-/*$(document).ready(function(){
-  
-  $(document).on('click', '#getUser', function(e){
-    
-    e.preventDefault();
-    
-    var uid = $(this).data('id'); // get id of clicked row
-    
-    $('#dynamic-content').hide(); // hide dive for loader
-    //$('#modal-loader').show();  // load ajax loader
-    
-    $.ajax({
-      url: 'getuser.php',
-      type: 'POST',
-      data: 'id='+uid,
-      dataType: 'json'
-    })
-    .done(function(data){
-      console.log(data);
-      $('#dynamic-content').hide(); // hide dynamic div
-      $('#dynamic-content').show(); // show dynamic div
-      $('#txt_fname').html(data.id_campana);
-      $('#txt_lname').html(data.id_ciudad);
-      $('#txt_email').html(data.id_semana);
-      $('#txt_position').html(data.text_semana);
-      $('#txt_office').html(data.no_scans);
-      $('#modal-loader').hide();    // hide ajax loader
-    })
-    .fail(function(){
-      $('.modal-body').html('<i class="glyphicon glyphicon-info-sign"></i> Something went wrong, Please try again...');
-    });
-    
+}
+function mostrarWkk (idr2){
+    $('#myModalSem').modal('show'); 
+    $('#repormd2').val(idr2);
+    $('#fechasmld2').val("");
+    $('#scansmdl').val("");
+    $('#viewsmdl').val("");
+
+}
+function mostrarGnr (idr3){
+    $('#myModalGenero').modal('show'); 
+    $('#repormdl3').val(idr3);
+    $('#datosmdl3').val("");
+
+}
+function mostrarAge (idr4){
+    $('#myModalEdad').modal('show'); 
+    $('#repormdl4').val(idr4);
+    $('#datosmdl4').val("");
+
+}
+function savedataGral(){
+
+  var irepor = $('#repormdl').val();
+  var idfecha = $('#fechasmld').val();
+  var idatos = $('#datosmdl').val();
+  $.ajax({
+    type: "POST",
+    url: "http://localhost:8081/cee_report/registros/reportes/general.php?p=add",
+    data: "repormdl="+irepor+"&fechasmld="+idfecha+"&datosmdl="+idatos,
+    success: function(){$('#myModalGral').modal('toggle');}
   });
-  
-});*/
+}
+function savedataWkk(){
+
+  var irepor2 = $('#repormd2').val();
+  var idfecha2 = $('#fechasmld2').val();
+  var iscans = $('#scansmdl').val();
+  var iviews = $('#viewsmdl').val();
+  $.ajax({
+    type: "POST",
+    url: "http://localhost:8081/cee_report/registros/reportes/semana.php?p=add",
+    data: "repormd2="+irepor2+"&fechasmld2="+idfecha2+"&scansmdl="+iscans+"&viewsmdl="+iviews,
+    success: function(){$('#myModalSem').modal('toggle');}
+  });
+}
+function savedataGnr(){
+
+  var irepor3 = $('#repormdl3').val();
+  var idatos3 = $('#datosmdl3').val();
+  $.ajax({
+    type: "POST",
+    url: "http://localhost:8081/cee_report/registros/reportes/genero.php?p=add",
+    data: "repormdl3="+irepor3+"&datosmdl3="+idatos3,
+    success: function(){$('#myModalGenero').modal('toggle');}
+  });
+}
+function savedataAge(){
+
+  var irepor4 = $('#repormdl4').val();
+  var idatos4 = $('#datosmdl4').val();
+  $.ajax({
+    type: "POST",
+    url: "http://localhost:8081/cee_report/registros/reportes/edad.php?p=add",
+    data: "repormdl4="+irepor4+"&datosmdl4="+idatos4,
+    success: function(){$('#myModalEdad').modal('toggle');}
+  });
+}
 </script>
 </body>
 </html>

@@ -115,6 +115,7 @@ require '../db.php';
         <button type="submit" class="btn btn-success">Crear</button>
         <a class="btn btn btn-default" href="index.php">Regresar</a>
     </div>
+    <br />
 </form>
                 
     </div> <!-- /row -->
