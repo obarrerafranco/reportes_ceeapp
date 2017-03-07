@@ -6,12 +6,13 @@ require '../db.php';
         
         $cliente  = $_POST['cliente'];
         $logo  = $_POST['logo'];
+        $letra  = $_POST['letra'];
         
         // inserta data
             $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO clientes (nombre_cliente,logo) values(?, ?)";
+            $sql = "INSERT INTO clientes (nombre_cliente,logo,letra) values(?, ?, ?)";
             $stmt = $PDO->prepare($sql);
-            $stmt->execute(array($cliente,$logo));
+            $stmt->execute(array($cliente,$logo,$letra));
             header("Location: index.php");
     }
 ?>
@@ -42,17 +43,27 @@ require '../db.php';
         <input type="text" class="form-control" required="required" id="inputName" name="cliente" placeholder="Nombre del Cliente">
     </div>
     <div class="form-group">
+        <label for="inputLetra">Letra</label>
+        <select class="form-control" required="required" id="inputLetra" name="letra" placeholder="Letra">
+       <?php for($i=65; $i<=90; $i++) {  
+            $letra = chr($i);  
+            echo '<option id='.$letra.'">'.$letra.'</option> ';  
+        }  ?>
+        </select>
+        
+    </div>
+    <div class="form-group">
         <label for="inputGender">Imagen</label>
         <input type="text" class="form-control"  id="inputImagen" name="logo" placeholder="Nombre de logo">
-        <form enctype="multipart/form-data" class="formulario">
+        <!--form enctype="multipart/form-data" class="formulario">
             <label>Subir un archivo</label><br />
             <input name="archivo" type="file" id="imagen" /><br /><br />
             <input type="button" value="Subir imagen" /><br />
-        </form>
+        </form-->
         <!--div para visualizar mensajes-->
-        <div class="messages"></div><br /><br />
-        <!--div para visualizar en el caso de imagen-->
-        <div class="showImage"></div>
+        <!--div class="messages"></div><br /><br />
+        <!div para visualizar en el caso de imagen-->
+        <!--div class="showImage"></div-->
     </div>
     
     <div class="form-actions">
@@ -64,7 +75,7 @@ require '../db.php';
     </div> <!-- /row -->
     </div> <!-- /container -->
 
-    <script type="text/javascript" src="../../js/functions.js"></script>
+    <!--script type="text/javascript" src="../../js/functions.js"></script-->
 
 </body>
 </html>

@@ -1,4 +1,5 @@
-<?php require "login/loginheader.php"; ?>
+<?php require "login/loginheader.php"; 
+require 'registros/db.php';?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -76,83 +77,21 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll2" href="#a">A</a>
+                        <a class="page-scroll2" href="http://localhost:8081/cee_report/reportes/jcdecaux/">JCDecaux</a>
                     </li>
-                    <li>
-                        <a class="page-scroll2" href="#b">B</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll2" href="#c">C</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll2" href="#d">D</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll2" href="#e">E</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#f">F</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#g">G</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#h">H</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#i">I</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#j">J</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#k">K</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#l">L</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#m">M</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#n">N</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#o">O</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#p">P</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#q">Q</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#r">R</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#s">S</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#t">T</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#u">E</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#v">V</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#w">W</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#x">X</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#y">Y</a>
-                    </li>
-                      <li>
-                        <a class="page-scroll2" href="#z">Z</a>
-                    </li>
+                    <?php 
+                     $letras = 'SELECT letra FROM campanas cp 
+                                INNER JOIN clientes cl ON cl.id = cp.id_cliente 
+                                INNER JOIN reportes_clientes rp ON cp.id = rp.id_campana
+                                INNER JOIN semanas wk ON rp.id_semana = wk.id
+                                WHERE status=1 GROUP BY letra ASC';
+
+                      foreach ($PDO->query($letras) as $lets) {
+
+                          echo '<li><a class="page-scroll2" href="#'.strtolower($lets['letra']).'">'.utf8_encode($lets['letra']).'</a></li>';
+
+                      }
+                      ?>
                     <li>
                         <a class="page-scroll2" href="login/logout.php">Salir</a>
                     </li>  
@@ -173,7 +112,48 @@
         </div>
         <div class="opacity"></div>
     </header>
+    <!-- SECCION RESUMEN DINAMICO INICIO-->
 
+  <?php 
+                     $letras = 'SELECT cl.letra as letra,cl.nombre_cliente as nam_cli, cl.logo as logo FROM campanas cp 
+                                INNER JOIN clientes cl ON cl.id = cp.id_cliente 
+                                INNER JOIN reportes_clientes rp ON cp.id = rp.id_campana
+                                INNER JOIN semanas wk ON rp.id_semana = wk.id
+                                WHERE status=1 GROUP BY letra ASC';
+                      $result = $PDO->prepare($letras); 
+                      $result->execute(); 
+                      $number_of_rows = $result->rowCount(); 
+                      //echo $number_of_rows;
+                      foreach ($PDO->query($letras) as $lets2) {
+
+                        echo'<section id="a">      
+                         <div class="container">
+                            <div><h2 class="section-heading">'.$lets2['letra'].'</h2></div><br />';
+                        $lista = 'SELECT cl.letra as letra,cl.nombre_cliente as nam_cli, cl.logo as logo FROM campanas cp 
+                            INNER JOIN clientes cl ON cl.id = cp.id_cliente 
+                            INNER JOIN reportes_clientes rp ON cp.id = rp.id_campana
+                            INNER JOIN semanas wk ON rp.id_semana = wk.id
+                            WHERE status=1 AND letra= '.$lets2['letra'].'ORDER BY letra ASC';
+                        $filta = $PDO->prepare($lista); 
+                        $filtrado = $filta->execute(); 
+                        echo $filtrado;
+                         echo'<div class="row">';
+                        for($i=0;$i==4; $i++){
+                            echo'<div class="col-6 col-sm-3">
+                                <div class="text-center">
+                                  <a href="#"><img src="img/logos/'.$lets3['logo'].'"></a>
+                                  <h3 class="text-center"><a href="#">'.$lets3['nam_cli'].'</a></h3>
+                                </div>
+                              </div>';
+                        }                                               
+                        echo '</div>
+                          </div>
+                         </section>';
+
+                      }
+                      ?>
+    <!-- SECCION RESUMEN DINAMICO FIN-->
+  
     <!-- SECCION RESUMEN-->
 
    <section id="a">      

@@ -31,6 +31,7 @@ $pagination = new PDO_Pagination($PDO);
         <th>ID</th>
         <th>Cliente</th>
         <th>Logo</th>
+        <th>Letra</th>
         <th>Estatus</th>
         <th>Accion</th>
     </tr>
@@ -54,7 +55,7 @@ while($rows = $query->fetch())
 }
 else
 {*/
-        $sqlpagina = 'SELECT id, nombre_cliente, logo, estatus FROM clientes 
+        $sqlpagina = 'SELECT id, nombre_cliente,letra, logo,  estatus FROM clientes 
         WHERE clientes.estatus = 1 ORDER BY nombre_cliente ASC';
 $pagination->rowCount($sqlpagina);
 $pagination->config(10, 10);
@@ -75,6 +76,7 @@ while($rows = $query->fetch())
         echo '<td>'. $row['id'] . '</td>';
         echo '<td>'. $row['nombre_cliente'] .'</td>';
         echo '<td>'. $row['logo'] . '</td>';
+        echo '<td>'. $row['letra'] . '</td>';
         echo '<td>'. $row['estatus'] . '</td>';
         echo '<td>
                   <a class="btn btn-xs btn-primary" href="update.php?id='. $row['id'] . '">Actualizar</a>

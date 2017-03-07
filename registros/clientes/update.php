@@ -16,13 +16,14 @@ require '../db.php';
         
         // post values
        $cliente  = $_POST['cliente'];
-        $logo  = $_POST['logo'];
+       $logo  = $_POST['logo'];
+        $letra  = $_POST['letra'];
         
         // update data
             $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "Update clientes set nombre_cliente=?,logo=? where id=?";
+            $sql = "Update clientes set nombre_cliente=?,logo=?,letra=? where id=?";
             $stmt = $PDO->prepare($sql);
-            $stmt->execute(array($cliente,$logo,$id));
+            $stmt->execute(array($cliente,$logo,$letra,$id));
             $PDO = null;
             header("Location: index.php");
     }
@@ -38,6 +39,7 @@ require '../db.php';
         }
         $cliente  = $data['nombre_cliente'];
         $logo  = $data['logo'];
+        $letra1  = $data['letra'];
     }
 ?>
 
@@ -64,6 +66,23 @@ require '../db.php';
                             <label for="inputCliente">Nombre del Cliente</label>
                             <input type="text" class="form-control" required="required" id="inputCliente" name="cliente" value="<?php echo $cliente; ?>">
                         </div>
+                            <div class="form-group">
+                                <label for="inputLetra">Letra</label>
+                                <select class="form-control" required="required" id="inputLetra" name="letra" placeholder="Letra">
+                               <?php for($i=65; $i<=90; $i++) {  
+                                    $letra = chr($i);  
+                                    $lea = '<option id='.$letra;
+                                
+                                    if($letra == trim($letra1)) {
+                                        $lea.= ' selected="selected"';
+                                    }
+                                    $lea.='">'.$letra.'</option>';  
+                                
+                                echo $lea;
+                                }   ?>
+                                </select>
+                                
+                            </div>
                         <div class="form-group">
                             <label for="inputLogo">Logo</label>
                             <input type="text" class="form-control" id="inputLogo" name="logo" value="<?php echo $logo; ?>">
