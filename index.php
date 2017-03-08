@@ -120,43 +120,56 @@ require 'registros/db.php';?>
                                 INNER JOIN reportes_clientes rp ON cp.id = rp.id_campana
                                 INNER JOIN semanas wk ON rp.id_semana = wk.id
                                 WHERE status=1 GROUP BY letra ASC';
-                      $result = $PDO->prepare($letras); 
-                      $result->execute(); 
-                      $number_of_rows = $result->rowCount(); 
-                      //echo $number_of_rows;
+                      $actual= 0;
                       foreach ($PDO->query($letras) as $lets2) {
+                        $actual++;
+                        if($actual%2==0){
+                          echo'<section id="'.strtolower($lets2['letra']).'" class="bg-light-gray">';  
+                        }else{
+                          echo'<section id="'.strtolower($lets2['letra']).'">'; 
+                        }
 
-                        echo'<section id="a">      
-                         <div class="container">
+                            
+                         echo '<div class="container">
                             <div><h2 class="section-heading">'.$lets2['letra'].'</h2></div><br />';
-                        $lista = 'SELECT cl.letra as letra,cl.nombre_cliente as nam_cli, cl.logo as logo FROM campanas cp 
-                            INNER JOIN clientes cl ON cl.id = cp.id_cliente 
-                            INNER JOIN reportes_clientes rp ON cp.id = rp.id_campana
-                            INNER JOIN semanas wk ON rp.id_semana = wk.id
-                            WHERE status=1 AND letra= '.$lets2['letra'].'ORDER BY letra ASC';
-                        $filta = $PDO->prepare($lista); 
-                        $filtrado = $filta->execute(); 
-                        echo $filtrado;
-                         echo'<div class="row">';
-                        for($i=0;$i==4; $i++){
-                            echo'<div class="col-6 col-sm-3">
-                                <div class="text-center">
-                                  <a href="#"><img src="img/logos/'.$lets3['logo'].'"></a>
-                                  <h3 class="text-center"><a href="#">'.$lets3['nam_cli'].'</a></h3>
-                                </div>
-                              </div>';
-                        }                                               
-                        echo '</div>
-                          </div>
-                         </section>';
+                              $lista = 'SELECT cl.letra as letra,cl.nombre_cliente as nam_cli,cl.id as id_cliente, cl.logo as logo, rp.id_semana as id_semana, rp.id_ciudad as idciudad FROM campanas cp
+                                  INNER JOIN clientes cl ON cl.id = cp.id_cliente 
+                                  INNER JOIN reportes_clientes rp ON cp.id = rp.id_campana
+                                  INNER JOIN semanas wk ON rp.id_semana = wk.id
+                                  WHERE status=1 AND letra= "'.$lets2['letra'].'" GROUP BY nam_cli ASC';
+
+                             
+                             echo'<div class="row">';
+
+                              foreach ($PDO->query($lista) as $list2) {
+               
+                                    echo'<div class="col-6 col-sm-3">
+                                        <div class="text-center">
+                                           <form method="post" id="a'.$list2["id_cliente"].'" action="reportes/clientes/index.php">
+                                            <a href="#" onclick="enviar('.$list2["id_cliente"].')"><img src="img/logos/'.$list2['logo'].'"></a>
+                                            <h3 class="text-center"><a href="#" onclick="enviar('.$list2["id_cliente"].')">'.$list2["nam_cli"].'</a></h3>
+                                            <input type="hidden" name="wekks" value="'.$list2['id_semana'].'">
+                                            <input type="hidden" name="client" value="'.$list2['id_cliente'].'">
+                                            <input type="hidden" name="citias" value="'.$list2['idciudad'].'">
+                                          </form>
+                                        </div>
+                                      </div>';
+                           
+                                }                                               
+                                echo '</div></div>
+                                 </section>';
 
                       }
                       ?>
     <!-- SECCION RESUMEN DINAMICO FIN-->
-  
+  <script type="text/javascript">
+  function enviar (id){
+    $("#a"+id).submit();
+  }
+  </script>
     <!-- SECCION RESUMEN-->
 
-   <section id="a">      
+   <!--section id="a">      
        <div class="container">
           <div><h2 class="section-heading">A</h2></div><br /> 
           <div class="row">
@@ -1076,7 +1089,7 @@ require 'registros/db.php';?>
             </div>
           </div>
       </div>
-   </section>
+   </section-->
   
 
     <!-- FOOTER INICIAL -->
