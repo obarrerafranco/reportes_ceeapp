@@ -113,7 +113,7 @@
     </nav>
 
     <!-- Header -->
-    <header style="background-image: url(../../img/headers/header_mopi.jpg);">
+    <header style="background-image: url(../../img/headers/hd_jcdecaux.jpg);">
         <div class="container">
             <div class="intro-text">
                 <div class="shadow intro-lead-in text-right">Reporte<br /> semana 04</div>

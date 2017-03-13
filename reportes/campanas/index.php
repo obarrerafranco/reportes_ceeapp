@@ -1,5 +1,51 @@
 <?php 
+   if(!isset($_POST['client'])){
+
+    echo "<div>No tienes acceso para ver esta página</div>";
+
+   }else{
+
+
     require '../../registros/db.php';
+
+          $week = $_POST['wekks'];//5;
+          $client = $_POST['client']; //43;
+          $city = $_POST['citias']; 
+          $camps = $_POST['camps']; 
+          $sql = "SELECT rc.id as id_rep, 
+          rc.id_campana, 
+          rc.id_ciudad, 
+          rc.id_semana, 
+          text_semana,
+          rc.porcen_total as porcen_total,
+          no_scans, 
+          no_views, 
+          best_hour,
+          CONCAT_WS('/',semanas.semana,semanas.year) as semana,
+          cy.nombre_ciudad as city,
+          cp.nombre_campana,
+          cp.id_cliente,
+          cp.img_header as mupi,
+          cl.nombre_cliente as cliente
+          FROM reportes_clientes rc
+          INNER JOIN semanas 
+               ON rc.id_semana = semanas.id
+          INNER JOIN ciudades cy 
+               ON rc.id_ciudad  = cy.id
+          INNER JOIN campanas cp 
+               ON rc.id_campana  = cp.id
+          INNER JOIN clientes cl 
+               ON cp.id_cliente  = cl.id
+          WHERE
+          cp.status = 1 AND 
+          rc.id_semana = ? AND 
+          cp.id_cliente = ? AND 
+          rc.id_ciudad = ? AND 
+          rc.id_campana = ?";
+
+          $stmt = $PDO->prepare($sql);
+          $stmt->execute(array($week,$client,$city,$camps));
+          $data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +61,7 @@
     <link rel="shortcut icon" href="../../img/plataforma/favicon.jpeg">
     <meta name="robots" content="noindex">
 
-    <title>Reebok (Bogotá) / Reporte Semana 07</title>
+    <title><?php echo $data['cliente']." ( ".$data['city'] ." ) / Reporte Semana ".$data['semana'] ?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -79,6 +125,9 @@
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top"><img class="monitor" src="../../img/plataforma/logo.png"><h4 class="logo-txt">CEE APP</h4></a>
             </div>
+
+            <?php if($city == 1){
+  ?>
             <!-- /.navbar-collapse -->
              <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -105,33 +154,67 @@
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
+            <?php }else { ?>
+              <!-- /.navbar-collapse -->
+               <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                      <li class="hidden">
+                          <a href="#page-top"></a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#resumen">Resumen</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#reportes1">Reportes</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#portfolio">News</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#historial">Historico</a>
+                      </li>
+                      <li style="padding: 15px 10px 10px 10px">
+                        <form method="post" id="nacional" action="index.php">
+                        <a class="page-scroll" href="#" onclick="document.forms['nacional'].submit(); return false;">Nacional</a>
+                         <?php echo '<input type="hidden" name="wekks" value="'.$week.'">
+                        <input type="hidden" name="client" value="'.$client.'">
+                        <input type="hidden" name="citias" value="1">'; ?>
+                        </form> 
+                      </li>
+
+                  </ul>
+              </div>
+              <!-- /.navbar-collapse -->
+
+            <?php } ?>
         </div>
         <!-- /.container-fluid -->
     </nav>
-
     <!-- Header -->
-    <header style="background-image: url(../../img/headers/header_mopi.jpg);">
+    <?php echo '<header style="background-image: url(../../img/headers/'.$data['mupi'].');">'; ?>
         <div class="container">
             <div class="intro-text">
-                <div class="shadow intro-lead-in text-right">Reporte<br /> semana 07</div>
-                <div class="shadow intro-heading text-right">Reebok <br>
-                    <span class="ciudad">(Bogotá)</span> </div>
+                <div class="shadow intro-lead-in text-right">Reporte <br /> semana <?php echo $data['semana']; ?></div>
+                <div class="shadow intro-heading text-right"><?php echo $data['cliente']; ?> <br>
+                    <span class="ciudad">(<?php echo $data['city']; ?>)</span> </div>
             </div>
         </div>
         <div class="opacity"></div>
     </header>
 
+    <?php echo '<input type="hidden" name="id_ob" id="id_ob" value="'.$data['id_rep'].'">'; ?>
+
     <!-- SECCION RESUMEN-->
 
-   <section id="resumen">
-       
+   <section id="resumen">  
        <div class="container">
        <div><h2 class="section-heading">Resumen</h2></div><br />
         <div class="col-sm-2 col-sm-offset-1">
           <!-- small box -->
           <div class="small-box bg-scans">
             <div class="inner caja">
-              <h1 class="text-center">379</h1>
+              <h1 class="text-center"><?php echo $data['no_scans']; ?></h1>
 
               <p class="text-center">Número de Scans</p>
             </div>
@@ -142,7 +225,7 @@
           <!-- small box -->
           <div class="small-box bg-views">
             <div class="inner caja">
-              <h1 class="text-center">121</h1>
+              <h1 class="text-center"><?php echo $data['no_views']; ?></h1>
 
               <p class="text-center">Número de Views</p>
             </div>
@@ -153,7 +236,7 @@
           <!-- small box -->
           <div class="small-box bg-hora">
             <div class="inner caja">
-             <h4 class="text-center">11 AM: 164 SCANS<p>&nbsp;</p></h4>
+             <h4 class="text-center"><?php echo $data['best_hour']; ?><p>&nbsp;</p></h4>
 
               <p class="text-center">Mejor Hora</p>
             </div>
@@ -164,9 +247,9 @@
           <!-- small box -->
           <div class="small-box bg-scan-total">
             <div class="inner caja">
-              <h1 class="text-center">22.402</h1>
+              <h1 class="text-center">23.594</h1>
 
-              <p class="text-center"><a href="#" data-toggle="tooltip" title="*4.54% del total">Scans Total</a></p>
+              <p class="text-center"><?php echo '<a href="#" data-toggle="tooltip" title="'. $data['porcen_total'].' del total">Scans Total</a></p>'; ?>
             </div>
           </div>
         </div>
@@ -191,8 +274,8 @@
                <div class="scans col-md-6 col-lg-6">
          
                                          <div class="text-center">
-                        <h4 class="section-heading">SEMANA 07 <span class="ciudad">(Nacional)</span></h4>
-                        <h5 class="section-subheading text-muted">Estos son los datos recogidos de scans realizados en la semana 07, que abarca del 8 de Febrero al 14 de Febrero:</h5>
+                        <h4 class="section-heading">SEMANA <?php echo $data['semana']; ?> <span class="ciudad">(<?php echo $data['city']; ?>)</span></h4>
+                        <h5 class="section-subheading text-muted">Estos son los datos recogidos de scans realizados en la semana 04, que abarca del <?php echo $data['text_semana']; ?>:</h5>
                     </div>
                     <div>
                         <canvas id="semana"></canvas>
@@ -201,7 +284,7 @@
                 </div>
                 <div class="views col-md-6 col-lg-6">
                     <div class="text-center">
-                        <h4 class="section-heading">INFORMACIÓN GENERAL <span class="ciudad">(Nacional)</span></h4>
+                        <h4 class="section-heading">INFORMACIÓN GENERAL <span class="ciudad">(<?php echo $data['city']; ?>)</span></h4>
                         <h5 class="section-subheading text-muted">En la gráfica se muestran todos los scans realizados en la última semana:</h5>
                     </div>
                     <div>
@@ -243,7 +326,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">HISTÓRICO <span class="ciudad">(Nacional)</span></h2>
+                    <h2 class="section-heading">HISTÓRICO <span class="ciudad">(<?php echo $data['city']; ?>)</span></h2>
                     <h3 class="section-subheading text-muted">El histórico incluye los datos registrados en semanas anteriores para esta campaña:</h3>
                 </div>
             </div>
@@ -252,14 +335,17 @@
 
                 
                 <?php 
-                $sql = 'SELECT historial.id, semanas.semana as lasemana,  semanas.color as color, 
+                $sqlhist = "SELECT historial.id, 
+                semanas.semana as lasemana,  
+                semanas.color as color, 
                 id_cliente, id_ciudad, id_semana, 
-                historial.estatus, imagen FROM historial 
+                historial.estatus, imagen 
+                FROM historial 
                 INNER JOIN semanas 
                 ON historial.id_semana= semanas.id
-                WHERE historial.estatus = 1 and id_ciudad = 2 and id_cliente = 3 ORDER BY historial.id DESC';
+                WHERE historial.estatus = 1 and id_ciudad = ".$city." and id_cliente = ".$client." ORDER BY historial.id DESC";
 
-                foreach ($PDO->query($sql) as $row1) {
+                foreach ($PDO->query($sqlhist) as $row1) {
 
                                 echo '<a href="#sem'.$row1['lasemana'].'" class="portfolio-link" data-toggle="modal"> '; 
                                  echo  '<div class="item '.$row1['color'].' transition"> ';  ?>
@@ -274,9 +360,11 @@
             </div>
         </div>
     </section>
+<?php if($city == 1){
+  ?>
 
      <!--  CIUDADES -->
-    <!--section id="ciudades">
+    <section id="ciudades">
       <div class="row">
               <div class="col-md-6 ciudades-txt">
                   <div>
@@ -293,16 +381,26 @@
                 <div class="mapita">
                   <img id="Image-Maps-Com-image-maps-2017-02-03-182337" src="../../img/plataforma/colombia.png" border="0" width="239" height="300" orgWidth="239" orgHeight="300" usemap="#image-maps-2017-02-03-182337" alt="" />
                   <map name="image-maps-2017-02-03-182337" id="ImageMapsCom-image-maps-2017-02-03-182337">
-                    <area id="1" alt="Bogotá" title="Bogotá" href="pegastic-bogota.php" shape="rect" coords="78,128,108,161" style="outline:none;" target="_self"     />
-                    <area id="2" alt="Cali" title="Cali" href="pegastic-cali.php" shape="rect" coords="27,138,64,176" style="outline:none;" target="_self"     />
+                    <form method="post" id="bogot" action="index.php">
+                      <area id="1" alt="Bogotá" title="Bogotá" href="#" onclick="document.forms['bogot'].submit(); return false;" shape="rect" coords="78,128,108,161" style="outline:none;" target="_self"     />
+                     <?php echo '<input type="hidden" name="wekks" value="'.$week.'">
+                      <input type="hidden" name="client" value="'.$client.'">
+                      <input type="hidden" name="citias" value="2">'; ?>
+                  </form>
+                  <form method="post" id="cal" action="index.php">
+                      <area id="1" alt="Cali" title="Cali" href="#" onclick="document.forms['cal'].submit(); return false;" shape="rect" coords="27,138,64,176" style="outline:none;" target="_self"     />
+                     <?php echo '<input type="hidden" name="wekks" value="'.$week.'">
+                      <input type="hidden" name="client" value="'.$client.'">
+                      <input type="hidden" name="citias" value="3">'; ?>
+                  </form>
                     <area shape="rect" coords="237,298,239,300" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
                   </map>
                 </div>
               </div>
           </div>
-    </section-->
+    </section>
     <!-- FIN CIUDADES -->
-
+<?php } ?>
     <!-- FOOTER INICIAL -->
     <footer class="footter">
         <div class="row">
@@ -319,7 +417,7 @@
  <!-- INICIO MODAL HISTORICO -->
     <?php 
 
-    foreach ($PDO->query($sql)as $row2) {
+    foreach ($PDO->query($sqlhist)as $row2) {
 
 
         echo '<div class="portfolio-modal modal fade" id="sem'.$row2['lasemana'].'" tabindex="-1" role="dialog" aria-hidden="true">'; ?>
@@ -345,6 +443,8 @@
         </div>
      <?php 
        }
+
+}
     ?>
         
     <!-- FIN MODAL HISTORICO -->
@@ -386,6 +486,10 @@
 
     <!-- Owl Carousel -->
     <script src="../../js/owl.carousel.js"></script>
+    <script type="text/javascript" src="../../ajax/info_genral.js"></script>
+    <script type="text/javascript" src="../../ajax/genero.js"></script>
+    <script type="text/javascript" src="../../ajax/edad.js"></script>
+    <script type="text/javascript" src="../../ajax/semana.js"></script>
 
 <script>
     $(document).ready(function() {
@@ -396,233 +500,6 @@
 });
 </script>
 
-<script>
-"use strict";
-
-        /* Semana linea Inicio */
-      var semanaLoaded = false;
-            $(document).on('scroll', function(){      
-                var scrollTop = $(window).scrollTop();
-                if(scrollTop > 250 && !semanaLoaded){
-                    var ctxsemana = document.getElementById("semana");
-
-
-
-                    var dataSemana = {
-                                labels: ["8 Febrero", "9 Febrero", "10 Febrero", "11 Febrero", "12 Febrero", "13 Febrero", "14 Febrero"],
-                                datasets: [
-                                     {
-                                        label: "Numero de views",
-                                        fill: true,
-                                        lineTension: 0.1,
-                                        backgroundColor: "#0c2756",
-                                        borderColor: "#0c2756",
-                                        borderCapStyle: 'butt',
-                                        borderDash: [],
-                                        borderDashOffset: 0.0,
-                                        borderJoinStyle: 'miter',
-                                        pointBorderColor: "#0c2756",
-                                        pointBackgroundColor: "#fff",
-                                        pointBorderWidth: 1,
-                                        pointHoverRadius: 5,
-                                        pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                                        pointHoverBorderColor: "rgba(220,220,220,1)",
-                                        pointHoverBorderWidth: 2,
-                                        pointRadius: 3,
-                                        pointColor: "rgba(148, 193, 31,1)",
-                                        pointHitRadius: 10,
-                                        data: [22, 19, 26, 6, 5, 24, 19],
-                                        spanGaps: false,
-                                    },
-                                      {
-                                        label: "Numero de scans",
-                                        fill: true,
-                                        lineTension: 0.1,
-                                        backgroundColor: "#94C11F",
-                                        borderColor: "#94C11F",
-                                        borderCapStyle: 'butt',
-                                        borderDash: [],
-                                        borderDashOffset: 0.0,
-                                        borderJoinStyle: 'miter',
-                                        pointBorderColor: "#94C11F",
-                                        pointBackgroundColor: "#fff",
-                                        pointBorderWidth: 1,
-                                        pointHoverRadius: 5,
-                                        pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                                        pointHoverBorderColor: "rgba(220,220,220,1)",
-                                        pointHoverBorderWidth: 2,
-                                        pointRadius: 3,
-                                        pointColor: "rgba(148, 193, 31,1)",
-                                        pointHitRadius: 10,
-                                        data: [69, 59, 80, 20, 16, 76, 59],
-                                        spanGaps: false,
-                                    }
-                                ]
-                        };
-
-                    var optionsSemana = {
-                            responsive: true,
-                        };
-
-                    var genero = new Chart(ctxsemana, {
-                        type: 'line',
-                        data: dataSemana,
-                        options: optionsSemana
-                    });  
-
-                     semanaLoaded = true;
-                    }
-                    else{
-                    return;
-                    }
-                 });
-        /* Semana Linea Fin */
-
-          /* General bar Inicio */
-      var generalLoaded = false;
-            $(document).on('scroll', function(){      
-                var scrollTop = $(window).scrollTop();
-                if(scrollTop > 250 && !generalLoaded){
-                    var ctxgral = document.getElementById("infogral");
-
-                    var dataGeneral = {
-                           labels: ["8 Febrero", "9 Febrero", "10 Febrero", "11 Febrero", "12 Febrero", "13 Febrero", "14 Febrero"],
-                    datasets: [
-                        {
-                            label: "Scans generales",
-                            fillColor: "rgba(148, 193, 31,1)",
-                            strokeColor: "rgba(148, 193, 31,1)",
-                            pointColor: "rgba(148, 193, 31,1)",
-                            pointStrokeColor: "#fff",
-                            pointHighlightFill: "#fff",
-                            pointHighlightStroke: "rgba(220,220,220,1)",
-                             data: [69, 59, 80, 20, 16, 76, 59],
-                            backgroundColor: [
-                                    '#0c2756',
-                                    '#0c2756',
-                                    '#0c2756',
-                                    '#0c2756',
-                                    '#0c2756',
-                                    '#0c2756',
-                                    '#0c2756'
-                                ],
-                        },
-                        
-                    ]
-                        };
-
-                    var optionsGeneral = {
-                            responsive: true,
-                        };
-
-                    var edad = new Chart(ctxgral, {
-                        type: 'bar',
-                        data: dataGeneral,
-                        options: optionsGeneral
-                    });  
-
-                     generalLoaded = true;
-                    }
-                    else{
-                    return;
-                    }
-                 });
-        /* General Bar Fin */
-
-        /* Dona de Genero Inicio */
-      var generoLoaded = false;
-            $(document).on('scroll', function(){      
-                var scrollTop = $(window).scrollTop();
-                if(scrollTop > 580 && !generoLoaded){
-                    var ctxgenero = document.getElementById("genero");
-
-                    var dataGenero = {
-                            labels: ["Masculino", "Femenino"],
-                            datasets: [{
-                                label: 'Genero',
-                                data: [227, 152],
-                                backgroundColor: [
-                                    '#1f5bbd',
-                                    '#ff777c',
-                                ],
-                                borderColor: [
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                ],
-                                borderWidth: 1
-                            },
-                            ]
-                        };
-
-                    var optionsGenero = {
-                            responsive: true,
-                        };
-
-                    var genero = new Chart(ctxgenero, {
-                        type: 'doughnut',
-                        data: dataGenero,
-                        options: optionsGenero
-                    });  
-
-                     generoLoaded = true;
-                    }
-                    else{
-                    return;
-                    }
-                 });
-        /* Dona de Genero Fin */
-
-         /* Dona de Edad Inicio */
-      var edadLoaded = false;
-            $(document).on('scroll', function(){      
-                var scrollTop = $(window).scrollTop();
-                if(scrollTop > 580 && !edadLoaded){
-                    var ctxedad = document.getElementById("edad");
-
-                    var dataEdad = {
-                            labels: ["10-19 años", "20-29 años", "30-39 años", "40-60 años"],
-                            datasets: [{
-                                label: 'Edad',
-                                data: [84, 63, 105, 126],
-                                backgroundColor: [
-                                    '#ff6b61',
-                                    '#f0a150',
-                                    '#b5d36f',
-                                    '#143b80',
-                                ],
-                                borderColor: [
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                    'rgba(200,200,200,1)',
-                                ],
-                                borderWidth: 1
-                            },
-                            ]
-                        };
-
-                    var optionsEdad = {
-                            responsive: true,
-                        };
-
-                    var edad = new Chart(ctxedad, {
-                        type: 'pie',
-                        data: dataEdad,
-                        options: optionsEdad
-                    });  
-
-                     edadLoaded = true;
-                    }
-                    else{
-                    return;
-                    }
-                 });
-        /* Dona de Edad Fin */
-
-       
-</script>
 <!-- end scripts -->
 </body>
 

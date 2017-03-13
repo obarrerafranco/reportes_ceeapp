@@ -87,6 +87,9 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="http://localhost:8081/cee_report/index.php">Indice</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#resumen_views">Resumen</a>
                     </li>
                     <li>
@@ -110,7 +113,7 @@
     </nav>
 
     <!-- Header -->
-    <header style="background-image: url(../../img/headers/header_mopi.jpg);">
+    <header style="background-image: url(../../img/headers/hd_jcdecaux.jpg);">
         <div class="container">
             <div class="intro-text">
                 <div class="shadow intro-lead-in text-right">Reporte<br /> semana 07</div>

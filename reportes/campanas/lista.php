@@ -1,26 +1,29 @@
-<?php require "login/loginheader.php"; 
-require 'registros/db.php';?>
+<?php 
+require '../registros/db.php';
+?>
 
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
+    <input type="hidden" name="id_sem" value="5" id="id_sem">
+    <input type="hidden" name="id_cli" value="43" id="id_cli">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="obarrerafranco">
-    <link rel="shortcut icon" href="img/plataforma/favicon.jpeg">
+    <link rel="shortcut icon" href="../img/plataforma/favicon.jpeg">
     <meta name="robots" content="noindex">
 
     <title>Listado de Clientes</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/ceeapp.css" rel="stylesheet">
+    <link href="../css/ceeapp.css" rel="stylesheet">
 
 
     <!-- Custom Fonts -->
@@ -39,8 +42,8 @@ require 'registros/db.php';?>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="js/device.min.js"></script>
-    <script src="js/modernizr.custom.js"></script>
+    <script src="../js/device.min.js"></script>
+    <script src="../js/modernizr.custom.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -67,26 +70,12 @@ require 'registros/db.php';?>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="nav navbar-brand page-scroll2" href="#page-top"><img class="monitor" src="img/plataforma/logo.png"></a>
+                <a class="nav navbar-brand page-scroll2" href="#page-top"><img class="monitor" src="../img/plataforma/logo.png"></a>
             </div>
             <!-- /.navbar-collapse -->
              <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <div class="navbar-nav navbar-left">
-              <select class="form-control input-md" id="semana" name="semana" >
-                <option></option>
-                <?php 
-                   $seman = 'SELECT wk.id as id, wk.semana as semana, wk.year as year FROM semanas wk
-                    INNER JOIN reportes_clientes rp ON rp.id_semana = wk.id WHERE wk.estatus = 1 GROUP BY wk.id ORDER BY wk.id DESC';
-
-                    foreach ($PDO->query($seman) as $wee1) {
-
-                        echo '<option value="'.$wee1['id'].'">'.$wee1['semana'].'-'.$wee1['year'].'</option>';
-
-                    }
-                    ?>
-              </select>
-            </div>
+            
                 <ul class="nav navbar-nav navbar-right" id="meniindi">
                    <!--Contenido del menu-->
                 </ul>
@@ -97,7 +86,7 @@ require 'registros/db.php';?>
     </nav>
 
     <!-- Header -->
-    <header style="background-image: url('img/headers/hd_jcdecaux.jpg');">
+    <header style="background-image: url('../img/headers/hd_jcdecaux.jpg');">
         <div class="container">
             <div class="intro-text">
                 <div class="shadow intro-lead-in text-right">Bienvenidos a<br /> Los reportes<br />Semanales</div>
@@ -109,12 +98,7 @@ require 'registros/db.php';?>
     <!-- SECCION RESUMEN DINAMICO INICIO-->
 
     <div id="secciones" >
-      <section class="section-heading">
-          <div class="container" id="bienvenida">
-            <h2 style="text-align:center">Bienvenido a los reportes de CEE APP<br /> Selecciona una Semana para iniciar</h2>
-            <img class="img-responsive" src="img/plataforma/ceeapp.png">
-          </div>
-      </section>
+      
     </div>
     <!-- SECCION RESUMEN DINAMICO FIN-->
   
@@ -124,8 +108,8 @@ require 'registros/db.php';?>
         <div class="row">
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
-               <img alt="JCdecaux" title="JCdecaux" src="img/plataforma/jcdecaux_footer.png">
-               <a href="http://www.ceeplatform.com" target="_blank"><img alt="CEE APP" title="CEE APP"  src="img/plataforma/ceelogo_footer.png"></a>
+               <img alt="JCdecaux" title="JCdecaux" src="../img/plataforma/jcdecaux_footer.png">
+               <a href="http://www.ceeplatform.com" target="_blank"><img alt="CEE APP" title="CEE APP"  src="../img/plataforma/ceelogo_footer.png"></a>
             </div>
             <div class="col-sm-3"></div>
         </div>
@@ -133,63 +117,45 @@ require 'registros/db.php';?>
     <!-- FOOTER FINAL -->
 
     <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
+    <script src="../js/jquery-1.11.0.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
+    <script src="../js/classie.js"></script>
+    <script src="../js/cbpAnimatedHeader.js"></script>
 
 
     <!-- Custom Theme JavaScript -->
-    <script src="js/agency.js"></script>
+    <script src="../js/agency.js"></script>
 
 
-    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="../js/jquery.easing.1.3.js"></script>
     <!-- IE -->
-    <script src="js/modernizr.custom.js"></script>
+    <script src="../js/modernizr.custom.js"></script>
 
     <!-- JS responsible for hover in touch devices -->
-    <script src="js/jquery.hoverIntent.js"></script>
+    <script src="../js/jquery.hoverIntent.js"></script>
 
     <!-- Detects when a element is on wiewport -->
-    <script src="js/jquery.appear.js"></script>
+    <script src="../js/jquery.appear.js"></script>
 
     <!-- Count to plugin -->
-    <script src="js/jquery.countTo.js"></script>
+    <script src="../js/jquery.countTo.js"></script>
 
     <script type="text/javascript">
       $(document).ready(inicio);
 
       function inicio(){
-  /*    $("#meniindi").change($('#meniindi :selected').val());*/
-        $("#semana").change(mostrarSem);
-      }
-      function enviar (id){
-        $("#a"+id).submit();
-      }
-      function mostrarSem (){
 
-        var id_semana= $( "#semana option:selected" ).val();
-          $.ajax({
-            url: "http://localhost:8081/cee_report/ajax/menu.php",
-            method: "POST",
-            data: { id_semana: id_semana },
-            success: function(lista) {
-              $('#meniindi').html("");
-              $('#meniindi').append(lista);
-            },
-            error: function(lista) {
-              console.log(lista);
-            }
-          });
+        var id_wks = $("#id_sem").val();
+        var id_cl= $("#id_cli").val();
 
-          $.ajax({
-            url: "http://localhost:8081/cee_report/ajax/secciones.php",
+       $.ajax({
+            url: "http://localhost:8081/cee_report/ajax/plantilla_c.php",
             method: "POST",
-            data: { id_semana: id_semana },
+            data: {id_sem:id_wks,id_cli:id_cl} ,
             success: function(logos) {
               $('#secciones').html("");
               $('#secciones').html(logos);
@@ -198,7 +164,11 @@ require 'registros/db.php';?>
               console.log(logos);
             }
           });
+     }
+     function enviar (id){
+        $("#a"+id).submit();
       }
+      
     </script>
 
 

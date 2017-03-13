@@ -1045,4 +1045,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .form-control #semana {
     margin-top: 10px !important;
 }
+#bienvenida .img-responsive {
+    margin: 0 auto;
+}
 /* Fin Nuevos estilos*/

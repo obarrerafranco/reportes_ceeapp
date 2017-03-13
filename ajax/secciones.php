@@ -2,7 +2,6 @@
  require '../registros/db.php';
 
    $seman = $_POST['id_semana'];
-   echo $seman;
    $logos = "";
    $letras = "SELECT cl.letra as letra,cl.nombre_cliente as nam_cli, cl.logo as logo FROM campanas cp 
               INNER JOIN clientes cl ON cl.id = cp.id_cliente 
