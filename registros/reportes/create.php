@@ -12,12 +12,14 @@ require '../db.php';
         $views  = $_POST['no_views'];
         $hora  = $_POST['hora'];
         $porcent  = $_POST['porcent'];
+        $tscans  = $_POST['tscans'];
+        $tdownlo  = $_POST['tdownlo'];
         
         // inserta data
             $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO reportes_clientes (id_campana,id_ciudad,id_semana,text_semana,no_scans,no_views,best_hour,porcen_total) values(?, ?, ?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO reportes_clientes (id_campana,id_ciudad,id_semana,text_semana,no_scans,no_views,best_hour,porcen_total,descarga_total,scans_total) values(?, ?, ?, ?, ?, ?, ?, ?,?,?)";
             $stmt = $PDO->prepare($sql);
-            $stmt->execute(array($campana,$ciudad,$semana,$tsemana,$scans,$views,$hora,$porcent));
+            $stmt->execute(array($campana,$ciudad,$semana,$tsemana,$scans,$views,$hora,$porcent,$tdownlo,$tscans));
             header("Location: index.php");
     }
 ?>
@@ -97,11 +99,11 @@ require '../db.php';
     </div>
     <div class="form-group">
         <label for="inputScans"># Scans</label>
-        <input type="text" class="form-control"  id="inputScans" name="no_scans" placeholder="# scans">
+        <input type="number" class="form-control"  id="inputScans" name="no_scans" placeholder="# scans">
     </div>
     <div class="form-group">
         <label for="inputViews"># Views</label>
-        <input type="text" class="form-control"  id="inputViews" name="no_views" placeholder="# views">
+        <input type="number" class="form-control"  id="inputViews" name="no_views" placeholder="# views">
     </div>
     <div class="form-group">
         <label for="inputHour">Mejor Hora</label>
@@ -110,6 +112,14 @@ require '../db.php';
    <div class="form-group">
         <label for="inputPorcen">Porcentaje</label>
         <input type="text" class="form-control"  id="inputPorcen" name="porcent" placeholder="Porcentaje de Scans">
+    </div>
+    <div class="form-group">
+        <label for="tscans">Total Scans</label>
+        <input type="number" class="form-control"  id="tscans" name="tscans" placeholder="Total Scans">
+    </div>
+    <div class="form-group">
+        <label for="tdownlo">Total Descargas</label>
+        <input type="number" class="form-control"  id="tdownlo" name="tdownlo" placeholder="Total Descargas">
     </div>
     <div class="form-actions">
         <button type="submit" class="btn btn-success">Crear</button>

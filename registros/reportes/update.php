@@ -15,14 +15,22 @@ require '../db.php';
     {
         
         // post values
-       $cliente  = $_POST['cliente'];
-        $logo  = $_POST['logo'];
+        $camapan  = $_POST['campana'];
+        $ciudad  = $_POST['ciudad'];
+        $semana  = $_POST['semana'];
+        $txtsem  = $_POST['textow'];
+        $noscan  = $_POST['no_scans'];
+        $noview  = $_POST['no_views'];
+        $hora  = $_POST['hora'];
+        $porce  = $_POST['porcent'];
+        $tscans  = $_POST['tscans'];
+        $tdownlo  = $_POST['tdownlo'];
         
         // update data
             $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "Update clientes set nombre_cliente=?,logo=? where id=?";
+            $sql = "Update reportes_clientes set id_campana=?,id_ciudad=?,id_semana=?,text_semana=?,no_scans=?,no_views=?,best_hour=?,porcen_total=?,scans_total=?,descarga_total=? where id=?";
             $stmt = $PDO->prepare($sql);
-            $stmt->execute(array($cliente,$logo,$id));
+            $stmt->execute(array($camapan,$ciudad,$semana,$txtsem,$noscan,$noview,$hora,$porce,$tscans,$tdownlo,$id));
             $PDO = null;
             header("Location: index.php");
     }
@@ -44,6 +52,8 @@ require '../db.php';
         $noview  = $data['no_views'];
         $hora  = $data['best_hour'];
         $porce  = $data['porcen_total'];
+        $tscans  = $data['scans_total'];
+        $tdownlo  = $data['descarga_total'];
     }
 ?>
 
@@ -153,7 +163,14 @@ require '../db.php';
                             <label for="inputPorcen">Porcentaje</label>
                             <input type="text" class="form-control" id="inputPorcen" name="porcent" value="<?php echo $porce; ?>">
                         </div>
-        
+                        <div class="form-group">
+                            <label for="tscans">Total Scans</label>
+                            <input type="text" class="form-control" id="tscans" name="tscans" value="<?php echo $tscans; ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="tdownlo">Total Descargas</label>
+                            <input type="text" class="form-control" id="tdownlo" name="tdownlo" value="<?php echo $tdownlo; ?>">
+                        </div>        
                         <div class="form-actions">
                             <button type="submit" class="btn btn-primary">Actualizar</button>
                             <a class="btn btn btn-default" href="index.php">Regresar</a>

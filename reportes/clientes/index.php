@@ -19,6 +19,8 @@
           rc.porcen_total as porcen_total,
           no_scans, 
           no_views, 
+          scans_total,
+          descarga_total, 
           best_hour,
           CONCAT_WS('/',semanas.semana,semanas.year) as semana,
           cy.nombre_ciudad as city,
@@ -247,7 +249,7 @@
           <!-- small box -->
           <div class="small-box bg-scan-total">
             <div class="inner caja">
-              <h1 class="text-center">23.594</h1>
+              <h1 class="text-center"><?php echo $data['scans_total']; ?></h1>
 
               <p class="text-center"><?php echo '<a href="#" data-toggle="tooltip" title="'. $data['porcen_total'].' del total">Scans Total</a></p>'; ?>
             </div>
@@ -258,7 +260,7 @@
           <!-- small box -->
           <div class="small-box bg-descargas">
             <div class="inner caja">
-              <h1 class="text-center">87.896</h1>
+              <h1 class="text-center"><?php echo $data['descarga_total']; ?></h1>
 
               <p class="text-center">Descargas Totales</p>
             </div>
@@ -372,8 +374,17 @@
                       <h1 class="mapa">CONOCE<br />LOS REPORTES <br />DE CADA CIUDAD</h1>
                       <hr class="separador"/>
                       <div >
-                        <a class="btn-ciudad" href="pegastic-bogota.php">BOGOTÁ</a> - 
-                        <a class="btn-ciudad" href="pegastic-cali.php">CALI</a>
+                        <form method="post" id="bogot" action="index.php">
+                          <a class="btn-ciudad" alt="Bogotá" title="Bogotá" href="#" onclick="document.forms['bogot'].submit(); return false;">BOGOTÁ</a>
+                          <?php echo '<input type="hidden" name="wekks" value="'.$week.'">
+                          <input type="hidden" name="client" value="'.$client.'">
+                          <input type="hidden" name="citias" value="2">'; ?>
+                        </form>-<form method="post" id="cal" action="index.php">
+                          <a class="btn-ciudad" alt="Cali" title="Cali" href="#" onclick="document.forms['cal'].submit(); return false;" >CALI</a>
+                         <?php echo '<input type="hidden" name="wekks" value="'.$week.'">
+                          <input type="hidden" name="client" value="'.$client.'">
+                          <input type="hidden" name="citias" value="3">'; ?>
+                        </form>
                       </div>
                   </div>
               </div>
@@ -493,6 +504,10 @@
 
 <script>
     $(document).ready(function() {
+    
+    function enviar (id){
+        $("#a"+id).submit();
+      }
  
   $("#owl-example").owlCarousel({
       items : 6

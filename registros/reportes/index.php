@@ -34,6 +34,8 @@ $pagination = new PDO_Pagination($PDO);
         <th>Semana</th>
         <th># Scans</th>
         <th># Views</th>
+        <th>Total Scans</th>
+        <th>Total Descargas</th>
         <th>Accion</th>
     </tr>
     <tbody>
@@ -64,6 +66,8 @@ text_semana,
 no_scans, 
 no_views, 
 best_hour,
+descarga_total,
+scans_total,
 CONCAT_WS("/",semanas.semana,semanas.year) as semana,
 cy.nombre_ciudad,
 cp.nombre_campana,
@@ -102,6 +106,8 @@ while($rows = $query->fetch())
         echo '<td>'. $row['semana'] . '</td>';
         echo '<td>'. $row['no_scans'] . '</td>';
         echo '<td>'. $row['no_views'] . '</td>';
+        echo '<td>'. $row['scans_total'] . '</td>';
+        echo '<td>'. $row['descarga_total'] . '</td>';
         echo '<td>
                   <a class="btn btn-xs btn-primary" href="update.php?id='. $row['id_repor'] . '">Editar</a>
                     <button type="button" class="btn btn-primary btn-xs" data-id="'. $row['id_repor'] . '" data-toggle="modal" onclick="mostrarGral('.$row['id_repor'].')">General</button>
