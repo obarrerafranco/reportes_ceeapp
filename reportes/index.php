@@ -6,8 +6,7 @@ require '../registros/db.php';
 <html lang="es">
 
 <head>
-    <input type="hidden" name="id_sem" value="5" id="id_sem">
-    <input type="hidden" name="id_cli" value="43" id="id_cli">
+    <input type="hidden" name="id_cli" value="9" id="id_cli">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -75,7 +74,23 @@ require '../registros/db.php';
             <!-- /.navbar-collapse -->
              <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            
+                <div class="navbar-nav navbar-left">
+              <select class="form-control input-md" id="id_sem" name="id_sem" >
+                <option id="blanco"></option>
+                <?php 
+                   $seman = 'SELECT wk.id as id, wk.semana as semana, wk.year as year, cp.id_cliente as id_cliente FROM semanas wk
+                    INNER JOIN reportes_clientes rp ON rp.id_semana = wk.id 
+                    INNER JOIN campanas cp ON cp.id = rp.id_campana
+                    WHERE wk.estatus = 1 AND cp.id_cliente =9 GROUP BY wk.id ORDER BY wk.id DESC';
+
+                    foreach ($PDO->query($seman) as $wee1) {
+
+                        echo '<option value="'.$wee1['id'].'">'.$wee1['semana'].'-'.$wee1['year'].'</option>';
+
+                    }
+                    ?>
+              </select>
+            </div>
                 <ul class="nav navbar-nav navbar-right" id="meniindi">
                    <!--Contenido del menu-->
                 </ul>
@@ -90,7 +105,7 @@ require '../registros/db.php';
         <div class="container">
             <div class="intro-text">
                 <div class="shadow intro-lead-in text-right">Bienvenidos a<br /> Los reportes<br />Semanales</div>
-                <div class="shadow intro-heading text-right">Cee APP</div>
+                <div class="shadow intro-heading text-right">Campañas Cee APP</div>
             </div>
         </div>
         <div class="opacity"></div>
@@ -98,7 +113,12 @@ require '../registros/db.php';
     <!-- SECCION RESUMEN DINAMICO INICIO-->
 
     <div id="secciones" >
-      
+        <section class="section-heading">
+          <div class="container" id="bienvenida">
+            <h2 style="text-align:center">Bienvenido a los reportes de CEE APP<br /> Selecciona una Semana para iniciar</h2>
+            <img class="img-responsive" src="../img/plataforma/ceeapp.png">
+          </div>
+      </section>
     </div>
     <!-- SECCION RESUMEN DINAMICO FIN-->
   
@@ -148,17 +168,20 @@ require '../registros/db.php';
       $(document).ready(inicio);
 
       function inicio(){
-
+        $("#id_sem").change(mostrarSem);
+        }
+      function mostrarSem (){
         var id_wks = $("#id_sem").val();
         var id_cl= $("#id_cli").val();
 
        $.ajax({
-            url: "http://localhost:8081/cee_report/ajax/plantilla_c.php",
+            url: "http://localhost:8081/cee_report/ajax/plantilla_j.php",
             method: "POST",
             data: {id_sem:id_wks,id_cli:id_cl} ,
             success: function(logos) {
               $('#secciones').html("");
               $('#secciones').html(logos);
+              $('#blanco').hide();
             },
             error: function(logos) {
               console.log(logos);

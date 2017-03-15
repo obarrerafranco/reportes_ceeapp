@@ -25,7 +25,7 @@
           best_hour,
           CONCAT_WS('/',semanas.semana,semanas.year) as semana,
           cy.nombre_ciudad as city,
-          cp.nombre_campana,
+          cp.nombre_campana as nombre_campana,
           cp.id_cliente,
           cp.img_header as mupi,
           cl.nombre_cliente as cliente
@@ -144,9 +144,6 @@
                         <a class="page-scroll" href="#reportes1">Reportes</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">News</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="#historial">Historico</a>
                     </li>
                     <li>
@@ -169,9 +166,6 @@
                       </li>
                       <li>
                           <a class="page-scroll" href="#reportes1">Reportes</a>
-                      </li>
-                      <li>
-                          <a class="page-scroll" href="#portfolio">News</a>
                       </li>
                       <li>
                           <a class="page-scroll" href="#historial">Historico</a>
@@ -200,6 +194,7 @@
             <div class="intro-text">
                 <div class="shadow intro-lead-in text-right">Reporte <br /> semana <?php echo $data['semana']; ?></div>
                 <div class="shadow intro-heading text-right"><?php echo $data['cliente']; ?> <br>
+                    <span class="camap"><?php echo $data['nombre_campana']; ?></span> <br /
                     <span class="ciudad">(<?php echo $data['city']; ?>)</span> </div>
             </div>
         </div>

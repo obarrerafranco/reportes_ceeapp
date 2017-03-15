@@ -37,7 +37,7 @@
                     }
                 $logos .='<div class="col-6 col-sm-3">
                       <div class="text-center">
-                         <form method="post" id="a'.$list2["id_cliente"].'" action="reportes/clientes/index.php">
+                         <form method="post" id="a'.$list2["id_cliente"].'" action="reportes/index.php">
                           <a href="#" onclick="enviar('.$list2["id_cliente"].')"><img src="img/logos/'.$list2['logo'].'"></a>
                           <h3 class="text-center"><a href="#" onclick="enviar('.$list2["id_cliente"].')">'.$list2["nam_cli"].'</a></h3>
                           <input type="hidden" name="wekks" value="'.$list2['id_semana'].'">

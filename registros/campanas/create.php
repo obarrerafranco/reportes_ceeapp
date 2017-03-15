@@ -39,7 +39,7 @@ require '../db.php';
                     <form method="POST" action="">
     <div class="form-group">
         <label for="inputCampana">Nombre de la Campaña</label>
-        <input type="text" class="form-control" required="required" id="inputCampana" name="campana" placeholder="Nombre de la campaña">
+        <input type="text" class="form-control" required="required" id="inputCampana" name="campana" placeholder="Nombre de la campaña" maxlength="25">
     </div>
     <div class="form-group">
         <label for="inputCliente">Cliente</label>

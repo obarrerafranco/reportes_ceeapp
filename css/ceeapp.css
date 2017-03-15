@@ -1048,4 +1048,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 #bienvenida .img-responsive {
     margin: 0 auto;
 }
+#id_sem, #semana{
+    margin-top: 7px !important;
+}
 /* Fin Nuevos estilos*/

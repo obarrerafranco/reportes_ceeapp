@@ -74,7 +74,7 @@ require 'registros/db.php';?>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <div class="navbar-nav navbar-left">
               <select class="form-control input-md" id="semana" name="semana" >
-                <option></option>
+                <option id="blanco"></option>
                 <?php 
                    $seman = 'SELECT wk.id as id, wk.semana as semana, wk.year as year FROM semanas wk
                     INNER JOIN reportes_clientes rp ON rp.id_semana = wk.id WHERE wk.estatus = 1 GROUP BY wk.id ORDER BY wk.id DESC';
@@ -101,7 +101,7 @@ require 'registros/db.php';?>
         <div class="container">
             <div class="intro-text">
                 <div class="shadow intro-lead-in text-right">Bienvenidos a<br /> Los reportes<br />Semanales</div>
-                <div class="shadow intro-heading text-right">Cee APP</div>
+                <div class="shadow intro-heading text-right">Clientes Cee APP</div>
             </div>
         </div>
         <div class="opacity"></div>
@@ -180,6 +180,7 @@ require 'registros/db.php';?>
             success: function(lista) {
               $('#meniindi').html("");
               $('#meniindi').append(lista);
+              $('#blanco').hide();
             },
             error: function(lista) {
               console.log(lista);

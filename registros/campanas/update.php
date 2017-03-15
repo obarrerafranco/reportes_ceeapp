@@ -57,13 +57,13 @@ require '../db.php';
     
                     <div class="row">
                     <div class="row">
-                        <h3>Actualizar Historial</h3>
+                        <h3>Actualizar Campaña</h3>
                     </div>
             
                     <form method="POST" action="update.php?id=<?php echo $id?>">
                         <div class="form-group">
-                            <label for="inputCampana">Nombre del Cliente</label>
-                            <input type="text" class="form-control" required="required" id="inputCampana" name="campana" value="<?php echo $campana; ?>">
+                            <label for="inputCampana">Nombre de la Campaña</label>
+                            <input type="text" class="form-control" required="required" id="inputCampana" name="campana" value="<?php echo $campana; ?>" maxlength="25">
                         </div>
                          <div class="form-group">
                         <label for="inputCliente">Cliente</label>
