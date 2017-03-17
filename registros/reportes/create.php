@@ -94,10 +94,6 @@ require '../db.php';
         </select>  
     </div>
     <div class="form-group">
-        <label for="inputTextw">Texto de la Semana</label>
-        <input type="text" class="form-control"  id="inputTextw" name="textow" placeholder="Dia DE Mes AL Dia DE Mes">
-    </div>
-    <div class="form-group">
         <label for="inputScans"># Scans</label>
         <input type="number" class="form-control"  id="inputScans" name="no_scans" placeholder="# scans">
     </div>
@@ -112,14 +108,6 @@ require '../db.php';
    <div class="form-group">
         <label for="inputPorcen">Porcentaje</label>
         <input type="text" class="form-control"  id="inputPorcen" name="porcent" placeholder="Porcentaje de Scans">
-    </div>
-    <div class="form-group">
-        <label for="tscans">Total Scans</label>
-        <input type="number" class="form-control"  id="tscans" name="tscans" placeholder="Total Scans">
-    </div>
-    <div class="form-group">
-        <label for="tdownlo">Total Descargas</label>
-        <input type="number" class="form-control"  id="tdownlo" name="tdownlo" placeholder="Total Descargas">
     </div>
     <div class="form-actions">
         <button type="submit" class="btn btn-success">Crear</button>

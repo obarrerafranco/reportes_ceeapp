@@ -22,6 +22,11 @@
         </a>
       </li>
       <li class="dropdown">
+        <a href="http://localhost:8081/cee_report/registros/semanas/index.php" class="dropdown-toggle">
+          Semanas
+        </a>
+      </li>
+      <li class="dropdown">
         <a href="http://localhost:8081/cee_report/registros/clientes/index.php" class="dropdown-toggle">
           Clientes
         </a>

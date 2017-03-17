@@ -1,12 +1,13 @@
 <?php 
 require '../registros/db.php';
+$clies = $_POST["client"];
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <input type="hidden" name="id_cli" value="9" id="id_cli">
+    <input type="hidden" name="id_cli" value="<?php echo $clies; ?>" id="id_cli">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -81,8 +82,9 @@ require '../registros/db.php';
                    $seman = 'SELECT wk.id as id, wk.semana as semana, wk.year as year, cp.id_cliente as id_cliente FROM semanas wk
                     INNER JOIN reportes_clientes rp ON rp.id_semana = wk.id 
                     INNER JOIN campanas cp ON cp.id = rp.id_campana
-                    WHERE wk.estatus = 1 AND cp.id_cliente =9 GROUP BY wk.id ORDER BY wk.id DESC';
-
+                    WHERE wk.estatus = 1 AND cp.id_cliente =';
+                    $seman .= $clies;
+                    $seman .= ' GROUP BY wk.id ORDER BY wk.id DESC';
                     foreach ($PDO->query($seman) as $wee1) {
 
                         echo '<option value="'.$wee1['id'].'">'.$wee1['semana'].'-'.$wee1['year'].'</option>';
@@ -115,7 +117,7 @@ require '../registros/db.php';
     <div id="secciones" >
         <section class="section-heading">
           <div class="container" id="bienvenida">
-            <h2 style="text-align:center">Bienvenido a los reportes de CEE APP<br /> Selecciona una Semana para iniciar</h2>
+            <h2 style="text-align:center">Campañas<br /> Selecciona una Semana para iniciar</h2>
             <img class="img-responsive" src="../img/plataforma/ceeapp.png">
           </div>
       </section>
