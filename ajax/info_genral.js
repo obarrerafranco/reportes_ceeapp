@@ -1,5 +1,5 @@
 $(document).ready(function(){
-     var id_report = $("#id_ob").val();
+     var id_report = $("#id_wkkk").val();
 	$.ajax({
 		url: "http://localhost:8081/cee_report/ajax/info_genral.php",
 		method: "GET",

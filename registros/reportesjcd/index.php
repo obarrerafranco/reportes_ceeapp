@@ -21,19 +21,17 @@ $pagination = new PDO_Pagination($PDO);
 <?php include('../menu.php'); ?>
 <div class="container">
     <div class="row">
-    <h3>Reportes CEE APP</h3>
+    <h3>Reportes Generales JCDecaux CEE APP</h3>
     </div>
     <div class="row">
     <p><a class="btn btn-md btn-success" href="create.php">Nuevo Reporte</a></p>
     <table class="table table-striped table-bordered table-hover">
     <tr>
         <th>ID</th>
-        <th>Cliente</th>
-        <th>Campaña</th>
         <th>Ciudad</th>
         <th>Semana</th>
-        <th># Scans</th>
-        <th># Views</th>
+        <th>Scans Semana</th>
+        <th>Views Semana</th>
         <th>Accion</th>
     </tr>
     <tbody>
@@ -56,28 +54,26 @@ while($rows = $query->fetch())
 }
 else
 {*/
-        $sqlpagina = 'SELECT rc.id as id_repor, 
-rc.id_campana, 
-rc.id_ciudad, 
-rc.id_semana, 
-no_scans, 
-no_views, 
-best_hour,
-CONCAT_WS("/",semanas.semana,semanas.year) as semana,
-cy.nombre_ciudad,
-cp.nombre_campana,
-cp.id_cliente,
-cp.img_header,
-cl.nombre_cliente
-FROM reportes_clientes rc
-INNER JOIN semanas 
-     ON rc.id_semana = semanas.id
-INNER JOIN ciudades cy 
-     ON rc.id_ciudad  = cy.id
-INNER JOIN campanas cp 
-     ON rc.id_campana  = cp.id
-INNER JOIN clientes cl 
-     ON cp.id_cliente  = cl.id ORDER BY id_repor DESC';
+        $sqlpagina = 'SELECT
+rc.id AS id_repor,
+rc.id_ciudad,
+rc.id_semana,
+CONCAT_WS("/",semanas.semana,semanas.year) AS semana,
+cy.nombre_ciudad as ciudad,
+rc.scans_total_semana as scans_sema,
+rc.scans_promedio_diario,
+rc.views_total_semana as views_sema,
+rc.views_promedio_diario,
+rc.views_total_year,
+rc.download_android,
+rc.download_ios,
+rc.download_windows,
+rc.mapa_ciudad
+FROM
+reportes_jcdecaux AS rc
+INNER JOIN semanas ON rc.id_semana = semanas.id
+INNER JOIN ciudades AS cy ON rc.id_ciudad = cy.id
+ORDER BY id_repor DESC';
 $pagination->rowCount($sqlpagina);
 $pagination->config(10, 10);
 $sql =  $sqlpagina." LIMIT $pagination->start_row, $pagination->max_rows";
@@ -95,17 +91,16 @@ while($rows = $query->fetch())
     foreach ($model as $row) {
         echo '<tr>';
         echo '<td>'. $row['id_repor'] . '</td>';
-        echo '<td>'. $row['nombre_cliente'] .'</td>';
-        echo '<td>'. $row['nombre_campana'] . '</td>';
-        echo '<td>'. $row['nombre_ciudad'] . '</td>';
+        echo '<td>'. $row['ciudad'] . '</td>';
         echo '<td>'. $row['semana'] . '</td>';
-        echo '<td>'. $row['no_scans'] . '</td>';
-        echo '<td>'. $row['no_views'] . '</td>';
+        echo '<td>'. $row['scans_sema'] . '</td>';
+        echo '<td>'. $row['views_sema'] . '</td>';
         echo '<td>
                   <a class="btn btn-xs btn-primary" href="update.php?id='. $row['id_repor'] . '">Editar</a>
                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-id="'. $row['id_repor'] . '" onclick="mostrarWkk('.$row['id_repor'].')">Semana</button>
                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-id="'. $row['id_repor'] . '" onclick="mostrarGnr('.$row['id_repor'].')">Genero</button>
                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-id="'. $row['id_repor'] . '" onclick="mostrarAge('.$row['id_repor'].')">Edad</button>
+                  <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-id="'. $row['id_repor'] . '" onclick="mostrarAge('.$row['id_repor'].')">Dispositivo</button>
               </td>';
         echo '</tr>';
     }
@@ -120,7 +115,36 @@ $pagination->pages("btn");
 </div>
     </div><!-- /row -->
 </div><!-- /container -->
-
+<!-- Inicio Modal General-->
+  <div class="modal fade" id="myModalGral" role="dialog">
+    <div class="modal-dialog"-->
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Datos Gráfica General</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="fechasmld">Fechas separadas por coma</label>
+            <input type="text" class="form-control"  id="fechasmld" name="fechasmld" placeholder="Fechas" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="datosmdl">Datos separados por coma</label>
+            <input type="text" class="form-control"  id="datosmdl" name="datosmdl" placeholder="Datos">
+          </div autocomplete="off">
+          <input type="hidden" name="repir" id="repormdl">
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-default" id="salva_general">Guardar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<!-- Fin Modal General-->
 <!-- Inicio Modal Semana-->
   <div class="modal fade" id="myModalSem" role="dialog">
     <div class="modal-dialog">
@@ -211,11 +235,19 @@ $pagination->pages("btn");
 $(document).ready(incia);
 
 function incia(){
+  $("#salva_general").click(savedataGral);
   $("#salva_semana").click(savedataWkk);
   $("#salva_genero").click(savedataGnr);
   $("#salva_edad").click(savedataAge);
 }
 
+function mostrarGral (idr){
+    $('#myModalGral').modal('show'); 
+    $('#repormdl').val(idr);
+    $('#fechasmld').val("");
+    $('#datosmdl').val("");
+
+}
 function mostrarWkk (idr2){
     $('#myModalSem').modal('show'); 
     $('#repormd2').val(idr2);
@@ -236,7 +268,18 @@ function mostrarAge (idr4){
     $('#datosmdl4').val("");
 
 }
+function savedataGral(){
 
+  var irepor = $('#repormdl').val();
+  var idfecha = $('#fechasmld').val();
+  var idatos = $('#datosmdl').val();
+  $.ajax({
+    type: "POST",
+    url: "http://localhost:8081/cee_report/registros/reportes/general.php?p=add",
+    data: "repormdl="+irepor+"&fechasmld="+idfecha+"&datosmdl="+idatos,
+    success: function(){$('#myModalGral').modal('toggle');}
+  });
+}
 function savedataWkk(){
 
   var irepor2 = $('#repormd2').val();

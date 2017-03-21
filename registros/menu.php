@@ -17,6 +17,11 @@
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
       <li class="dropdown">
+        <a href="http://localhost:8081/cee_report/registros/reportesjcd/index.php" class="dropdown-toggle">
+          Generales JCD
+        </a>
+      </li>
+      <li class="dropdown">
         <a href="http://localhost:8081/cee_report/registros/campanas/index.php" class="dropdown-toggle">
           Campañas
         </a>

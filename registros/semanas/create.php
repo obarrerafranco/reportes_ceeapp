@@ -57,15 +57,15 @@ require '../db.php';
         </div>
         <div class="form-group">
             <label for="inputTextw">Texto de la Semana</label>
-            <input type="text" class="form-control"  id="inputTextw" name="textow" placeholder="Dia DE Mes AL Dia DE Mes">
+            <input type="text" class="form-control"  id="inputTextw" name="textow" placeholder="Dia DE Mes AL Dia DE Mes" autocomplete="off">
         </div>
         <div class="form-group">
             <label for="tscans">Total Scans</label>
-            <input type="number" class="form-control"  id="tscans" name="tscans" placeholder="Total Scans">
+            <input type="number" class="form-control"  id="tscans" name="tscans" placeholder="Total Scans" autocomplete="off">
         </div>
         <div class="form-group">
             <label for="tdownlo">Total Descargas</label>
-            <input type="number" class="form-control"  id="tdownlo" name="tdownlo" placeholder="Total Descargas">
+            <input type="number" class="form-control"  id="tdownlo" name="tdownlo" placeholder="Total Descargas" autocomplete="off">
         </div>
         <div class="form-group">
             <label for="cold">Color</label>

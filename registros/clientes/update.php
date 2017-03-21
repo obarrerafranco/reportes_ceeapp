@@ -64,7 +64,7 @@ require '../db.php';
                     <form method="POST" action="update.php?id=<?php echo $id?>">
                         <div class="form-group">
                             <label for="inputCliente">Nombre del Cliente</label>
-                            <input type="text" class="form-control" required="required" id="inputCliente" name="cliente" value="<?php echo $cliente; ?>">
+                            <input type="text" class="form-control" required="required" id="inputCliente" name="cliente" value="<?php echo $cliente; ?>" autocomplete="off">
                         </div>
                             <div class="form-group">
                                 <label for="inputLetra">Letra</label>
@@ -85,7 +85,7 @@ require '../db.php';
                             </div>
                         <div class="form-group">
                             <label for="inputLogo">Logo</label>
-                            <input type="text" class="form-control" id="inputLogo" name="logo" value="<?php echo $logo; ?>">
+                            <input type="text" class="form-control" id="inputLogo" name="logo" value="<?php echo $logo; ?>" autocomplete="off">
                         </div>
         
                         <div class="form-actions">

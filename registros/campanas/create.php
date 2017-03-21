@@ -39,7 +39,7 @@ require '../db.php';
                     <form method="POST" action="">
     <div class="form-group">
         <label for="inputCampana">Nombre de la Campaña</label>
-        <input type="text" class="form-control" required="required" id="inputCampana" name="campana" placeholder="Nombre de la campaña" maxlength="25">
+        <input type="text" class="form-control" required="required" id="inputCampana" name="campana" placeholder="Nombre de la campaña" maxlength="25" autocomplete="off">
     </div>
     <div class="form-group">
         <label for="inputCliente">Cliente</label>
@@ -60,7 +60,7 @@ require '../db.php';
     </div>
     <div class="form-group">
         <label for="inputGender">Header</label>
-        <input type="text" class="form-control"  id="inputHeader" name="header" placeholder="Nombre del header">
+        <input type="text" class="form-control"  id="inputHeader" name="header" placeholder="Nombre del header" autocomplete="off">
     </div>
     
     <div class="form-actions">

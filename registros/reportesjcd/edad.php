@@ -4,15 +4,14 @@ require '../db.php';
 $page = $_GET["p"];
     if ( $page=="add") {
         
-        $semansmdl  = $_POST['semansmdl'];
-        $fechasmld  = $_POST['fechasmld'];
-        $datosmdl  = $_POST['datosmdl'];
+        $repormdl4  = $_POST['repormdl4'];
+        $datosmdl4  = $_POST['datosmdl4'];
         
         // inserta data
             $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO graficas_general (id_semana,fechas_general,datos_general) values(?, ?, ?)";
+            $sql = "INSERT INTO graficas_edad (id_reporte,datos_edad) values(?, ?)";
             $stmt = $PDO->prepare($sql);
-            $stmt->execute(array($semansmdl,$fechasmld,$datosmdl));
+            $stmt->execute(array($repormdl4,$datosmdl4));
             //header("Location: index.php");
     }
 ?>

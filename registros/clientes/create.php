@@ -40,7 +40,7 @@ require '../db.php';
                     <form method="POST" action="">
     <div class="form-group">
         <label for="inputGender">Nombre Cliente</label>
-        <input type="text" class="form-control" required="required" id="inputName" name="cliente" placeholder="Nombre del Cliente">
+        <input type="text" class="form-control" required="required" id="inputName" name="cliente" placeholder="Nombre del Cliente" autocomplete="off">
     </div>
     <div class="form-group">
         <label for="inputLetra">Letra</label>
@@ -54,7 +54,7 @@ require '../db.php';
     </div>
     <div class="form-group">
         <label for="inputGender">Imagen</label>
-        <input type="text" class="form-control"  id="inputImagen" name="logo" placeholder="Nombre de logo">
+        <input type="text" class="form-control"  id="inputImagen" name="logo" placeholder="Nombre de logo" autocomplete="off">
         <!--form enctype="multipart/form-data" class="formulario">
             <label>Subir un archivo</label><br />
             <input name="archivo" type="file" id="imagen" /><br /><br />

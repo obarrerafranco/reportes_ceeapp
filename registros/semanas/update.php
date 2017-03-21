@@ -103,15 +103,15 @@ require '../db.php';
                         </div>
                         <div class="form-group">
                             <label for="inputTextw">Texto de la Semana</label>
-                            <input type="text" class="form-control"  id="inputTextw" name="textow" placeholder="Dia DE Mes AL Dia DE Mes" value="<?php echo $text_semana; ?>">
+                            <input type="text" class="form-control"  id="inputTextw" name="textow" placeholder="Dia DE Mes AL Dia DE Mes" value="<?php echo $text_semana; ?>" autocomplete="off">
                         </div>
                         <div class="form-group">
                             <label for="tscans">Total Scans</label>
-                            <input type="number" class="form-control"  id="tscans" name="tscans" placeholder="Total Scans" value="<?php echo $scans_total; ?>">
+                            <input type="number" class="form-control"  id="tscans" name="tscans" placeholder="Total Scans" value="<?php echo $scans_total; ?>" autocomplete="off">
                         </div>
                         <div class="form-group">
                             <label for="tdownlo">Total Descargas</label>
-                            <input type="number" class="form-control"  id="tdownlo" name="tdownlo" placeholder="Total Descargas" value="<?php echo $descarga_total; ?>">
+                            <input type="number" class="form-control"  id="tdownlo" name="tdownlo" placeholder="Total Descargas" value="<?php echo $descarga_total; ?>" autocomplete="off">
                         </div>
                         <div class="form-group">
                             <label for="cold">Color</label>

@@ -201,6 +201,7 @@
     </header>
 
     <?php echo '<input type="hidden" name="id_ob" id="id_ob" value="'.$data['id_rep'].'">'; ?>
+    <?php echo '<input type="text" name="id_wkkk" id="id_wkkk" value="'.$week.'">'; ?>
 
     <!-- SECCION RESUMEN-->
 
@@ -233,7 +234,7 @@
           <!-- small box -->
           <div class="small-box bg-hora">
             <div class="inner caja">
-             <h4 class="text-center"><?php echo $data['best_hour']; ?><p>&nbsp;</p></h4>
+             <h4 class="text-center"><?php echo $data['best_hour']; ?> SCANS<p>&nbsp;</p></h4>
 
               <p class="text-center">Mejor Hora</p>
             </div>

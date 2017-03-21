@@ -84,6 +84,7 @@ while($rows = $query->fetch())
         echo '<td>
                   <a class="btn btn-xs btn-primary" href="update.php?id='. $row['id'] . '">Actualizar</a>
                     <button type="button" class="btn btn-primary btn-xs" data-id="'. $row['id'] . '" data-toggle="modal" onclick="mostrarGral('.$row['id'].')">General</button>
+
               </td>';
         echo '</tr>';
     }
@@ -110,7 +111,7 @@ $PDO = null;
             <label for="datosmdl">Datos separados por coma</label>
             <input type="text" class="form-control"  id="datosmdl" name="datosmdl" placeholder="Datos">
           </div>
-          <input type="hidden" name="repir" id="repormdl">
+          <input type="hidden" name="semir" id="semansmdl">
         </div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-default" id="salva_general">Guardar</button>
@@ -135,22 +136,25 @@ $(document).ready(incia);
 function incia(){
   $("#salva_general").click(savedataGral);
 }
-
 function mostrarGral (idr){
     $('#myModalGral').modal('show'); 
+    $('#semansmdl').val(idr);
+    $('#fechasmld').val("");
+    $('#datosmdl').val("");
 
 }
 function savedataGral(){
 
-  var irepor = $('#repormdl').val();
+  var isem = $('#semansmdl').val();
   var idfecha = $('#fechasmld').val();
   var idatos = $('#datosmdl').val();
   $.ajax({
     type: "POST",
     url: "http://localhost:8081/cee_report/registros/semanas/general.php?p=add",
-    data: "repormdl="+irepor+"&fechasmld="+idfecha+"&datosmdl="+idatos,
+    data: "semansmdl="+isem+"&fechasmld="+idfecha+"&datosmdl="+idatos,
     success: function(){$('#myModalGral').modal('toggle');}
   });
 }
+</script>
 </body>
 </html>

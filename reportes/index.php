@@ -1,6 +1,7 @@
 <?php 
 require '../registros/db.php';
 $clies = $_POST["client"];
+$wekks = $_POST["wekks"];
 ?>
 
 <!DOCTYPE html>
@@ -8,6 +9,7 @@ $clies = $_POST["client"];
 
 <head>
     <input type="hidden" name="id_cli" value="<?php echo $clies; ?>" id="id_cli">
+    <input type="hidden" name="id_semrp" value="<?php echo $wekks; ?>" id="id_semrp">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -87,7 +89,17 @@ $clies = $_POST["client"];
                     $seman .= ' GROUP BY wk.id ORDER BY wk.id DESC';
                     foreach ($PDO->query($seman) as $wee1) {
 
-                        echo '<option value="'.$wee1['id'].'">'.$wee1['semana'].'-'.$wee1['year'].'</option>';
+                        $spa = '<option value="'.$wee1['id'].'"';
+
+                        
+
+                         if($wee1['id'] == trim($wekks)) {
+
+                        $spa .=  'selected="selected"'; }
+
+                       $spa .= '>'.$wee1['semana'].'-'.$wee1['year'].'</option>';
+
+                       echo $spa;
 
                     }
                     ?>
@@ -170,11 +182,37 @@ $clies = $_POST["client"];
       $(document).ready(inicio);
 
       function inicio(){
-        $("#id_sem").change(mostrarSem);
+            if($("#id_semrp").val().length < 1) {  
+                $("#id_sem").change(mostrarSem);
+            }else{
+               mostrarSem2(); 
+            }
         }
       function mostrarSem (){
         var id_wks = $("#id_sem").val();
         var id_cl= $("#id_cli").val();
+        $("#id_semrp").val("");
+
+        
+
+       $.ajax({
+            url: "http://localhost:8081/cee_report/ajax/plantilla_j.php",
+            method: "POST",
+            data: {id_sem:id_wks,id_cli:id_cl} ,
+            success: function(logos) {
+              $('#secciones').html("");
+              $('#secciones').html(logos);
+              $('#blanco').hide();
+            },
+            error: function(logos) {
+              console.log(logos);
+            }
+          });
+     }
+     function mostrarSem2 (){
+        var id_wks = $("#id_semrp").val();
+        var id_cl= $("#id_cli").val();
+        $("#id_semrp").val("");
 
        $.ajax({
             url: "http://localhost:8081/cee_report/ajax/plantilla_j.php",

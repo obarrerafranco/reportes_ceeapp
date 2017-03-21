@@ -7,19 +7,16 @@ require '../db.php';
         $campana  = $_POST['campana'];
         $ciudad  = $_POST['ciudad'];
         $semana  = $_POST['semana'];
-        $tsemana  = $_POST['textow'];
         $scans  = $_POST['no_scans'];
         $views  = $_POST['no_views'];
         $hora  = $_POST['hora'];
         $porcent  = $_POST['porcent'];
-        $tscans  = $_POST['tscans'];
-        $tdownlo  = $_POST['tdownlo'];
         
         // inserta data
             $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO reportes_clientes (id_campana,id_ciudad,id_semana,text_semana,no_scans,no_views,best_hour,porcen_total,descarga_total,scans_total) values(?, ?, ?, ?, ?, ?, ?, ?,?,?)";
+            $sql = "INSERT INTO reportes_clientes (id_campana,id_ciudad,id_semana,no_scans,no_views,best_hour,porcen_total) values(?, ?, ?, ?, ?, ?, ?)";
             $stmt = $PDO->prepare($sql);
-            $stmt->execute(array($campana,$ciudad,$semana,$tsemana,$scans,$views,$hora,$porcent,$tdownlo,$tscans));
+            $stmt->execute(array($campana,$ciudad,$semana,$scans,$views,$hora,$porcent));
             header("Location: index.php");
     }
 ?>
@@ -95,19 +92,19 @@ require '../db.php';
     </div>
     <div class="form-group">
         <label for="inputScans"># Scans</label>
-        <input type="number" class="form-control"  id="inputScans" name="no_scans" placeholder="# scans">
+        <input type="number" class="form-control"  id="inputScans" name="no_scans" placeholder="# scans" autocomplete="off">
     </div>
     <div class="form-group">
         <label for="inputViews"># Views</label>
-        <input type="number" class="form-control"  id="inputViews" name="no_views" placeholder="# views">
+        <input type="number" class="form-control"  id="inputViews" name="no_views" placeholder="# views" autocomplete="off">
     </div>
     <div class="form-group">
         <label for="inputHour">Mejor Hora</label>
-        <input type="text" class="form-control"  id="inputHour" name="hora" placeholder="Hora PM Cantidad SCANS">
+        <input type="text" class="form-control"  id="inputHour" name="hora" placeholder="Hora PM Cantidad SCANS" autocomplete="off">
     </div>
    <div class="form-group">
         <label for="inputPorcen">Porcentaje</label>
-        <input type="text" class="form-control"  id="inputPorcen" name="porcent" placeholder="Porcentaje de Scans">
+        <input type="text" class="form-control"  id="inputPorcen" name="porcent" placeholder="Porcentaje de Scans" autocomplete="off">
     </div>
     <div class="form-actions">
         <button type="submit" class="btn btn-success">Crear</button>

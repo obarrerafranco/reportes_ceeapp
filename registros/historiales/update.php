@@ -132,7 +132,7 @@ require '../db.php';
                     </div>
                     <div class="form-group">
                         <label for="inputImagen">Imagen</label>
-                        <input type="text" class="form-control" required="required" id="inputImagen" name="imagen" placeholder="Nombre de la Imagen" value="<?php echo $imagen; ?>">
+                        <input type="text" class="form-control" required="required" id="inputImagen" name="imagen" placeholder="Nombre de la Imagen" value="<?php echo $imagen; ?>" autocomplete="off">
                     </div>
     
                     <div class="form-actions">

@@ -42,7 +42,7 @@ require '../db.php';
                     <form method="POST" action="">
     <div class="form-group">
         <label for="inputGender">Cliente</label>
-        <select class="form-control" required="required" id="inputCliente" name="cliente" placeholder="Cliente">
+        <select class="form-control" required="required" id="inputCliente" name="cliente" placeholder="Cliente" autocomplete="off">
         <option></option>
         <?php 
            $client = 'SELECT id, nombre_cliente, estatus FROM clientes WHERE estatus = 1 ORDER BY nombre_cliente ASC';
@@ -90,7 +90,7 @@ require '../db.php';
     </div>
     <div class="form-group">
         <label for="inputImagen">Imagen</label>
-        <input type="text" class="form-control" required="required" id="inputImagen" name="imagen" placeholder="Nombre de la Imagen">
+        <input type="text" class="form-control" required="required" id="inputImagen" name="imagen" placeholder="Nombre de la Imagen" autocomplete="off">
     </div>
     
     <div class="form-actions">
