@@ -11,7 +11,7 @@ $page = $_GET["p"];
         
         // inserta data
             $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO graficas_semana (id_reporte,fechas_semana,scans_semana, views_semana) values(?, ?, ?, ?)";
+            $sql = "INSERT INTO graficas_semana_jcd (id_reporte,fechas_semana,scans_semana, views_semana) values(?, ?, ?, ?)";
             $stmt = $PDO->prepare($sql);
             $stmt->execute(array($repormd2,$fechasmld2,$scansmdl,$viewsmdl));
             //header("Location: index.php");

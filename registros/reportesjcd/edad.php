@@ -9,7 +9,7 @@ $page = $_GET["p"];
         
         // inserta data
             $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO graficas_edad (id_reporte,datos_edad) values(?, ?)";
+            $sql = "INSERT INTO graficas_edad_jcd (id_reporte,datos_edad) values(?, ?)";
             $stmt = $PDO->prepare($sql);
             $stmt->execute(array($repormdl4,$datosmdl4));
             //header("Location: index.php");

@@ -202,7 +202,7 @@
     </header>
 
     <?php echo '<input type="hidden" name="id_ob" id="id_ob" value="'.$data['id_rep'].'">'; ?>
-        <?php echo '<input type="text" name="id_wkkk" id="id_wkkk" value="'.$week.'">'; ?>
+    <?php echo '<input type="text" name="id_wkkk" id="id_wkkk" value="'.$week.'">'; ?>
 
     <!-- SECCION RESUMEN-->
 
@@ -398,12 +398,11 @@
                       <input type="hidden" name="citias" value="2">'; ?>
                   </form>
                   <form method="post" id="cal" action="index.php">
-                      <area id="1" alt="Cali" title="Cali" href="#" onclick="document.forms['cal'].submit(); return false;" shape="rect" coords="27,138,64,176" style="outline:none;" target="_self"     />
+                      <area id="2" alt="Cali" title="Cali" href="#" onclick="document.forms['cal'].submit(); return false;" shape="rect" coords="27,138,64,176" style="outline:none;" target="_self"     />
                      <?php echo '<input type="hidden" name="wekks" value="'.$week.'">
                       <input type="hidden" name="client" value="'.$client.'">
                       <input type="hidden" name="citias" value="3">'; ?>
                   </form>
-                    <area shape="rect" coords="237,298,239,300" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
                   </map>
                 </div>
               </div>

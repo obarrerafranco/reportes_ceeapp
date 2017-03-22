@@ -1,41 +1,5 @@
 <?php 
     require '../../registros/db.php';
-
-          $week = $_GET['wekks'];
-          $city = $_GET['citias']; 
-          $sql = "SELECT
-          rpj.id as id_rep,
-          rpj.id_ciudad,
-          rpj.id_semana,
-          rpj.scans_total_semana,
-          rpj.scans_promedio_diario,
-          rpj.views_total_semana,
-          rpj.views_promedio_diario,
-          rpj.views_total_year,
-          rpj.download_android,
-          rpj.download_ios,
-          rpj.download_windows,
-          rpj.mapa_ciudad,
-          ct.nombre_ciudad,
-          wk.id as id_semanas,
-          ct.id as id_ciudads,
-          wk.semana as semn,
-          wk.year,
-          CONCAT_WS('/',wk.semana,wk.year) as semana,
-          wk.scans_total,
-          wk.descarga_total,
-          wk.text_semana
-          FROM
-          reportes_jcdecaux AS rpj 
-          INNER JOIN ciudades ct ON ct.id = rpj.id_ciudad
-          INNER JOIN semanas wk ON wk.id = rpj.id_semana 
-          WHERE
-          rpj.id_semana = ? AND
-          rpj.id_ciudad = ?";
-
-          $stmt = $PDO->prepare($sql);
-          $stmt->execute(array($week,$city));
-          $data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +15,7 @@
     <link rel="shortcut icon" href="../../img/plataforma/favicon.jpeg">
     <meta name="robots" content="noindex">
 
-    <title>JC Decaux Nacional: <?php echo $data['semana']; ?></title>
+    <title>JC Decaux Nacional / Reporte Semana 07</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -152,16 +116,14 @@
     <header style="background-image: url(../../img/headers/hd_jcdecaux.jpg);">
         <div class="container">
             <div class="intro-text">
-                <div class="shadow intro-lead-in text-right">Reporte<br /><?php echo $data['semana']; ?></div>
+                <div class="shadow intro-lead-in text-right">Reporte<br /> semana 07</div>
                 <div class="shadow intro-heading text-right">JC Decaux  <br>
-                    <span class="ciudad">(<?php echo $data['nombre_ciudad']; ?>)</span></div>
+                    <span class="ciudad">(Nacional)</span></div>
             </div>
         </div>
         <div class="opacity"></div>
     </header>
-      <?php echo '<input type="hidden" name="id_ob" id="id_ob" value="'.$data['id_rep'].'">'; ?>
-      <?php echo '<input type="hidden" name="id_wkkk" id="id_wkkk" value="'.$week.'">'; ?>
-      
+
     <!-- SECCION RESUMEN VIEWS-->
    <section id="resumen_views">
        
@@ -173,7 +135,7 @@
                 <!-- small box -->
                 <div class="small-box bg-scans">
                   <div class="inner caja">
-                    <h1 class="text-center"><?php echo $data['scans_total_semana']; ?></h1>
+                    <h1 class="text-center">31.256</h1>
 
                     <p class="text-center">Total Semana</p>
                   </div>
@@ -184,7 +146,7 @@
                 <!-- small box -->
                 <div class="small-box bg-views">
                   <div class="inner caja">
-                    <h1 class="text-center"><?php echo $data['scans_promedio_diario']; ?></h1>
+                    <h1 class="text-center">4.465</h1>
 
                     <p class="text-center">Promedio Diario</p>
                   </div>
@@ -195,7 +157,7 @@
                 <!-- small box -->
                 <div class="small-box bg-descargas">
                   <div class="inner caja">
-                    <h1 class="text-center"><?php echo $data['scans_total']; ?></h1>
+                    <h1 class="text-center">173.639</h1>
 
                     <p class="text-center">Total 2017</p>
                   </div>
@@ -209,7 +171,7 @@
               <!-- small box -->
               <div class="small-box bg-scans">
                 <div class="inner caja">
-                  <h1 class="text-center"><?php echo $data['views_total_semana']; ?></h1>
+                  <h1 class="text-center">23.594</h1>
 
                   <p class="text-center">Total Semana</p>
                 </div>
@@ -220,7 +182,7 @@
               <!-- small box -->
               <div class="small-box bg-views">
                 <div class="inner caja">
-                  <h1 class="text-center"><?php echo $data['views_promedio_diario']; ?></h1>
+                  <h1 class="text-center">3.371</h1>
 
                   <p class="text-center">Promedio Diario</p>
                 </div>
@@ -231,7 +193,7 @@
               <!-- small box -->
               <div class="small-box bg-descargas">
                 <div class="inner caja">
-                  <h1 class="text-center"><?php echo $data['views_total_year']; ?></h1>
+                  <h1 class="text-center">89.192</h1>
 
                   <p class="text-center">Total 2017</p>
                 </div>
@@ -254,7 +216,7 @@
           <!-- small box -->
           <div class="small-box bg-android">
             <div class="inner caja">
-              <h1 class="text-center"><?php echo $data['download_android']; ?></h1>
+              <h1 class="text-center">43.877</h1>
 
               <p class="text-center">Android</p>
             </div>
@@ -265,7 +227,7 @@
           <!-- small box -->
           <div class="small-box bg-ios">
             <div class="inner caja">
-              <h1 class="text-center"><?php echo $data['download_ios']; ?></h1>
+              <h1 class="text-center">42.011</h1>
 
               <p class="text-center">IOS</p>
             </div>
@@ -276,7 +238,7 @@
           <!-- small box -->
           <div class="small-box bg-windows">
             <div class="inner caja">
-              <h1 class="text-center"><?php echo $data['download_windows']; ?></h1>
+              <h1 class="text-center">2.540</h1>
 
               <p class="text-center">Windows</p>
             </div>
@@ -287,7 +249,7 @@
           <!-- small box -->
           <div class="small-box bg-descargas">
             <div class="inner caja">
-              <h1 class="text-center"><?php echo $data['descarga_total']; ?></h1>
+              <h1 class="text-center">88.428</h1>
 
               <p class="text-center">Total</p>
             </div>
@@ -395,8 +357,7 @@
             </div>
         </div>
     </section>
-<?php if($city == 1){
-  ?>
+
      <!--  CIUDADES -->
     <section id="ciudades" class="bg-light-gray">
       <div class="row">
@@ -406,15 +367,8 @@
                       <h1 class="mapa">CONOCE<br />LOS REPORTES <br />DE CADA CIUDAD</h1>
                       <hr class="separador"/>
                       <div >
-                        <form method="post" id="bogot" action="index.php?wekks=<?php echo $week; ?>&citias=2">
-                          <a class="btn-ciudad" alt="Bogotá" title="Bogotá" href="#" onclick="document.forms['bogot'].submit(); return false;">BOGOTÁ</a>
-                          <?php echo '<input type="hidden" name="wekks" value="'.$week.'">
-                          <input type="hidden" name="citias" value="2">'; ?>
-                        </form>-<form method="post" id="cal" action="index.php?wekks=<?php echo $week; ?>&citias=3">
-                          <a class="btn-ciudad" alt="Cali" title="Cali" href="#" onclick="document.forms['cal'].submit(); return false;" >CALI</a>
-                         <?php echo '<input type="hidden" name="wekks" value="'.$week.'">
-                          <input type="hidden" name="citias" value="3">'; ?>
-                        </form>
+                        <a class="btn-ciudad" href="jcdecaux-bogota.php">BOGOTÁ</a> - 
+                        <a class="btn-ciudad" href="jcdecaux-cali.php">CALI</a>
                       </div>
                   </div>
               </div>
@@ -422,23 +376,15 @@
                 <div class="mapita">
                   <img id="Image-Maps-Com-image-maps-2017-02-03-182337" src="../../img/plataforma/colombia.png" border="0" width="239" height="300" orgWidth="239" orgHeight="300" usemap="#image-maps-2017-02-03-182337" alt="" />
                   <map name="image-maps-2017-02-03-182337" id="ImageMapsCom-image-maps-2017-02-03-182337">
-                  <form method="post" id="bogot" action="index.php?wekks=<?php echo $week; ?>&citias=2">
-                      <area id="1" alt="Bogotá" title="Bogotá" href="#" onclick="document.forms['bogot'].submit(); return false;" shape="rect" coords="78,128,108,161" style="outline:none;" target="_self"     />
-                     <?php echo '<input type="hidden" name="wekks" value="'.$week.'">
-                      <input type="hidden" name="citias" value="2">'; ?>
-                  </form>
-                  <form method="post" id="cal" action="index.php?wekks=<?php echo $week; ?>&citias=3">
-                      <area id="2" alt="Cali" title="Cali" href="#" onclick="document.forms['cal'].submit(); return false;" shape="rect" coords="27,138,64,176" style="outline:none;" target="_self"     />
-                     <?php echo '<input type="hidden" name="wekks" value="'.$week.'">
-                      <input type="hidden" name="citias" value="3">'; ?>
-                  </form>
+                    <area id="1" alt="Bogotá" title="Bogotá" href="jcdecaux-bogota.php" shape="rect" coords="78,128,108,161" style="outline:none;" target="_self"     />
+                    <area id="2" alt="Cali" title="Cali" href="jcdecaux-cali.php" shape="rect" coords="27,138,64,176" style="outline:none;" target="_self"     />
                   </map>
                 </div>
               </div>
           </div>
     </section>
     <!-- FIN CIUDADES -->
-<?php } ?>
+
     <!-- FOOTER INICIAL -->
     <footer class="footter">
         <div class="row">
@@ -521,11 +467,6 @@
 
     <!-- Owl Carousel -->
     <script src="../../js/owl.carousel.js"></script>
-    <script type="text/javascript" src="../../ajax/info_genral.js"></script>
-    <script type="text/javascript" src="../../ajax/genero_jcd.js"></script>
-    <script type="text/javascript" src="../../ajax/edad_jcd.js"></script>
-    <script type="text/javascript" src="../../ajax/semana_jcd.js"></script>
-    <script type="text/javascript" src="../../ajax/dispositivos_jcd.js"></script>
 
 <script>
     $(document).ready(function() {
@@ -534,6 +475,278 @@
       items : 6
  });
 });
+</script>
+
+<script>
+"use strict";
+
+        /* Semana linea Inicio */
+      var semanaLoaded = false;
+            $(document).on('scroll', function(){      
+                var scrollTop = $(window).scrollTop();
+                if(scrollTop > 250 && !semanaLoaded){
+                    var ctxsemana = document.getElementById("semana");
+
+
+
+                    var dataSemana = {
+                                labels: ["Semana 1", "Semana 2", "Semana 3", "Semana 4", "Semana 5", "Semana 6", "Semana 7"],
+                                datasets: [
+                                     {
+                                        label: "Numero de views",
+                                        fill: true,
+                                        lineTension: 0.1,
+                                        backgroundColor: "#0c2756",
+                                        borderColor: "#0c2756",
+                                        borderCapStyle: 'butt',
+                                        borderDash: [],
+                                        borderDashOffset: 0.0,
+                                        borderJoinStyle: 'miter',
+                                        pointBorderColor: "#0c2756",
+                                        pointBackgroundColor: "#fff",
+                                        pointBorderWidth: 1,
+                                        pointHoverRadius: 5,
+                                        pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                                        pointHoverBorderWidth: 2,
+                                        pointRadius: 3,
+                                        pointColor: "rgba(148, 193, 31,1)",
+                                        pointHitRadius: 10,
+                                        data: [11744, 10968, 12886, 13598 , 14598, 15598, 16598],
+                                        spanGaps: false,
+                                    },
+                                      {
+                                        label: "Numero de scans",
+                                        fill: true,
+                                        lineTension: 0.1,
+                                        backgroundColor: "#94C11F",
+                                        borderColor: "#94C11F",
+                                        borderCapStyle: 'butt',
+                                        borderDash: [],
+                                        borderDashOffset: 0.0,
+                                        borderJoinStyle: 'miter',
+                                        pointBorderColor: "#94C11F",
+                                        pointBackgroundColor: "#fff",
+                                        pointBorderWidth: 1,
+                                        pointHoverRadius: 5,
+                                        pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                                        pointHoverBorderWidth: 2,
+                                        pointRadius: 3,
+                                        pointColor: "rgba(148, 193, 31,1)",
+                                        pointHitRadius: 10,
+                                         data: [21744, 20968, 22886, 23594, 25135, 28055, 31256],
+                                        spanGaps: false,
+                                    }
+                                ]
+                        };
+
+                    var optionsSemana = {
+                            responsive: true,
+                        };
+
+                    var genero = new Chart(ctxsemana, {
+                        type: 'line',
+                        data: dataSemana,
+                        options: optionsSemana
+                    });  
+
+                     semanaLoaded = true;
+                    }
+                    else{
+                    return;
+                    }
+                 });
+        /* Semana Linea Fin */
+
+          /* General bar Inicio */
+      var generalLoaded = false;
+            $(document).on('scroll', function(){      
+                var scrollTop = $(window).scrollTop();
+                if(scrollTop > 250 && !generalLoaded){
+                    var ctxgral = document.getElementById("infogral");
+
+                    var dataGeneral = {
+                           labels: ["8 Febrero", "9 Febrero", "10 Febrero", "11 Febrero", "12 Febrero", "13 Febrero", "14 Febrero"],
+                    datasets: [
+                        {
+                            label: "Scans generales",
+                            fillColor: "rgba(148, 193, 31,1)",
+                            strokeColor: "rgba(148, 193, 31,1)",
+                            pointColor: "rgba(148, 193, 31,1)",
+                            pointStrokeColor: "#fff",
+                            pointHighlightFill: "#fff",
+                            pointHighlightStroke: "rgba(220,220,220,1)",
+                             data: [4166, 4368, 2955, 1987, 1606, 4305, 3015],
+                            backgroundColor: [
+                                    '#0c2756',
+                                    '#0c2756',
+                                    '#0c2756',
+                                    '#0c2756',
+                                    '#0c2756',
+                                    '#0c2756',
+                                    '#0c2756'
+                                ],
+                        },
+                        
+                    ]
+                        };
+
+                    var optionsGeneral = {
+                            responsive: true,
+                        };
+
+                    var edad = new Chart(ctxgral, {
+                        type: 'bar',
+                        data: dataGeneral,
+                        options: optionsGeneral
+                    });  
+
+                     generalLoaded = true;
+                    }
+                    else{
+                    return;
+                    }
+                 });
+        /* General Bar Fin */
+
+        /* Dona de Genero Inicio */
+      var generoLoaded = false;
+            $(document).on('scroll', function(){      
+                var scrollTop = $(window).scrollTop();
+                if(scrollTop > 580 && !generoLoaded){
+                    var ctxgenero = document.getElementById("genero");
+
+                    var dataGenero = {
+                            labels: ["Masculino", "Femenino"],
+                            datasets: [{
+                                label: 'Genero',
+                                data: [15593, 6809],
+                                backgroundColor: [
+                                    '#1f5bbd',
+                                    '#ff777c',
+                                ],
+                                borderColor: [
+                                    'rgba(200,200,200,1)',
+                                    'rgba(200,200,200,1)',
+                                    'rgba(200,200,200,1)',
+                                    'rgba(200,200,200,1)',
+                                ],
+                                borderWidth: 1
+                            },
+                            ]
+                        };
+
+                    var optionsGenero = {
+                            responsive: true,
+                        };
+
+                    var genero = new Chart(ctxgenero, {
+                        type: 'doughnut',
+                        data: dataGenero,
+                        options: optionsGenero
+                    });  
+
+                     generoLoaded = true;
+                    }
+                    else{
+                    return;
+                    }
+                 });
+        /* Dona de Genero Fin */
+
+         /* Dona de Edad Inicio */
+      var edadLoaded = false;
+            $(document).on('scroll', function(){      
+                var scrollTop = $(window).scrollTop();
+                if(scrollTop > 580 && !edadLoaded){
+                    var ctxedad = document.getElementById("edad");
+
+                    var dataEdad = {
+                            labels: ["10-19 años", "20-29 años", "30-39 años", "40-60 años"],
+                            datasets: [{
+                                label: 'Edad',
+                                data: [0, 15587, 6816, 0],
+                                backgroundColor: [
+                                    '#ff6b61',
+                                    '#f0a150',
+                                    '#b5d36f',
+                                    '#143b80',
+                                ],
+                                borderColor: [
+                                    'rgba(200,200,200,1)',
+                                    'rgba(200,200,200,1)',
+                                    'rgba(200,200,200,1)',
+                                    'rgba(200,200,200,1)',
+                                ],
+                                borderWidth: 1
+                            },
+                            ]
+                        };
+
+                    var optionsEdad = {
+                            responsive: true,
+                        };
+
+                    var edad = new Chart(ctxedad, {
+                        type: 'pie',
+                        data: dataEdad,
+                        options: optionsEdad
+                    });  
+
+                     edadLoaded = true;
+                    }
+                    else{
+                    return;
+                    }
+                 });
+        /* Dona de Edad Fin */
+
+       /* Dona de dispositiv Inicio */
+      var disposiLoaded = false;
+            $(document).on('scroll', function(){      
+                var scrollTop = $(window).scrollTop();
+                if(scrollTop > 580 && !disposiLoaded){
+                    var ctxdisp = document.getElementById("dispositiv");
+
+                    var dataDispo = {
+                            labels: ["Android", "IOS", "Windows"],
+                            datasets: [{
+                                label: 'Edad',
+                                data: [12321, 10081, 0],
+                                backgroundColor: [
+                                   '#8dbe00',
+                                    '#909090',
+                                    '#0191f2',
+                                ],
+                                borderColor: [
+                                    'rgba(200,200,200,1)',
+                                    'rgba(200,200,200,1)',
+                                    'rgba(200,200,200,1)',
+                                ],
+                                borderWidth: 1
+                            },
+                            ]
+                        };
+
+                    var optionsDispo= {
+                            responsive: true,
+                        };
+
+                    var disposi = new Chart(ctxdisp, {
+                        type: 'pie',
+                        data: dataDispo,
+                        options: optionsDispo
+                    });  
+
+                     disposiLoaded = true;
+                    }
+                    else{
+                    return;
+                    }
+                 });
+        /* Dona de dispositiv Fin */
+       
 </script>
 <!-- end scripts -->
 </body>

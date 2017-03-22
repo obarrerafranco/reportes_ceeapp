@@ -100,7 +100,7 @@ while($rows = $query->fetch())
                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-id="'. $row['id_repor'] . '" onclick="mostrarWkk('.$row['id_repor'].')">Semana</button>
                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-id="'. $row['id_repor'] . '" onclick="mostrarGnr('.$row['id_repor'].')">Genero</button>
                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-id="'. $row['id_repor'] . '" onclick="mostrarAge('.$row['id_repor'].')">Edad</button>
-                  <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-id="'. $row['id_repor'] . '" onclick="mostrarAge('.$row['id_repor'].')">Dispositivo</button>
+                  <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-id="'. $row['id_repor'] . '" onclick="mostrarDisp('.$row['id_repor'].')">Dispositivo</button>
               </td>';
         echo '</tr>';
     }
@@ -123,7 +123,7 @@ $pagination->pages("btn");
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Datos Gráfica General</h4>
+          <h4 class="modal-title">Datos Gráfica General JCDecaux</h4>
         </div>
         <div class="modal-body">
           <div class="form-group">
@@ -153,7 +153,7 @@ $pagination->pages("btn");
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Datos Gráfica Semana</h4>
+          <h4 class="modal-title">Datos Gráfica Semana JCDecaux</h4>
         </div>
         <div class="modal-body">
           <div class="form-group">
@@ -187,7 +187,7 @@ $pagination->pages("btn");
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Datos Gráfica Genero</h4>
+          <h4 class="modal-title">Datos Gráfica Genero JCDecaux</h4>
         </div>
         <div class="modal-body">
           <div class="form-group">
@@ -213,7 +213,7 @@ $pagination->pages("btn");
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Datos Gráfica Edad</h4>
+          <h4 class="modal-title">Datos Gráfica Edad JCDecaux</h4>
         </div>
         <div class="modal-body">
           <div class="form-group">
@@ -231,23 +231,42 @@ $pagination->pages("btn");
     </div>
   </div>
 <!-- Fin Modal Edad-->
+<!-- Inicio Modal Edad-->
+  <div class="modal fade" id="myModalDispositv" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Datos Gráfica Dispositivo JCDecaux</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="datosdisp">Datos separados por coma</label>
+            <input type="text" class="form-control"  id="datosdisp" name="datosdisp" placeholder="Android, IOS, Windows" autocomplete="off">
+          </div>
+          <input type="hidden" name="repirdis4" id="repordismdl4">
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-default" id="salva_disp">Guardar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<!-- Fin Modal Edad-->
 <script type="text/javascript">
 $(document).ready(incia);
 
 function incia(){
-  $("#salva_general").click(savedataGral);
   $("#salva_semana").click(savedataWkk);
   $("#salva_genero").click(savedataGnr);
   $("#salva_edad").click(savedataAge);
+  $("#salva_disp").click(savedataDisp);
 }
 
-function mostrarGral (idr){
-    $('#myModalGral').modal('show'); 
-    $('#repormdl').val(idr);
-    $('#fechasmld').val("");
-    $('#datosmdl').val("");
-
-}
 function mostrarWkk (idr2){
     $('#myModalSem').modal('show'); 
     $('#repormd2').val(idr2);
@@ -268,17 +287,11 @@ function mostrarAge (idr4){
     $('#datosmdl4').val("");
 
 }
-function savedataGral(){
+function mostrarDisp (idr5){
+    $('#myModalDispositv').modal('show'); 
+    $('#repordismdl4').val(idr5);
+    $('#datosdisp').val("");
 
-  var irepor = $('#repormdl').val();
-  var idfecha = $('#fechasmld').val();
-  var idatos = $('#datosmdl').val();
-  $.ajax({
-    type: "POST",
-    url: "http://localhost:8081/cee_report/registros/reportes/general.php?p=add",
-    data: "repormdl="+irepor+"&fechasmld="+idfecha+"&datosmdl="+idatos,
-    success: function(){$('#myModalGral').modal('toggle');}
-  });
 }
 function savedataWkk(){
 
@@ -288,7 +301,7 @@ function savedataWkk(){
   var iviews = $('#viewsmdl').val();
   $.ajax({
     type: "POST",
-    url: "http://localhost:8081/cee_report/registros/reportes/semana.php?p=add",
+    url: "http://localhost:8081/cee_report/registros/reportesjcd/semana.php?p=add",
     data: "repormd2="+irepor2+"&fechasmld2="+idfecha2+"&scansmdl="+iscans+"&viewsmdl="+iviews,
     success: function(){$('#myModalSem').modal('toggle');}
   });
@@ -299,7 +312,7 @@ function savedataGnr(){
   var idatos3 = $('#datosmdl3').val();
   $.ajax({
     type: "POST",
-    url: "http://localhost:8081/cee_report/registros/reportes/genero.php?p=add",
+    url: "http://localhost:8081/cee_report/registros/reportesjcd/genero.php?p=add",
     data: "repormdl3="+irepor3+"&datosmdl3="+idatos3,
     success: function(){$('#myModalGenero').modal('toggle');}
   });
@@ -310,9 +323,20 @@ function savedataAge(){
   var idatos4 = $('#datosmdl4').val();
   $.ajax({
     type: "POST",
-    url: "http://localhost:8081/cee_report/registros/reportes/edad.php?p=add",
+    url: "http://localhost:8081/cee_report/registros/reportesjcd/edad.php?p=add",
     data: "repormdl4="+irepor4+"&datosmdl4="+idatos4,
     success: function(){$('#myModalEdad').modal('toggle');}
+  });
+}
+function savedataDisp(){
+
+  var irepor5 = $('#repordismdl4').val();
+  var idatos5 = $('#datosdisp').val();
+  $.ajax({
+    type: "POST",
+    url: "http://localhost:8081/cee_report/registros/reportesjcd/dispositivos.php?p=add",
+    data: "repordismdl4="+irepor5+"&datosdisp="+idatos5,
+    success: function(){$('#myModalDispositv').modal('toggle');}
   });
 }
 </script>

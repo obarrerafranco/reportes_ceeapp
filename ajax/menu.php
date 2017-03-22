@@ -13,7 +13,7 @@ require '../registros/db.php';
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll2" href="http://localhost:8081/cee_report/reportes/jcdecaux/">JCDecaux</a>
+                        <a class="page-scroll2" href="http://localhost:8081/cee_report/reportes/jcdecaux/index.php?wekks='.$seman.'&citias=1">JCDecaux</a>
                     </li>';       
 
       foreach ($PDO->query($letras) as $lets) {
