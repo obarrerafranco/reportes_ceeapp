@@ -15,7 +15,7 @@
           rpj.download_android,
           rpj.download_ios,
           rpj.download_windows,
-          rpj.mapa_ciudad,
+          rpj.mapa_ciudad as mapa,
           ct.nombre_ciudad,
           wk.id as id_semanas,
           ct.id as id_ciudads,
@@ -116,14 +116,17 @@
                 <a class="navbar-brand page-scroll" href="#page-top"><img class="monitor" src="../../img/plataforma/logo.png"></a>
             </div>
             <!-- /.navbar-collapse -->
+
              <!-- Collect the nav links, forms, and other content for toggling -->
+             <?php if($city == 1){
+  ?>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="http://localhost:8081/cee_report/index.php">Indice</a>
+                        <?php echo "<a class='page-scroll2' href='http://localhost:8081/cee_report/reportes/jcdecaux/index.php?wekks=".$week."&citias=1'>JCdecaux</a>"; ?>
                     </li>
                     <li>
                         <a class="page-scroll" href="#resumen_views">Resumen</a>
@@ -143,6 +146,33 @@
                     
                 </ul>
             </div>
+<?php }else{
+  ?>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#resumen_views">Resumen</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#resumen_descargas">Descargas</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#reportes1">Reportes</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#historial">Historico</a>
+                    </li>
+                    <li>
+                       <?php echo "<a class='page-scroll2' href='http://localhost:8081/cee_report/reportes/jcdecaux/index.php?wekks=".$week."&citias=1'>Nacional</a>"; ?>
+                    </li>
+                    
+                </ul>
+            </div>
+
+  <?php } ?>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
@@ -305,7 +335,7 @@
                <div class="scans col-md-6 col-lg-6">
          
                                          <div class="text-center">
-                        <h4 class="section-heading">EVOLUCIÓN SEMANAL DE SCANS Y VIEWS <span class="ciudad">(Nacional)</span></h4>
+                        <h4 class="section-heading">EVOLUCIÓN SEMANAL DE SCANS Y VIEWS <span class="ciudad">(<?php echo strtoupper($data['nombre_ciudad']); ?>)</span></h4>
                     </div>
                     <div>
                         <canvas id="semana"></canvas>
@@ -314,7 +344,7 @@
                 </div>
                 <div class="views col-md-6 col-lg-6">
                     <div class="text-center">
-                        <h4 class="section-heading">INFORMACIÓN GENERAL <span class="ciudad">(Nacional)</span></h4>
+                        <h4 class="section-heading">INFORMACIÓN GENERAL <span class="ciudad">(<?php echo strtoupper($data['nombre_ciudad']); ?>)</span></h4>
                         <h5 class="section-subheading text-muted">En la gráfica se muestran todos los scans realizados en la última semana:</h5>
                     </div>
                     <div>
@@ -364,7 +394,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">HISTÓRICO <span class="ciudad">(Nacional)</span></h2>
+                    <h2 class="section-heading">HISTÓRICO <span class="ciudad">(<?php echo strtoupper($data['nombre_ciudad']); ?>)</span></h2>
                     <h3 class="section-subheading text-muted">El histórico incluye los datos registrados en semanas anteriores para esta campaña:</h3>
                 </div>
             </div>
@@ -395,6 +425,20 @@
             </div>
         </div>
     </section>
+<!--- FIN HISTORICO-->
+<?php if($city != 1){
+  ?>
+     <!--  MAPA CIUDAD -->
+    <section id="mapa_ciudad">
+      <div class="row">
+        <div class="map-img row">
+          <h2 class="section-heading">MAPA <?php echo $data['nombre_ciudad']; ?></h2>
+          <?php echo '<img class="img-responsive" style="margin:0 auto" src="../../img/mapas/'.$data['mapa'].'">';?>
+        </div>
+      </div>
+    </section>
+    <!-- FIN MAPA CIUDAD -->
+<?php } ?>
 <?php if($city == 1){
   ?>
      <!--  CIUDADES -->
